@@ -397,6 +397,9 @@ a {
   }
 }
 
+/*===================
+	about page style 
+=====================*/
 .about-page {
 
   .about-us {
@@ -470,6 +473,42 @@ a {
           display: block;
           margin-top: 12px;
         }
+      }
+    }
+  }
+}
+
+/*===================
+	contact page style 
+=====================*/
+.contact-page {
+  h1{
+    font-weight: 800;
+    color: $redColor;
+  }
+  .contact-info {
+    .info-img {
+      img {
+        width: 100%;
+      }
+    }
+    .info-form{
+      label{
+        font-weight: 700;
+        color: $mainColor;
+      }
+      input, textarea{
+        border-color: $borderColor;
+        height: 50px;
+        color: $textGrayColor;
+        font-size: 15px;
+        text-align: right;
+        &::placeholder {
+          color: $textGrayColor
+        }
+      }
+      textarea{
+      height: auto;
       }
     }
   }

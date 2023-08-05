@@ -290,6 +290,9 @@ a {
   text-align: center;
 }
 
+/*===================
+	about page style 
+=====================*/
 .about-page .about-us h2 {
   font-weight: 800;
   color: #DB1E3C;
@@ -345,4 +348,32 @@ a {
   margin-left: 10px;
   display: block;
   margin-top: 12px;
+}
+
+/*===================
+	contact page style 
+=====================*/
+.contact-page h1 {
+  font-weight: 800;
+  color: #DB1E3C;
+}
+.contact-page .contact-info .info-img img {
+  width: 100%;
+}
+.contact-page .contact-info .info-form label {
+  font-weight: 700;
+  color: #212529;
+}
+.contact-page .contact-info .info-form input, .contact-page .contact-info .info-form textarea {
+  border-color: #EEEEEE;
+  height: 50px;
+  color: #737373;
+  font-size: 15px;
+  text-align: right;
+}
+.contact-page .contact-info .info-form input::placeholder, .contact-page .contact-info .info-form textarea::placeholder {
+  color: #737373;
+}
+.contact-page .contact-info .info-form textarea {
+  height: auto;
 }/*# sourceMappingURL=style.css.map */

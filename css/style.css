@@ -235,6 +235,9 @@ a {
 .footer .footer-inner .footer-list li.footer-list-item:hover a {
   color: #DB1E3C;
 }
+.footer .footer-inner .footer-list li.footer-list-item:hover i {
+  color: #DB1E3C;
+}
 .footer .footer-inner .about {
   text-align: justify;
   width: 80%;
@@ -285,4 +288,61 @@ a {
   border-radius: 6px;
   margin-left: 7px;
   text-align: center;
+}
+
+.about-page .about-us h2 {
+  font-weight: 800;
+  color: #DB1E3C;
+}
+.about-page .about-us .about-us-box {
+  padding: 20px;
+  border: 1px solid #EEEEEE;
+  border-radius: 20px;
+  width: 30%;
+  min-height: 183px;
+}
+.about-page .about-us .about-us-box h4 {
+  font-weight: 700;
+  color: #DB1E3C;
+  text-align: center;
+}
+.about-page .about-us .about-us-box p {
+  color: #737373;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+}
+.about-page .about-info .info-img {
+  width: 490px;
+  height: 490px;
+  border-radius: 50%;
+  background: linear-gradient(0deg, rgba(192, 183, 191, 0.26), rgba(192, 183, 191, 0.26)), linear-gradient(212.23deg, #CEF0FF 18.95%, rgba(115, 197, 232, 0.395692) 46.92%, rgba(10, 135, 189, 0.52) 89.3%);
+  text-align: center;
+}
+.about-page .about-info .info-img img {
+  width: 97%;
+}
+.about-page .about-info .info-text h5 {
+  font-weight: 700;
+  color: #525457;
+}
+.about-page .about-info .info-text p {
+  color: #737373;
+}
+.about-page .about-info .about-list {
+  color: #212529;
+  line-height: 2;
+}
+.about-page .about-info .about-list li.about-list-item {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+.about-page .about-info .about-list li.about-list-item i {
+  font-size: 6px;
+  margin-left: 10px;
+  display: block;
+  margin-top: 12px;
 }/*# sourceMappingURL=style.css.map */

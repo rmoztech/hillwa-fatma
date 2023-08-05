@@ -1,0 +1,394 @@
+@import "./sass/colors";
+@import "./sass/mediaQuery";
+/*===================
+	Global style 
+=====================*/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+
+}
+
+.container {
+  max-width: 1100px;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.border-left {
+  border-left: 1px solid $borderColor;
+}
+
+
+.padding-section {
+  padding: 90px 0;
+}
+
+.section-header {
+  h4 {
+    font-weight: 700;
+  }
+}
+
+.btn-bg {
+  background-color: $redColor;
+  border-radius: 10px;
+  text-align: center;
+  color: $whiteColor !important;
+
+  &:hover {
+    background-color: #b60723;
+  }
+}
+
+.order-card {
+  border: 1px solid $grayLightColor;
+  background-color: $grayLight2Color;
+  color: $textColor;
+  position: relative;
+  line-height: 2;
+
+  .order-card-img {
+    background-color: $grayLightColor;
+  }
+
+  .card-body {
+    .card-text {
+      font-size: 13px;
+    }
+
+    .price {
+      span {
+        &:first-child {
+          color: $grayBlackColor;
+          text-decoration: line-through;
+        }
+
+        &:last-child {
+          color: $redColor;
+          font-size: 17px;
+        }
+      }
+    }
+
+    a {
+      width: 60%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .discount {
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      top: 15px;
+      background-color: $redColor;
+      color: $whiteColor;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        font-size: 24px;
+        line-height: 1.2;
+        text-align: center;
+      }
+    }
+  }
+}
+
+/*===================
+	header style 
+=====================*/
+.header {
+  border-bottom: 1px solid $borderColor;
+
+  .menu-list {
+    .nav {
+      li.nav-item {
+        padding: 0 20px;
+
+        a {
+          color: $mainColor;
+          font-weight: 400;
+          transition: all 0.3s ease-in-out;
+        }
+
+        svg {
+          width: 24px;
+          height: 17px;
+          margin: 10px 0;
+          stroke: $mainColor;
+          transition: all 0.3s ease-in-out;
+
+          &.translate-svg {
+            stroke: none;
+            fill: $mainColor
+          }
+        }
+
+        &:hover {
+          a {
+            color: $redColor;
+          }
+
+          svg {
+            stroke: $redColor;
+
+            &.translate-svg {
+              stroke: none;
+              fill: $redColor
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*===================
+	home page style 
+=====================*/
+.home-page {
+  .slider {
+    .owl-slider {
+      .owl-dots {
+        position: absolute;
+        bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .owl-dot {
+          span {
+            background-color: transparent;
+            border: 1px solid $redColor
+          }
+
+          &.active {
+            span {
+              background: $redColor;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .our-clients {
+    border-top: 1px solid $borderColor;
+    border-bottom: 1px solid $borderColor;
+    position: relative;
+
+    .owl-clients {
+      .item {
+        padding: 0 55px;
+      }
+    }
+  }
+
+  .hilwa-info {
+    background-color: $blueLightColor;
+
+    .info-img {
+      img {
+        height: 600px;
+      }
+    }
+
+    .info-text {
+      position: relative;
+      min-height: 67px;
+      min-width: 310px;
+
+      &.padding-right {
+        padding-right: 67px;
+
+        img.shap01 {
+          position: absolute;
+          right: 0;
+          top: 14px;
+          height: 30px;
+        }
+
+        img.shap02 {
+          position: absolute;
+          right: 27px;
+          bottom: -10px;
+          transform: rotateY(180deg);
+          width: 90%;
+        }
+      }
+
+      &.padding-left {
+        padding-left: 67px;
+
+        img.shap01 {
+          position: absolute;
+          left: 0;
+          top: 14px;
+          height: 30px;
+        }
+
+        img.shap02 {
+          position: absolute;
+          left: 27px;
+          bottom: -10px;
+          // transform: rotateY(180deg);
+          width: 90%;
+        }
+      }
+
+      p {
+        font-size: 17px;
+      }
+
+
+
+    }
+  }
+
+  .certificates {
+    .owl-certificates {
+      .item {
+        padding: 0 55px;
+      }
+    }
+
+  }
+}
+
+/*===================
+	footer style 
+=====================*/
+.footer {
+  background-color: $blueLightColor;
+  line-height: 2;
+
+  .footer-inner {
+    color: $grayBlackColor;
+
+    a {
+      color: $grayBlackColor;
+    }
+
+    h6 {
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .footer-list {
+      li.footer-list-item {
+        i {
+          font-size: 6px;
+          margin-left: 10px;
+        }
+
+        &:hover {
+          a {
+            color: $redColor;
+          }
+        }
+      }
+    }
+
+    .about {
+      text-align: justify;
+      width: 80%;
+      line-height: 1.7;
+    }
+
+    .social-list {
+      li {
+        display: inline-block;
+
+        a {
+          width: 25px;
+          height: 25px;
+          border: 1px solid $grayBlackColor;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 7px;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: $whiteColor;
+            border-color: $redColor;
+
+            i {
+              color: $redColor;
+            }
+          }
+
+        }
+      }
+    }
+
+    .download-list {
+      li {
+        display: inline-block;
+      }
+    }
+
+    .contact-list {
+      svg {
+        width: 17px;
+        height: 20px;
+        margin-left: 7px;
+      }
+    }
+
+  }
+
+  .footer-bottom {
+    // height: 80px;
+    padding: 20px 50px;
+    background-color: $blueDarkColor;
+    color: $whiteColor;
+
+    p {
+      font-weight: 300;
+
+    }
+
+    .footer-bottom-list {
+      li {
+        display: inline-block;
+        width: 64px;
+        height: 32px;
+        background-color: $blueLightColor;
+        border-radius: 6px;
+        margin-left: 7px;
+        text-align: center;
+      }
+    }
+  }
+}

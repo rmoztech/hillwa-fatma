@@ -519,4 +519,28 @@ a {
 }
 .shopping-cart-page .complete-sale .table tbody tr:last-child {
   border-top: 1px solid #EEEEEE;
+}
+.shopping-cart-page .complete-sale .modal .modal-content {
+  padding: 30px 60px;
+}
+.shopping-cart-page .complete-sale .modal .modal-content .modal-header {
+  border: none;
+  justify-content: center;
+}
+.shopping-cart-page .complete-sale .modal .modal-content .modal-header h6 {
+  font-weight: 700;
+}
+.shopping-cart-page .complete-sale .modal .modal-content .modal-footer {
+  border: none;
+}
+.shopping-cart-page .complete-sale .modal .modal-content .modal-footer .btn-bg {
+  border-radius: 8px;
+  font-size: 13px;
+  height: 45px;
+  border: 1px solid #DB1E3C;
+}
+.shopping-cart-page .complete-sale .modal .modal-content .modal-footer .btn-bg:nth-child(2) {
+  border: 1px solid #DB1E3C;
+  background-color: #fff;
+  color: #DB1E3C !important;
 }/*# sourceMappingURL=style.css.map */

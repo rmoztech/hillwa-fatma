@@ -706,8 +706,42 @@ a {
           td {
             padding: 12px 30px;
           }
-          &:last-child{
+
+          &:last-child {
             border-top: 1px solid $borderColor;
+          }
+        }
+      }
+    }
+
+    .modal {
+      .modal-content {
+        padding: 30px 60px;
+
+        .modal-header {
+          border: none;
+          justify-content: center;
+
+          h6 {
+            font-weight: 700;
+
+          }
+        }
+
+        .modal-footer {
+          border: none;
+
+          .btn-bg {
+            border-radius: 8px;
+            font-size: 13px;
+            height: 45px;
+            border: 1px solid $redColor;
+
+            &:nth-child(2) {
+              border: 1px solid $redColor;
+              background-color: $whiteColor;
+              color: $redColor !important;
+            }
           }
         }
       }

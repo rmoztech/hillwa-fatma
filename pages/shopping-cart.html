@@ -287,7 +287,30 @@
                             </tbody>
                         </table>
                         <div class="text-center">
-                            <a href="#" class="btn btn-bg w-50 mx-auto"> اكمال البيع</a>
+                            <button type="button" class="btn btn-bg w-50 mx-auto" data-bs-toggle="modal"
+                                data-bs-target="#saleModal"> اكمال البيع</button>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="saleModal" tabindex="-1" aria-labelledby="saleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header mb-5">
+                                        <h6 class="modal-title" id="saleModalLabel">تسجيل الدخول</h6>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- <p>لتسجيل الدخول أضف رقم جواللك أدناه , وسيتم إرسال رسالة نصية لتتحقق من الرقم
+                                            المضاف</p> -->
+                                        <input type="tel" class="form-control" id="mobile" aria-describedby="mobile"
+                                            placeholder="5x xxx xxxx">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-bg w-100 mb-3"data-bs-dismiss="modal"> تسجيل الدخول</button>
+                                        <button type="button" class="btn btn-bg w-100"data-bs-dismiss="modal"> حساب جديد</button>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

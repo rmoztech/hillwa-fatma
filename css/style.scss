@@ -68,6 +68,14 @@ a {
   }
 }
 
+.btn-link {
+  color: $redColor;
+
+  &:hover {
+    color: $redColor;
+  }
+}
+
 .order-card {
   border: 1px solid $grayLightColor;
   background-color: $grayLight2Color;
@@ -188,6 +196,14 @@ a {
     }
   }
 
+}
+
+label.error {
+  color: $redColor !important;
+}
+
+input.error {
+  border: 1px solid $redColor;
 }
 
 /*===================
@@ -514,6 +530,10 @@ a {
   }
 
   .about-info {
+    >div {
+      width: 50%;
+    }
+
     .info-img {
       width: 490px;
       height: 490px;
@@ -557,6 +577,33 @@ a {
       }
     }
   }
+
+  @include devices(tablet) {
+    .banner {
+      img {
+        width: 100%;
+      }
+    }
+
+    .about-info {
+      >div {
+        width: 100%;
+      }
+
+      .info-img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .about-us {
+      .about-us-box {
+        width: 100%;
+      }
+    }
+  }
+
+
 }
 
 /*===================
@@ -569,6 +616,10 @@ a {
   }
 
   .contact-info {
+    >div {
+      width: 50%;
+    }
+
     .info-img {
       img {
         width: 100%;
@@ -599,6 +650,15 @@ a {
       }
     }
   }
+
+  @include devices(tablet) {
+    .contact-info {
+      >div {
+        width: 100%;
+      }
+    }
+  }
+
 }
 
 /*===================
@@ -657,10 +717,6 @@ a {
       border: 1px solid $borderColor;
       border-radius: 12px;
     }
-
-
-
-
 
   }
 
@@ -744,6 +800,55 @@ a {
             }
           }
         }
+
+        label,
+        p,
+        input {
+          color: $textGrayColor;
+        }
+      }
+    }
+
+    .number-code {
+      direction: ltr;
+      text-align: center;
+
+      input {
+        width: 60px;
+        height: 60px;
+        border: 1px solid $borderColor;
+        margin: 0 5px;
+        border-radius: 8px;
+        font-size: 31px;
+        text-align: center;
+
+        &::placeholder {
+          color: $borderColor;
+        }
+      }
+
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+
+      }
+
+      /* Firefox */
+      input[type=number] {
+        -moz-appearance: textfield;
+      }
+    }
+  }
+
+  @include devices(tablet) {
+    .order-card {
+      .card-img-top {
+        width: auto;
+        height: 100%;
+        display: block;
+        margin: 0 auto;
       }
     }
   }

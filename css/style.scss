@@ -62,10 +62,31 @@ a {
   border-radius: 10px;
   text-align: center;
   color: $whiteColor !important;
+  min-width: 185px;
+  min-height: 40px;
 
   &:hover {
     background-color: #b60723;
   }
+}
+
+.btn-gray-bg {
+  background-color: $borderColor !important;
+  border-radius: 10px;
+  text-align: center;
+  color: $mainColor !important;
+  min-width: 100px;
+
+  svg {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+  }
+
+  // 
+  //   &:hover {
+  //     background-color: #b60723;
+  //   }
 }
 
 .btn-link {
@@ -205,6 +226,131 @@ label.error {
 input.error {
   border: 1px solid $redColor;
 }
+
+.complete-sale {
+  padding: 60px 0;
+  border: 1px solid $borderColor;
+  border-radius: 12px;
+  font-size: 13px;
+
+  .discount-code {
+    border-bottom: 1px solid $borderColor;
+
+    .input-group {
+      padding: 6px;
+      border: 1px solid $borderColor;
+      width: 90%;
+      margin: 0 auto;
+      border-radius: 6px;
+
+
+      input {
+        border: none;
+        font-size: 13px;
+        outline: none;
+
+      }
+
+      button {
+        border-radius: 6px !important;
+        background-color: $mainColor;
+        color: $whiteColor;
+        padding: 3px 12px;
+        font-size: 13px;
+
+      }
+    }
+
+  }
+
+  .table {
+    tbody {
+      tr {
+        td {
+          padding: 12px 30px;
+        }
+
+        &:last-child {
+          border-top: 1px solid $borderColor;
+        }
+      }
+    }
+  }
+
+
+
+  .number-code {
+    direction: ltr;
+    text-align: center;
+
+    input {
+      width: 60px;
+      height: 60px;
+      border: 1px solid $borderColor;
+      margin: 0 5px;
+      border-radius: 8px;
+      font-size: 31px;
+      text-align: center;
+
+      &::placeholder {
+        color: $borderColor;
+      }
+    }
+
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+
+    }
+
+    /* Firefox */
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+  }
+}
+
+.modal {
+  .modal-content {
+    padding: 30px 60px;
+
+    .modal-header {
+      border: none;
+      justify-content: center;
+
+      h6 {
+        font-weight: 700;
+
+      }
+    }
+
+    .modal-footer {
+      border: none;
+
+      .btn-bg {
+        border-radius: 8px;
+        font-size: 13px;
+        height: 45px;
+        border: 1px solid $redColor;
+
+        &:nth-child(2) {
+          border: 1px solid $redColor;
+          background-color: $whiteColor;
+          color: $redColor !important;
+        }
+      }
+    }
+
+    label,
+    p,
+    input {
+      color: $textGrayColor;
+    }
+  }
+}
+
 
 /*===================
 	header style 
@@ -720,128 +866,6 @@ input.error {
 
   }
 
-  .complete-sale {
-    padding: 60px 0;
-    border: 1px solid $borderColor;
-    border-radius: 12px;
-    font-size: 13px;
-
-    .discount-code {
-      border-bottom: 1px solid $borderColor;
-
-      .input-group {
-        padding: 6px;
-        border: 1px solid $borderColor;
-        width: 90%;
-        margin: 0 auto;
-        border-radius: 6px;
-
-
-        input {
-          border: none;
-          font-size: 13px;
-          outline: none;
-
-        }
-
-        button {
-          border-radius: 6px !important;
-          background-color: $mainColor;
-          color: $whiteColor;
-          padding: 3px 12px;
-          font-size: 13px;
-
-        }
-      }
-
-    }
-
-    .table {
-      tbody {
-        tr {
-          td {
-            padding: 12px 30px;
-          }
-
-          &:last-child {
-            border-top: 1px solid $borderColor;
-          }
-        }
-      }
-    }
-
-    .modal {
-      .modal-content {
-        padding: 30px 60px;
-
-        .modal-header {
-          border: none;
-          justify-content: center;
-
-          h6 {
-            font-weight: 700;
-
-          }
-        }
-
-        .modal-footer {
-          border: none;
-
-          .btn-bg {
-            border-radius: 8px;
-            font-size: 13px;
-            height: 45px;
-            border: 1px solid $redColor;
-
-            &:nth-child(2) {
-              border: 1px solid $redColor;
-              background-color: $whiteColor;
-              color: $redColor !important;
-            }
-          }
-        }
-
-        label,
-        p,
-        input {
-          color: $textGrayColor;
-        }
-      }
-    }
-
-    .number-code {
-      direction: ltr;
-      text-align: center;
-
-      input {
-        width: 60px;
-        height: 60px;
-        border: 1px solid $borderColor;
-        margin: 0 5px;
-        border-radius: 8px;
-        font-size: 31px;
-        text-align: center;
-
-        &::placeholder {
-          color: $borderColor;
-        }
-      }
-
-      /* Chrome, Safari, Edge, Opera */
-      input::-webkit-outer-spin-button,
-      input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-
-      }
-
-      /* Firefox */
-      input[type=number] {
-        -moz-appearance: textfield;
-      }
-    }
-  }
-
   @include devices(tablet) {
     .order-card {
       .card-img-top {
@@ -852,4 +876,258 @@ input.error {
       }
     }
   }
+}
+
+/*===================
+	checkout  page style 
+=====================*/
+
+.checkout-page {
+  h5 {
+    font-weight: 600;
+  }
+
+  .addresses,
+  .payment-method,
+  .shipping-address {
+    .custom-radio {
+      input {
+        display: none;
+
+        &:checked+.radio-btn {
+          .check-icon {
+            background-color: $greenColor;
+
+            >i {
+              opacity: 1;
+              transform: translateX(0) scale(1);
+            }
+          }
+        }
+      }
+
+      .radio-btn {
+        margin: 10px;
+        width: 100%;
+        padding: 20px;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        border-bottom: 1px solid $borderColor;
+
+        .check-icon {
+          color: $whiteColor;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 25px;
+          height: 25px;
+          top: 25px;
+          border-radius: 50%;
+          border: 2px solid $borderColor;
+
+          >i {
+            opacity: 0;
+            transition: 0.5s;
+            pointer-events: none;
+            transform: translateX(-40%) scale(2);
+
+          }
+        }
+
+        .address-icon {
+          padding-right: 50px;
+
+          .icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: $borderColor;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+
+            svg {
+              width: 30px;
+              height: 30px;
+            }
+          }
+
+          button.btn-gray-bg {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+          }
+
+          .close {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $borderColor;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+          }
+
+        }
+      }
+    }
+  }
+
+  .shipping-address {
+    .btn-bg {
+      font-size: 13px;
+    }
+
+    .modal {
+      .modal-content {
+        padding: 30px 0;
+
+        .addressForm {
+          font-size: 15px;
+          iframe {
+            width: 100%;
+            height: 300px;
+            padding: 0 10px;
+          }
+
+          .modal-body {
+            padding: 0 60px;
+          }
+
+          .custom-radio {
+            input {
+              &:checked+.radio-btn {
+                .check-icon {
+                  background-color: $redColor;
+                }
+              }
+            }
+
+            .radio-btn {
+              padding: 0 10px;
+              border: none;
+              margin: 0;
+
+              .address-icon {
+                padding-right: 30px;
+              }
+
+              .check-icon {
+                top: 0;
+              }
+            }
+          }
+
+          .form-check-input:checked {
+            background-color: $redColor;
+            border-color: $redColor;
+          }
+          label{
+            color: $mainColor;
+          }
+        }
+      }
+    }
+  }
+
+
+  .receipt-date {
+    .custom-radio {
+      input {
+        display: none;
+
+        &:checked+.radio-btn {
+          background-color: $redColor;
+          color: $whiteColor;
+        }
+      }
+
+      .radio-btn {
+        margin: 10px;
+        padding: 7px 20px;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        border: 1px solid $redColor;
+        border-radius: 10px;
+        color: $redColor;
+        text-align: center;
+        font-size: 15px;
+        min-width: 130px;
+      }
+    }
+
+    >p {
+      color: $textGrayColor;
+      font-size: 14px;
+    }
+
+    .shipping-time {
+      .radio-btn {
+        border: 1px solid $borderColor;
+        color: $mainColor
+      }
+    }
+
+  }
+
+  .note {
+    label {
+      font-weight: 700;
+    }
+
+    textarea {
+      border: 1px solid $borderColor;
+      font-size: 15px;
+    }
+  }
+
+  .payment-method {
+    padding: 0 30px;
+    border-bottom: 1px solid $borderColor;
+
+    .custom-radio {
+      .radio-btn {
+        padding: 0px;
+        border: none;
+
+        .check-icon {
+          top: 8px;
+        }
+      }
+
+      .img {
+        display: inline-block;
+        min-width: 100px;
+        padding: 12px;
+        border: 2px solid $borderColor;
+        border-radius: 10px;
+        text-align: center;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          margin-left: 5px;
+        }
+
+        span {
+          &:nth-of-type(2) {
+            color: $textGrayColor;
+            padding-left: 10px;
+            border-right: 1px solid $borderColor;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+  }
+
 }

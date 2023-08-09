@@ -169,10 +169,7 @@ $(document).ready(function () {
 
     $('.newAccountForm').on('submit', function (e) {
         e.preventDefault();
-        console.log('dkljfhsdfjksdfhjk')
-
         if ($(".newAccountForm").valid()) {
-            console.log('dkljfhsdfjksdfhjk')
             $("#newAccountModal").modal("hide");
             $("#codeModal").modal("show");
         }

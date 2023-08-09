@@ -83,18 +83,23 @@ a {
     margin-left: 5px;
   }
 
-  // 
-  //   &:hover {
-  //     background-color: #b60723;
-  //   }
+}
+
+.btn-white-bg {
+  border: 1px solid $redColor !important;
+  background-color: $whiteColor;
+  color: $redColor !important;
+
+  &:hover {
+    background-color: #fde8eb;
+  }
 }
 
 .btn-link {
-  color: $redColor;
-
-  &:hover {
-    color: $redColor;
-  }
+  color: $redColor !important;
+}
+.btn-gray-link{
+  color: $textGrayColor !important;
 }
 
 .order-card {
@@ -227,6 +232,45 @@ input.error {
   border: 1px solid $redColor;
 }
 
+.modal {
+  .modal-content {
+    padding: 30px 60px;
+
+    .modal-header {
+      border: none;
+      justify-content: center;
+
+      h6 {
+        font-weight: 700;
+
+      }
+    }
+
+    .modal-footer {
+      border: none;
+
+      .btn-bg {
+        border-radius: 8px;
+        font-size: 13px;
+        height: 45px;
+        border: 1px solid $redColor;
+      }
+    }
+
+    label,
+    p,
+    input {
+      color: $textGrayColor;
+      font-size: 15px;
+    }
+
+    input {
+      font-size: 14px;
+      height: 45px;
+    }
+  }
+}
+
 .complete-sale {
   padding: 60px 0;
   border: 1px solid $borderColor;
@@ -277,8 +321,6 @@ input.error {
     }
   }
 
-
-
   .number-code {
     direction: ltr;
     text-align: center;
@@ -308,48 +350,12 @@ input.error {
     /* Firefox */
     input[type=number] {
       -moz-appearance: textfield;
+      font-size: 30px;
     }
   }
 }
 
-.modal {
-  .modal-content {
-    padding: 30px 60px;
 
-    .modal-header {
-      border: none;
-      justify-content: center;
-
-      h6 {
-        font-weight: 700;
-
-      }
-    }
-
-    .modal-footer {
-      border: none;
-
-      .btn-bg {
-        border-radius: 8px;
-        font-size: 13px;
-        height: 45px;
-        border: 1px solid $redColor;
-
-        &:nth-child(2) {
-          border: 1px solid $redColor;
-          background-color: $whiteColor;
-          color: $redColor !important;
-        }
-      }
-    }
-
-    label,
-    p,
-    input {
-      color: $textGrayColor;
-    }
-  }
-}
 
 
 /*===================
@@ -991,6 +997,7 @@ input.error {
 
         .addressForm {
           font-size: 15px;
+
           iframe {
             width: 100%;
             height: 300px;
@@ -1029,9 +1036,11 @@ input.error {
             background-color: $redColor;
             border-color: $redColor;
           }
-          label{
+
+          label {
             color: $mainColor;
           }
+
         }
       }
     }

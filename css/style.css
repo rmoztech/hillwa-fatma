@@ -76,11 +76,21 @@ a {
   margin-left: 5px;
 }
 
-.btn-link {
-  color: #DB1E3C;
+.btn-white-bg {
+  border: 1px solid #DB1E3C !important;
+  background-color: #fff;
+  color: #DB1E3C !important;
 }
-.btn-link:hover {
-  color: #DB1E3C;
+.btn-white-bg:hover {
+  background-color: #fde8eb;
+}
+
+.btn-link {
+  color: #DB1E3C !important;
+}
+
+.btn-gray-link {
+  color: #737373 !important;
 }
 
 .order-card {
@@ -186,6 +196,36 @@ input.error {
   border: 1px solid #DB1E3C;
 }
 
+.modal .modal-content {
+  padding: 30px 60px;
+}
+.modal .modal-content .modal-header {
+  border: none;
+  justify-content: center;
+}
+.modal .modal-content .modal-header h6 {
+  font-weight: 700;
+}
+.modal .modal-content .modal-footer {
+  border: none;
+}
+.modal .modal-content .modal-footer .btn-bg {
+  border-radius: 8px;
+  font-size: 13px;
+  height: 45px;
+  border: 1px solid #DB1E3C;
+}
+.modal .modal-content label,
+.modal .modal-content p,
+.modal .modal-content input {
+  color: #737373;
+  font-size: 15px;
+}
+.modal .modal-content input {
+  font-size: 14px;
+  height: 45px;
+}
+
 .complete-sale {
   padding: 60px 0;
   border: 1px solid #EEEEEE;
@@ -245,36 +285,7 @@ input.error {
 }
 .complete-sale .number-code input[type=number] {
   -moz-appearance: textfield;
-}
-
-.modal .modal-content {
-  padding: 30px 60px;
-}
-.modal .modal-content .modal-header {
-  border: none;
-  justify-content: center;
-}
-.modal .modal-content .modal-header h6 {
-  font-weight: 700;
-}
-.modal .modal-content .modal-footer {
-  border: none;
-}
-.modal .modal-content .modal-footer .btn-bg {
-  border-radius: 8px;
-  font-size: 13px;
-  height: 45px;
-  border: 1px solid #DB1E3C;
-}
-.modal .modal-content .modal-footer .btn-bg:nth-child(2) {
-  border: 1px solid #DB1E3C;
-  background-color: #fff;
-  color: #DB1E3C !important;
-}
-.modal .modal-content label,
-.modal .modal-content p,
-.modal .modal-content input {
-  color: #737373;
+  font-size: 30px;
 }
 
 /*===================

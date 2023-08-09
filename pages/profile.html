@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Site keywords here">
+    <meta name="description" content="">
+    <meta name='copyright' content=''>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title -->
+    <title>Hilwa</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../img/logo.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+        rel="stylesheet">
+    <!--  load Bootstrap CSS  -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.rtl.css">
+    <!--  load font awesome CSS  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!--  load owl carousel CSS  -->
+    <link href="../css/owl.carousel.css" rel="stylesheet">
+    <link href="../css/owl.theme.default.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/datepicker.css">
+
+    <!-- load style CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Header Area -->
+    <header class="header">
+        <div class="nav d-flex align-items-center justify-content-between container">
+            <div class="d-flex align-items-center justify-content-start">
+                <div class="logo text-center">
+                    <a href="../index.html">
+                        <img src="../img/logo.png" alt="">
+                    </a>
+                </div>
+                <!-- menu list -->
+                <div class="menu-list me-5">
+                    <ul class="nav">
+                        <li class="nav-item active">
+                            <a href="./about.html">
+                                من نحن
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../pages/products.html">
+                                المنتجات
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./contact.html">
+                                اتصل بنا
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="menu-list">
+                    <ul class="nav">
+                        <li class="nav-item border-left">
+                            <a href="#">
+                                <svg class="translate-svg">
+                                    <use href="../icons.svg#translate"></use>
+                                </svg>
+                                English
+                            </a>
+                        </li>
+                        <li class="nav-item border-left">
+                            <a href="#">
+                                <svg>
+                                    <use href="../icons.svg#user"></use>
+                                </svg>
+                                تسجيل الدخول
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">
+                                <svg>
+                                    <use href="../icons.svg#shoppingCart"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- End Header Inner -->
+    </header>
+    <!-- End Header Area -->
+    <!-- page content -->
+    <div class="profile-page">
+        <div class="sidebar">
+            <div class="user-info">
+                <p>محمود خلة</p>
+                <p>mahmodk@gmail.com</p>
+            </div>
+            <div class="sidebar-list d-flex align-items-start w-100">
+                <div class="nav flex-column nav-pills w-100" id="v-pills-tab" role="tablist"
+                    aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-portfolio-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-portfolio" type="button" role="tab" aria-controls="v-pills-portfolio"
+                        aria-selected="true">المحفظة</button>
+                    <button class="nav-link" id="v-pills-orders-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-orders" type="button" role="tab" aria-controls="v-pills-orders"
+                        aria-selected="false">الطلبات</button>
+                    <button class="nav-link" id="v-pills-address-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-address" type="button" role="tab" aria-controls="v-pills-address"
+                        aria-selected="false">العناوين</button>
+                    <button class="nav-link" id="v-pills-return-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-return" type="button" role="tab" aria-controls="v-pills-return"
+                        aria-selected="false">الإرجاع</button>
+                    <button class="nav-link" id="v-pills-account-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-account" type="button" role="tab" aria-controls="v-pills-account"
+                        aria-selected="false">حسابي</button>
+                </div>
+            </div>
+            <a href="#" class="nav-link">تسجيل خروج</a>
+        </div>
+        <div class="page-content container">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-portfolio" role="tabpanel"
+                    aria-labelledby="v-pills-portfolio-tab">
+                    <div class="d-flex align-items-start justify-content-end">
+                        <button type="button" class="btn btn-bg" data-bs-toggle="modal" data-bs-dismiss="modal"
+                            data-bs-target="#balanceModal">
+                            <i class="fa-solid fa-plus"></i>
+                            شحن الرصيد
+                        </button>
+                        <div class="modal fade" id="balanceModal" tabindex="-1" aria-labelledby="balanceModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content">
+                                    <form action="#" class="accountForm">
+                                        <div class="modal-header">
+                                            <h6 class="modal-title" id="balanceModalLabel"> شحن الرصيد</h6>
+                                        </div>
+                                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link active" id="pills-balance01-tab"
+                                                    data-bs-toggle="pill" data-bs-target="#pills-balance01"
+                                                    type="button" role="tab" aria-controls="pills-balance01"
+                                                    aria-selected="true">
+                                                    <img src="../img/footer01.png" alt="">
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-balance02-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-balance02" type="button" role="tab"
+                                                    aria-controls="pills-balance02" aria-selected="false">
+                                                    <img src="../img/footer02.png" alt="">/
+                                                    <img src="../img/footer05.png" alt="">
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-balance03-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-balance03" type="button" role="tab"
+                                                    aria-controls="pills-balance03" aria-selected="false">
+                                                    <img src="../img/footer04.png" alt="">
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button class="nav-link" id="pills-balance04-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-balance04" type="button" role="tab"
+                                                    aria-controls="pills-balance04" aria-selected="false">
+                                                    <img src="../img/footer06.png" alt="">
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div class="modal-body">
+                                            <div class="tab-content pt-4" id="pills-tabContent">
+                                                <div class="tab-pane fade show active" id="pills-balance01"
+                                                    role="tabpanel" aria-labelledby="pills-balance01-tab">
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-6 mb-4">
+                                                            <label for="card-number" class="form-label">رقم
+                                                                البطاقة</label>
+                                                            <input type="number" class="form-control" id="card-number"
+                                                                name="card-number">
+                                                        </div>
+                                                        <div class="col-12 col-md-6 mb-4">
+                                                            <label for="card-name" class="form-label">اسم حامل البطاقة
+                                                            </label>
+                                                            <input type="text" class="form-control" id="card-name"
+                                                                name="card-name">
+                                                        </div>
+                                                        <div class="col-12 col-md-6 mb-4">
+                                                            <label for="date" class="form-label">تاريخ الانتهاء</label>
+                                                            <input type="text" class="form-control" placeholder="الشهر"
+                                                                id="datepicker">
+                                                        </div>
+                                                        <div class="col-12 col-md-6 mb-4">
+                                                            <label for="CVC" class="form-label">رقم CVC/CVV</label>
+                                                            <input type="number" class="form-control" id="CVC"
+                                                                name="CVC">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="pills-balance02" role="tabpanel"
+                                                    aria-labelledby="pills-balance02-tab">...</div>
+                                                <div class="tab-pane fade" id="pills-balance03" role="tabpanel"
+                                                    aria-labelledby="pills-balance03-tab">...</div>
+                                                <div class="tab-pane fade" id="pills-balance04" role="tabpanel"
+                                                    aria-labelledby="pills-balance04-tab">...</div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer justify-content-center">
+                                            <button type="submit" class="btn btn-bg mb-3" data-bs-toggle="modal"
+                                                data-bs-dismiss="modal">
+                                                شحن الرصيد </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="balance my-5 d-flex align-items-center justify-content-between flex-wrap">
+                        <div class="balance-box">
+                            <p>الرصيد الكلي</p>
+                            <p class="mb-0">0.00 ر.س</p>
+                        </div>
+                        <div class="balance-box">
+                            <p>الرصيد المعلق</p>
+                            <p class="mb-0">0.00 ر.س</p>
+                        </div>
+                        <div class="balance-box">
+                            <p>الرصيد المتاح</p>
+                            <p class="mb-0">0.00 ر.س</p>
+                        </div>
+                        <div class="balance-box">
+                            <p>الرصيد القابل للسحب</p>
+                            <p class="mb-0">0.00 ر.س</p>
+                        </div>
+                    </div>
+                    <div class="financial-operations">
+                        <h5 class="mb-5 fw-bold">المعاملات المالية</h5>
+                        <div class="financ-box d-flex align-items-start justify-content-start">
+                            <span>+0.00 ر.س</span>
+                            <div>
+                                <p class="m-0">
+                                    إيداع بواسطة Visa card
+                                </p>
+                                <p class="text-muted m-0">
+                                    <i class="fa-regular fa-calendar"></i>
+                                    6/5/2023
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">
+                    <h5 class="mb-5 fw-bold"> قائمة الطلبات</h5>
+                    
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">حالية</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">مكتملة</button>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                      </div>
+                
+                </div>
+                <div class="tab-pane fade" id="v-pills-address" role="tabpanel" aria-labelledby="v-pills-address-tab">
+                    address</div>
+                <div class="tab-pane fade" id="v-pills-return" role="tabpanel" aria-labelledby="v-pills-return-tab">
+                    return</div>
+                <div class="tab-pane fade" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account-tab">
+                    account</div>
+            </div>
+        </div>
+    </div>
+    <!-- page footer -->
+    <section class="footer">
+        <div class="footer-inner padding-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <h6 class="mb-4">عن الموقع</h6>
+                        <p class="about">
+                            تجسد علامتنا التجارية المتميزة رؤية لتوفير حياة كريمة قوامها التراث القوي والتقاليد الراسخة
+                            والسمعة الطيبة, حيث نسعى من خلالها لتقديم مياه شرب نقية وفق أعلى مستويات الجودة للمستهلكين.
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <h6 class="mb-4"> روابط</h6>
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+                                <i class="fa-solid fa-square"></i>
+                                <a href="#">عن الشركة</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <i class="fa-solid fa-square"></i>
+                                <a href="#">المنتجات </a>
+                            </li>
+                            <li class="footer-list-item">
+                                <i class="fa-solid fa-square"></i>
+                                <a href="#">الأسئلة الشائعة</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <i class="fa-solid fa-square"></i>
+                                <a href="#"> التوظيف</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-2">
+                        <h6 class="mb-4">سياسة الموقع</h6>
+                        <ul class="footer-list">
+                            <li class="footer-list-item">
+                                <i class="fa-solid fa-square"></i>
+                                <a href="#">سياسة الخصوصية</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <i class="fa-solid fa-square"></i>
+                                <a href="#">الشروط والأحكام </a>
+                            </li>
+                            <li class="footer-list-item">
+                                <i class="fa-solid fa-square"></i>
+                                <a href="#">اتصل بنا</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <h6 class="mb-2"> تابعنا</h6>
+                        <ul class="social-list mb-4">
+                            <li><a href="#">
+                                    <i class="fa-brands fa-snapchat"></i>
+                                </a></li>
+                            <li><a href="#">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a></li>
+                            <li><a href="#">
+                                    <i class="fa-brands fa-twitter"></i>
+                                </a></li>
+                            <li><a href="#">
+                                    <i class="fa-brands fa-facebook"></i>
+                                </a></li>
+                            <li><a href="#">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </a></li>
+                            <li><a href="#">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </a></li>
+                            <li><a href="#">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a></li>
+                            <li><a href="#">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </a></li>
+                        </ul>
+                        <h6 class="mb-2">حمل التطبيق</h6>
+                        <ul class="download-list mb-4">
+                            <li><a href="#">
+                                    <img src="../img/download01.png" alt="">
+                                </a></li>
+                            <li><a href="#">
+                                    <img src="../img/download.png" alt="">
+                                </a></li>
+                        </ul>
+                        <h6 class="mb-2">تواصل معنا</h6>
+                        <ul class="contact-list">
+                            <li><a href="#">
+                                    <svg>
+                                        <use href="../icons.svg#calling"></use>
+                                    </svg>
+                                    920001536
+                                </a></li>
+                            <li><a href="#">
+                                    <svg>
+                                        <use href="../icons.svg#message"></use>
+                                    </svg>
+                                    info@hilwawater.com
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="col-12 col-md-4"></div>
+                <div class="col-12 col-md-4">
+                    <p class="text-center m-0"> ©
+                        جميع الحقوق محفوظة لموقع حلوة
+                        2023</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <ul class="footer-bottom-list">
+                        <li>
+                            <img src="../img/footer01.png" alt="footer img">
+                        </li>
+                        <li>
+                            <img src="../img/footer02.png" alt="footer img">
+                        </li>
+                        <li>
+                            <img src="../img/footer03.png" alt="footer img">
+                        </li>
+                        <li>
+                            <img src="../img/footer04.png" alt="footer img">
+                        </li>
+                        <li>
+                            <img src="../img/footer05.png" alt="footer img">
+                        </li>
+                        <li>
+                            <img src="../img/footer06.png" alt="footer img">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- End page content -->
+
+    <!--  load jQuery  -->
+    <script src="../js/jquery.min.js"></script>
+    <!--  load owl carousel.  -->
+    <script src="../js/owl.carousel.min.js"></script>
+    <!--  load popper.js  -->
+    <script src="../js/popper.js"></script>
+    <!--  load bootstrap js  -->
+    <script src="../js/bootstrap.min.js"></script>
+    <!--  load jquery validate js  -->
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <!-- Main JS -->
+    <script src="../js/main.js"></script>
+
+</body>
+
+</html>

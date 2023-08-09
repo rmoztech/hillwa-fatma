@@ -53,7 +53,7 @@ a {
 
 .btn-bg {
   background-color: #DB1E3C;
-  border-radius: 10px;
+  border-radius: 8px;
   text-align: center;
   color: #fff !important;
   min-width: 185px;
@@ -65,7 +65,7 @@ a {
 
 .btn-gray-bg {
   background-color: #EEEEEE !important;
-  border-radius: 10px;
+  border-radius: 8px;
   text-align: center;
   color: #212529 !important;
   min-width: 100px;
@@ -855,4 +855,91 @@ input.error {
   padding-left: 10px;
   border-right: 1px solid #EEEEEE;
   margin-right: 10px;
+}
+
+/*===================
+	profile  page style 
+=====================*/
+.profile-page {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+}
+.profile-page .nav-link {
+  padding: 14px 58px 14px;
+  text-align: right;
+  font-size: 18px;
+  color: #C0B7B7;
+  font-weight: 600;
+  border-radius: 0px;
+}
+.profile-page .nav-link.active {
+  background-color: #D1E9FF;
+  color: #737373;
+}
+.profile-page .sidebar {
+  min-height: 600px;
+  background: #F5FAFF;
+  width: 270px;
+  border-bottom: 5px solid #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.profile-page .sidebar .user-info {
+  padding: 40px 30px 30px;
+}
+.profile-page .sidebar .user-info p {
+  margin: 0;
+  line-height: 1.7;
+}
+.profile-page .sidebar .sidebar-list {
+  padding: 30px 0;
+  border-top: 1px solid #EEEEEE;
+  border-bottom: 1px solid #EEEEEE;
+}
+.profile-page .page-content {
+  padding: 70px 0;
+  min-height: 600px;
+  padding-right: 100px;
+}
+.profile-page .page-content .balance .balance-box {
+  width: 22%;
+  text-align: center;
+  background-color: #F5FAFF;
+  padding: 20px 0;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.profile-page .page-content .balance .balance-box:first-of-type {
+  color: #028C59;
+}
+.profile-page .page-content .financial-operations .financ-box {
+  padding: 20px;
+  background-color: #F5FAFF;
+  line-height: 2;
+  font-size: 17px;
+}
+.profile-page .page-content .financial-operations .financ-box span {
+  margin-left: 20px;
+}
+.profile-page .page-content .financial-operations .financ-box .text-muted {
+  color: #F7F7F7;
+  font-size: 13px;
+}
+.profile-page .modal .modal-content {
+  padding: 30px 0;
+}
+.profile-page .modal .modal-content .accountForm {
+  font-size: 15px;
+}
+.profile-page .modal .modal-content .accountForm .modal-body {
+  padding: 0 60px;
+}
+.profile-page .modal .modal-content ul.nav {
+  background-color: #F5FAFF;
+}
+.profile-page .modal .modal-content ul.nav .nav-link {
+  padding: 15px 30px 15px;
 }/*# sourceMappingURL=style.css.map */

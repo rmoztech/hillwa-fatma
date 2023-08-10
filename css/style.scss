@@ -71,7 +71,7 @@ a {
 }
 
 .btn-gray-bg {
-  background-color: $borderColor !important;
+  background-color: $borderColor;
   border-radius: 8px;
   text-align: center;
   color: $mainColor !important;
@@ -81,6 +81,10 @@ a {
     width: 15px;
     height: 15px;
     margin-left: 5px;
+  }
+
+  &:hover {
+    background-color: #dcdcdc;
   }
 
 }
@@ -95,6 +99,34 @@ a {
   }
 }
 
+.btn-blue-bg {
+  background-color: $blueLightColor;
+  border-radius: 8px;
+  text-align: center;
+  color: $blueDarkColor ;
+  min-width: 155px;
+  padding: 10px;
+
+  svg {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    stroke: $blueDarkColor;
+  }
+}
+
+.btn-green-bg {
+  background-color: $greenLightColor;
+  border-radius: 8px;
+  text-align: center;
+  color: $greenColor !important;
+  min-width: 155px;
+
+  &:hover {
+    background-color: #028c5936;
+  }
+}
+
 .btn-link {
   color: $redColor !important;
 }
@@ -103,14 +135,14 @@ a {
   color: $textGrayColor !important;
 }
 
-.order-card {
+.product-card {
   border: 1px solid $grayLightColor;
   background-color: $grayLight2Color;
   color: $textColor;
   position: relative;
   line-height: 2;
 
-  .order-card-img {
+  .product-card-img {
     background-color: $grayLightColor;
   }
 
@@ -354,6 +386,46 @@ input.error {
       font-size: 30px;
     }
   }
+}
+.address-icon {
+  padding-right: 50px;
+
+  .icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: $borderColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  button.btn-gray-bg {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .close {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $borderColor;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
 }
 
 /*===================
@@ -816,7 +888,7 @@ input.error {
 =====================*/
 .product-page {
   .page-content {
-    .order-card {
+    .product-card {
       .card-body {
         .card-text {
           font-size: 16px;
@@ -831,6 +903,7 @@ input.error {
             width: 20px;
             height: 20px;
             margin-left: 5px;
+            stroke: $mainColor;
           }
         }
 
@@ -855,23 +928,24 @@ input.error {
 	shopping cart page style 
 =====================*/
 .shopping-cart-page {
-  .order-card {
+  .product-card {
     border: none;
     background-color: transparent;
     border-bottom: 1px solid $borderColor;
     border-radius: 0;
 
-    .order-card-img {
+    .product-card-img {
       width: 100%;
       height: 190px;
       border: 1px solid $borderColor;
       border-radius: 12px;
+      display: flex;
     }
 
   }
 
   @include devices(tablet) {
-    .order-card {
+    .product-card {
       .card-img-top {
         width: auto;
         height: 100%;
@@ -885,7 +959,6 @@ input.error {
 /*===================
 	checkout  page style 
 =====================*/
-
 .checkout-page {
   h5 {
     font-weight: 600;
@@ -940,46 +1013,7 @@ input.error {
           }
         }
 
-        .address-icon {
-          padding-right: 50px;
-
-          .icon {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background-color: $borderColor;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-left: 20px;
-
-            svg {
-              width: 30px;
-              height: 30px;
-            }
-          }
-
-          button.btn-gray-bg {
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-          }
-
-          .close {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background-color: $borderColor;
-            font-size: 13px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-          }
-
-        }
+  
       }
     }
   }
@@ -1111,12 +1145,20 @@ input.error {
       }
 
       .img {
+        // display: inline-block;
+        // min-width: 100px;
+        // padding: 12px;
+        // border: 2px solid $borderColor;
+        // border-radius: 10px;
+        // text-align: center;
         display: inline-block;
-        min-width: 100px;
+        min-width: 90px;
         padding: 12px;
-        border: 2px solid $borderColor;
+        border: 2px solid #EEEEEE;
         border-radius: 10px;
         text-align: center;
+        height: 50px;
+        min-width: 80px;
 
         svg {
           width: 20px;
@@ -1127,7 +1169,7 @@ input.error {
         span {
           &:nth-of-type(2) {
             color: $textGrayColor;
-            padding-left: 10px;
+            padding-right: 10px;
             border-right: 1px solid $borderColor;
             margin-right: 10px;
           }
@@ -1252,4 +1294,103 @@ input.error {
     }
   }
 
+  .order-card {
+    padding: 30px 15px;
+    border-bottom: 2px solid $borderColor;
+    height: 160px;
+
+    .order-card-icon {
+      margin-left: 30px;
+
+      svg {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    .order-card-info {
+      line-height: 2;
+
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    .order-card-btn {
+      .btn-gray-bg {
+        min-width: 155px
+      }
+    }
+  }
+
+  #orders {
+    border-bottom: 2px solid $borderColor;
+
+    .nav-link {
+      min-width: 160px;
+      text-align: center;
+      padding: 10px 20px;
+      border: none;
+
+      &.active {
+        background-color: transparent;
+        border-bottom: 3px solid $mainColor;
+        color: $mainColor;
+      }
+    }
+  }
+
+}
+/*===================
+	profile  page style 
+=====================*/
+.order-details-page {
+  .complete-sale {
+    .payment-list {
+      li {
+        display: inline-block;
+        min-width: 90px;
+        padding: 12px;
+        border: 2px solid #EEEEEE;
+        border-radius: 10px;
+        text-align: center;
+        height: 50px;
+        width: 80px;
+
+        &.active {
+          border-color: $redColor;
+        }
+      }
+    }
+
+    p {
+      svg {
+        width: 15px;
+        height: 15px;
+        margin-left: 5px;
+      }
+    }
+
+    .truck {
+      stroke: $mainColor;
+    }
+
+  }
+
+  .product-card {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid $borderColor;
+    border-radius: 0;
+
+    .product-card-img {
+      width: 100%;
+      height: 190px;
+      border: 1px solid $borderColor;
+      border-radius: 12px;
+      display: flex;
+    }
+
+  }
 }

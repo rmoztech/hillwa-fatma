@@ -111,7 +111,7 @@ $(document).ready(function () {
 
     $(".complete-sale-btn").click(function (e) {
         e.preventDefault();
-        var count = $(".shopping-cart-page").find(".order-card").length;
+        var count = $(".shopping-cart-page").find(".product-card").length;
         if (count < 10) {
             var toastElList = [].slice.call($('.toast'))
             var toastList = toastElList.map(function (toastEl) {

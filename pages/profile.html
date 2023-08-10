@@ -259,21 +259,180 @@
                 </div>
                 <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">
                     <h5 class="mb-5 fw-bold"> قائمة الطلبات</h5>
-                    
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+                    <ul class="nav nav-tabs" id="orders" role="tablist">
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">حالية</button>
+                            <button class="nav-link active" id="current-tab" data-bs-toggle="tab"
+                                data-bs-target="#current" type="button" role="tab" aria-controls="current"
+                                aria-selected="true">حالية</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">مكتملة</button>
+                            <button class="nav-link" id="completed-tab" data-bs-toggle="tab" data-bs-target="#completed"
+                                type="button" role="tab" aria-controls="completed" aria-selected="false">مكتملة</button>
                         </li>
-                      </ul>
-                      <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-                      </div>
-                
+                    </ul>
+                    <div class="tab-content" id="ordersContent">
+                        <div class="tab-pane fade show active" id="current" role="tabpanel"
+                            aria-labelledby="current-tab">
+                            <div class="order-card d-flex align-items-center justify-content-between flex-wrap">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <div class="order-card-icon">
+                                        <svg>
+                                            <use href="../icons.svg#box"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="order-card-info">
+                                        <p class="m-0">
+                                            رقم الطلب #012308
+                                        </p>
+                                        <p class="m-0">
+                                            إجمالي السعر
+                                            <span>
+                                                40 ر.س
+                                            </span>
+                                        </p>
+                                        <p class="m-0">
+                                            <svg>
+                                                <use href="../icons.svg#boxTime"></use>
+                                            </svg>
+                                            28/4/2023
+                                            <span class="mx-2">|</span>
+                                            04:00 PM
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="order-card-btn d-flex align-items-start flex-column h-100">
+                                    <span class="btn-blue-bg d-block mb-auto">
+                                        <svg>
+                                            <use href="../icons.svg#truck"></use>
+                                        </svg>
+                                        في الطريق اليك
+                                    </span>
+                                    <a href="#" class="btn btn-gray-bg">
+                                        عرض تفاصيل
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="order-card d-flex align-items-center justify-content-between flex-wrap">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <div class="order-card-icon">
+                                        <svg>
+                                            <use href="../icons.svg#box"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="order-card-info">
+                                        <p class="m-0">
+                                            رقم الطلب #012308
+                                        </p>
+                                        <p class="m-0">
+                                            إجمالي السعر
+                                            <span>
+                                                40 ر.س
+                                            </span>
+                                        </p>
+                                        <p class="m-0">
+                                            <svg>
+                                                <use href="../icons.svg#boxTime"></use>
+                                            </svg>
+                                            28/4/2023
+                                            <span class="mx-2">|</span>
+                                            04:00 PM
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="order-card-btn d-flex align-items-start flex-column h-100">
+                                    <span class="btn-blue-bg d-block mb-auto">
+                                        <svg>
+                                            <use href="../icons.svg#truck"></use>
+                                        </svg>
+                                        في الطريق اليك
+                                    </span>
+                                    <a href="#" class="btn btn-gray-bg">
+                                        عرض تفاصيل
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
+                            <div class="order-card d-flex align-items-center justify-content-between flex-wrap">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <div class="order-card-icon">
+                                        <svg>
+                                            <use href="../icons.svg#box"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="order-card-info">
+                                        <p class="m-0">
+                                            رقم الطلب #012308
+                                        </p>
+                                        <p class="m-0">
+                                            إجمالي السعر
+                                            <span>
+                                                40 ر.س
+                                            </span>
+                                        </p>
+                                        <p class="m-0">
+                                            <svg>
+                                                <use href="../icons.svg#boxTime"></use>
+                                            </svg>
+                                            28/4/2023
+                                            <span class="mx-2">|</span>
+                                            04:00 PM
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="order-card-btn d-flex align-items-start flex-column h-100">
+                                    <a href="#" class="btn btn-green-bg mb-auto">
+                                        طلب مرة أخري
+                                    </a>
+                                    <a href="#" class="btn btn-gray-bg">
+                                        عرض تفاصيل
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="order-card d-flex align-items-center justify-content-between flex-wrap">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <div class="order-card-icon">
+                                        <svg>
+                                            <use href="../icons.svg#box"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="order-card-info">
+                                        <p class="m-0">
+                                            رقم الطلب #012308
+                                        </p>
+                                        <p class="m-0">
+                                            إجمالي السعر
+                                            <span>
+                                                40 ر.س
+                                            </span>
+                                        </p>
+                                        <p class="m-0">
+                                            <svg>
+                                                <use href="../icons.svg#boxTime"></use>
+                                            </svg>
+                                            28/4/2023
+                                            <span class="mx-2">|</span>
+                                            04:00 PM
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="order-card-btn d-flex align-items-start flex-column h-100">
+                                    <a href="#" class="btn btn-green-bg mb-auto">
+                                        طلب مرة أخري
+                                    </a>
+                                    <a href="#" class="btn btn-gray-bg">
+                                        عرض تفاصيل
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="tab-pane fade" id="v-pills-address" role="tabpanel" aria-labelledby="v-pills-address-tab">
                     address</div>

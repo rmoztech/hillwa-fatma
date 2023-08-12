@@ -387,6 +387,7 @@ input.error {
     }
   }
 }
+
 .address-icon {
   padding-right: 50px;
 
@@ -1013,7 +1014,7 @@ input.error {
           }
         }
 
-  
+
       }
     }
   }
@@ -1342,8 +1343,9 @@ input.error {
   }
 
 }
+
 /*===================
-	profile  page style 
+	order details page style 
 =====================*/
 .order-details-page {
   .complete-sale {
@@ -1390,6 +1392,175 @@ input.error {
       border: 1px solid $borderColor;
       border-radius: 12px;
       display: flex;
+    }
+
+  }
+}
+
+/*===================
+	questions page style 
+=====================*/
+.questions-page {
+  h1 {
+    font-weight: 700;
+    color: $redColor;
+  }
+
+  .accordion-item {
+    border-radius: 10px;
+
+    .accordion-button {
+      position: relative;
+      overflow: hidden;
+      padding-right: 30px;
+      color: $mainColor !important;
+      font-weight: 700;
+      border-radius: 10px;
+      background-color: transparent !important;
+      height: 65px;
+
+      &::after {
+        display: none;
+      }
+
+      span {
+        position: absolute;
+        right: 0;
+        left: 0;
+        width: 20px;
+        height: 100%;
+        background-color: $borderColor;
+
+      }
+
+      i {
+        font-size: 20px;
+        color: $borderColor;
+        margin-left: 15px;
+      }
+
+      &:not(.collapsed) {
+        span {
+          background-color: $redColor;
+        }
+
+        i {
+          color: $redColor
+        }
+      }
+    }
+
+    .accordion-body {
+      padding: 20px 45px;
+
+      ul {
+        li {
+          line-height: 2.5;
+        }
+      }
+    }
+  }
+
+}
+
+/*===================
+	privacy page style 
+=====================*/
+.privacy-page {
+  line-height: 2.5;
+
+  h1,
+  h6,
+  h4 {
+    font-weight: 700;
+    color: $redColor;
+  }
+
+  .privacy-content {
+    >div {
+      &:first-of-type {
+        width: 70%;
+
+        ul {
+          list-style: inside;
+        }
+      }
+
+      &:nth-of-type(2) {
+        width: 25%;
+      }
+
+      @include devices(tablet) {
+        &:first-of-type {
+          width: 100%;
+        }
+
+        &:nth-of-type(2) {
+          width: 100%;
+        }
+
+      }
+    }
+
+    p {
+      text-align: justify;
+      margin: 0;
+    }
+
+    h6 {
+      position: relative;
+
+      >span {
+        width: 20px;
+        height: 20px;
+        background-color: #D1E9FFE5;
+        border-radius: 50%;
+        position: absolute;
+        right: -30px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        >span {
+          width: 10px;
+          height: 10px;
+          background-color: $redColor;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .indexing {
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+
+
+        >span {
+          width: 15px;
+          height: 15px;
+          background-color: #D1E9FFE5;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 10px;
+
+          >span {
+            width: 7px;
+            height: 7px;
+            background-color: $redColor;
+            border-radius: 50%;
+          }
+        }
+
+        a {
+          text-decoration: underline;
+          font-size: 17px;
+        }
+      }
     }
 
   }

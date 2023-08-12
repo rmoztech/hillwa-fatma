@@ -1005,7 +1005,7 @@ input.error {
 }
 
 /*===================
-	profile  page style 
+	order details page style 
 =====================*/
 .order-details-page .complete-sale .payment-list li {
   display: inline-block;
@@ -1040,4 +1040,133 @@ input.error {
   border: 1px solid #EEEEEE;
   border-radius: 12px;
   display: flex;
+}
+
+/*===================
+	questions page style 
+=====================*/
+.questions-page h1 {
+  font-weight: 700;
+  color: #DB1E3C;
+}
+.questions-page .accordion-item {
+  border-radius: 10px;
+}
+.questions-page .accordion-item .accordion-button {
+  position: relative;
+  overflow: hidden;
+  padding-right: 30px;
+  color: #212529 !important;
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: transparent !important;
+  height: 65px;
+}
+.questions-page .accordion-item .accordion-button::after {
+  display: none;
+}
+.questions-page .accordion-item .accordion-button span {
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background-color: #EEEEEE;
+}
+.questions-page .accordion-item .accordion-button i {
+  font-size: 20px;
+  color: #EEEEEE;
+  margin-left: 15px;
+}
+.questions-page .accordion-item .accordion-button:not(.collapsed) span {
+  background-color: #DB1E3C;
+}
+.questions-page .accordion-item .accordion-button:not(.collapsed) i {
+  color: #DB1E3C;
+}
+.questions-page .accordion-item .accordion-body {
+  padding: 20px 45px;
+}
+.questions-page .accordion-item .accordion-body ul li {
+  line-height: 2.5;
+}
+
+/*===================
+	privacy page style 
+=====================*/
+.privacy-page {
+  line-height: 2.5;
+}
+.privacy-page h1,
+.privacy-page h6,
+.privacy-page h4 {
+  font-weight: 700;
+  color: #DB1E3C;
+}
+.privacy-page .privacy-content > div:first-of-type {
+  width: 70%;
+}
+.privacy-page .privacy-content > div:first-of-type ul {
+  list-style: inside;
+}
+.privacy-page .privacy-content > div:nth-of-type(2) {
+  width: 25%;
+}
+@media only screen and (max-width: 768px) {
+  .privacy-page .privacy-content > div:first-of-type {
+    width: 100%;
+  }
+  .privacy-page .privacy-content > div:nth-of-type(2) {
+    width: 100%;
+  }
+}
+.privacy-page .privacy-content p {
+  text-align: justify;
+  margin: 0;
+}
+.privacy-page .privacy-content h6 {
+  position: relative;
+}
+.privacy-page .privacy-content h6 > span {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(209, 233, 255, 0.8980392157);
+  border-radius: 50%;
+  position: absolute;
+  right: -30px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.privacy-page .privacy-content h6 > span > span {
+  width: 10px;
+  height: 10px;
+  background-color: #DB1E3C;
+  border-radius: 50%;
+}
+.privacy-page .privacy-content .indexing li {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.privacy-page .privacy-content .indexing li > span {
+  width: 15px;
+  height: 15px;
+  background-color: rgba(209, 233, 255, 0.8980392157);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.privacy-page .privacy-content .indexing li > span > span {
+  width: 7px;
+  height: 7px;
+  background-color: #DB1E3C;
+  border-radius: 50%;
+}
+.privacy-page .privacy-content .indexing li a {
+  text-decoration: underline;
+  font-size: 17px;
 }/*# sourceMappingURL=style.css.map */

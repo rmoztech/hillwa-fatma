@@ -143,6 +143,7 @@ a {
   color: $textColor;
   position: relative;
   line-height: 2;
+  transition: all ease-in-out .3s;
 
   .product-card-img {
     background-color: $grayLightColor;
@@ -216,12 +217,34 @@ a {
       border-radius: 50%;
       background-color: $borderColor;
       text-align: center;
+      min-width: 35px;
+      padding: 0;
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
 
       svg {
         width: 18px;
         height: 18px;
+        margin: 0;
       }
     }
+
+    a.card-title {
+      color: $mainColor;
+      width: 100%;
+      transition: all ease-in-out .3s;
+
+      &:hover {
+        color: $redColor;
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+
   }
 }
 
@@ -1066,6 +1089,8 @@ div[class*="-page"] {
 .product-page {
   .page-content {
     .product-card {
+      box-shadow: none;
+
       .card-body {
         .card-text {
           font-size: 16px;
@@ -1110,6 +1135,7 @@ div[class*="-page"] {
     background-color: transparent;
     border-bottom: 1px solid $borderColor;
     border-radius: 0;
+    box-shadow: none;
 
     .product-card-img {
       width: 100%;
@@ -1589,6 +1615,10 @@ div[class*="-page"] {
 	order details page style 
 =====================*/
 .order-details-page {
+  .product-card {
+    box-shadow: none;
+  }
+
   .complete-sale {
     .payment-list {
       li {

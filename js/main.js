@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     $(window).scroll(function () {
         const currentScroll = window.pageYOffset;
         if (currentScroll > 150) {
@@ -64,77 +63,6 @@ $(document).ready(function () {
         }
     });
 
-    $('.btn-number').click(function (e) {
-        e.preventDefault();
-
-        fieldName = $(this).attr('data-field');
-        type = $(this).attr('data-type');
-        var input = $("input[name='" + fieldName + "']");
-        var currentVal = parseInt(input.val());
-        if (!isNaN(currentVal)) {
-            if (type == 'minus') {
-
-                if (currentVal > input.attr('min')) {
-                    input.val(currentVal - 1).change();
-                }
-                if (parseInt(input.val()) == input.attr('min')) {
-                    $(this).attr('disabled', true);
-                }
-
-            } else if (type == 'plus') {
-
-                if (currentVal < input.attr('max')) {
-                    input.val(currentVal + 1).change();
-                }
-                if (parseInt(input.val()) == input.attr('max')) {
-                    $(this).attr('disabled', true);
-                }
-
-            }
-        } else {
-            input.val(0);
-        }
-    });
-    $('.input-qty').focusin(function () {
-        $(this).data('oldValue', $(this).val());
-    });
-    $('.input-qty').change(function () {
-
-        minValue = parseInt($(this).attr('min'));
-        maxValue = parseInt($(this).attr('max'));
-        valueCurrent = parseInt($(this).val());
-
-        name = $(this).attr('name');
-        if (valueCurrent >= minValue) {
-            $(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled')
-        } else {
-            alert('Sorry, the minimum value was reached');
-            $(this).val($(this).data('oldValue'));
-        }
-        if (valueCurrent <= maxValue) {
-            $(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled')
-        } else {
-            alert('Sorry, the maximum value was reached');
-            $(this).val($(this).data('oldValue'));
-        }
-
-
-    });
-    $(".input-qty").keydown(function (e) {
-        // Allow: backspace, delete, tab, escape, enter and .
-        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
-            // Allow: Ctrl+A
-            (e.keyCode == 65 && e.ctrlKey === true) ||
-            // Allow: home, end, left, right
-            (e.keyCode >= 35 && e.keyCode <= 39)) {
-            // let it happen, don't do anything
-            return;
-        }
-        // Ensure that it is a number and stop the keypress
-        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
-            e.preventDefault();
-        }
-    });
 
     $(".complete-sale-btn").click(function (e) {
         e.preventDefault();
@@ -208,8 +136,8 @@ $(document).ready(function () {
         if (localStorage.cart) {
             // load cart data from local storage
             cart = JSON.parse(localStorage.cart);
-            $('.num-cart').text(JSON.parse(localStorage.cart).length);
-            // showCart();  // display cart that is loaded into cart array
+            $('.num-cart').text(JSON.parse(localStorage.cart).length || 0);
+            showCart();  // display cart that is loaded into cart array
         }
     });
     function saveCart() {
@@ -218,26 +146,103 @@ $(document).ready(function () {
             $('.num-cart').text(JSON.parse(localStorage.cart).length);
         }
     }
+
+    
+    function deleteItem(index){
+        console.log('dfkdfjdfkdjf')
+        cart.splice(index,1); 
+        console.log(cart)
+        showCart();
+        saveCart();
+    }
+
+
+    function showCart() {
+        $(".card-list").empty();
+
+        for (var i in cart) {
+            var item = cart[i];
+            var product = `<div class="card product-card mb-4 pb-4" data-aos="fade-up">
+            <div class="row g-0">
+                <div class="col-md-3">
+                    <div class="product-card-img">
+                        <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
+                        <div class="w-75">
+                            <h6 class="card-title mb-4">`
+                                 + item.name + 
+                             `</h6> <p class="card-text mb-4">`
+                                + item.details + 
+                                `</p> 
+                        </div>
+                        <div class="w-25">
+                            <p class='price p-0 mb-5 text-end'>
+                                <span class="new-price">`
+                        + item.newPrice + `</span>
+                                <span class="old-price">`
+                        + item.oldPrice
+
+                        + `</span>
+                        </p>
+                    </div>
+            <div class="w-100 d-flex align-items-center justify-content-between">
+                <div class="amount">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-number" data-type="plus"
+                                data-field="quant[01]">
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+                                    </span>
+                                    <input type="text" name="quant[01]" class=" input-qty" value="1"
+                                        min="1" max="100">
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-number" data-type="minus"
+                                                data-field="quant[01]">
+                                                <i class="fa-solid fa-minus"></i> </button>
+                                        </span>
+                                        <span class="me-3">كرتون</span>
+                                </div>
+                            </div>
+                            <button class=" btn btn-gray-bg trash" onclick='deleteItem(` + i +  `)'>
+                            <svg>
+                                <use href="../icons.svg#trash"></use>
+                            </svg>
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>`
+            // + "<button onclick='deleteItem(" + i + ")'>Delete</button></td></tr>";
+            $(".card-list").append(product);
+        }
+    }
     function addToCart(item) {
         var name = $(item).parent('.card-body').find(".card-title").text() || $('.card').find(".card-title").text();
-        var price = $(item).parent('.card-body').find(".price").find(".new-price").text() || $('.card').find(".price").find(".new-price").text();
+        var details = $(item).parent('.card-body').find("p.card-text").text() || $('.card').find("p.card-text").text();
+        var newPrice = $(item).parent('.card-body').find(".price").find(".new-price").text() || $('.card').find(".price").find(".new-price").text();
+        var oldPrice = $(item).parent('.card-body').find(".price").find(".old-price").text() || $('.card').find(".price").find(".old-price").text();
         var qty = $('.card').find(".input-qty").val() || 1;
 
         // update Qty if product is already present
         for (var i in cart) {
             if (cart[i].Product == name) {
                 cart[i].Qty = qty;  // replace existing Qty
-                // showCart();
+                showCart();
                 saveCart();
                 return;
             }
         }
 
-        var item = { Product: name, Price: price, Qty: qty };
+        var item = { name: name, details: details, newPrice: newPrice, oldPrice: oldPrice, Qty: qty };
         cart.push(item);
 
         saveCart();
-        // showCart();
+        showCart();
     }
 
     $('.add-to-cart').on('click', function () {
@@ -320,8 +325,6 @@ $(document).ready(function () {
         addToCart($(this));
     });
 
-
-
     var numberCodeForm = $('[data-number-code-form]');
     var numberCodeInputs = [...$('[data-number-code-input]').find('[data-number-code-input]').prevObject];
     // Event callbacks
@@ -391,6 +394,79 @@ $(document).ready(function () {
 
     numberCodeForm.on('input', handleInput);
     numberCodeForm.on('keydown', handleKeyDown);
+    
+    $('.btn-number').click(function (e) {
+        e.preventDefault();
+
+        fieldName = $(this).attr('data-field');
+        type = $(this).attr('data-type');
+        var input = $("input[name='" + fieldName + "']");
+        var currentVal = parseInt(input.val());
+        if (!isNaN(currentVal)) {
+            if (type == 'minus') {
+
+                if (currentVal > input.attr('min')) {
+                    input.val(currentVal - 1).change();
+                }
+                if (parseInt(input.val()) == input.attr('min')) {
+                    $(this).attr('disabled', true);
+                }
+
+            } else if (type == 'plus') {
+
+                if (currentVal < input.attr('max')) {
+                    input.val(currentVal + 1).change();
+                }
+                if (parseInt(input.val()) == input.attr('max')) {
+                    $(this).attr('disabled', true);
+                }
+
+            }
+        } else {
+            input.val(0);
+        }
+    });
+    $('.input-qty').focusin(function () {
+        $(this).data('oldValue', $(this).val());
+    });
+    $('.input-qty').change(function () {
+
+        minValue = parseInt($(this).attr('min'));
+        maxValue = parseInt($(this).attr('max'));
+        valueCurrent = parseInt($(this).val());
+
+        name = $(this).attr('name');
+        if (valueCurrent >= minValue) {
+            $(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled')
+        } else {
+            alert('Sorry, the minimum value was reached');
+            $(this).val($(this).data('oldValue'));
+        }
+        if (valueCurrent <= maxValue) {
+            $(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled')
+        } else {
+            alert('Sorry, the maximum value was reached');
+            $(this).val($(this).data('oldValue'));
+        }
+
+
+    });
+    $(".input-qty").keydown(function (e) {
+        // Allow: backspace, delete, tab, escape, enter and .
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
+            // Allow: Ctrl+A
+            (e.keyCode == 65 && e.ctrlKey === true) ||
+            // Allow: home, end, left, right
+            (e.keyCode >= 35 && e.keyCode <= 39)) {
+            // let it happen, don't do anything
+            return;
+        }
+        // Ensure that it is a number and stop the keypress
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+
     AOS.init({
         duration: 1500,
         once: true,

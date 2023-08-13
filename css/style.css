@@ -130,6 +130,7 @@ a {
   color: #22262D;
   position: relative;
   line-height: 2;
+  transition: all ease-in-out 0.3s;
 }
 .product-card .product-card-img {
   background-color: #F7F7F7;
@@ -186,10 +187,27 @@ a {
   border-radius: 50%;
   background-color: #EEEEEE;
   text-align: center;
+  min-width: 35px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .product-card .card-body .trash svg {
   width: 18px;
   height: 18px;
+  margin: 0;
+}
+.product-card .card-body a.card-title {
+  color: #212529;
+  width: 100%;
+  transition: all ease-in-out 0.3s;
+}
+.product-card .card-body a.card-title:hover {
+  color: #DB1E3C;
+}
+.product-card:hover {
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
 }
 
 .breadcrumb {
@@ -822,6 +840,9 @@ div[class*=-page] {
 /*===================
 	product page style 
 =====================*/
+.product-page .page-content .product-card {
+  box-shadow: none;
+}
 .product-page .page-content .product-card .card-body .card-text {
   font-size: 16px;
 }
@@ -850,6 +871,7 @@ div[class*=-page] {
   background-color: transparent;
   border-bottom: 1px solid #EEEEEE;
   border-radius: 0;
+  box-shadow: none;
 }
 .shopping-cart-page .product-card .product-card-img {
   width: 100%;
@@ -1206,6 +1228,9 @@ div[class*=-page] {
 /*===================
 	order details page style 
 =====================*/
+.order-details-page .product-card {
+  box-shadow: none;
+}
 .order-details-page .complete-sale .payment-list li {
   display: inline-block;
   min-width: 90px;

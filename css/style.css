@@ -593,7 +593,7 @@ div[class*=-page] {
   bottom: 30px;
   z-index: 98;
 }
-.home-page .contact > span {
+.home-page .contact > a {
   width: 65px;
   height: 65px;
   border-radius: 50%;
@@ -602,17 +602,17 @@ div[class*=-page] {
   justify-content: center;
   color: #fff;
 }
-.home-page .contact > span.call {
+.home-page .contact > a.call {
   background-color: #DB1E3C;
   margin-bottom: 10px;
 }
-.home-page .contact > span.call i {
+.home-page .contact > a.call i {
   font-size: 30px;
 }
-.home-page .contact > span.whatsapp {
+.home-page .contact > a.whatsapp {
   background-color: #52CB5F;
 }
-.home-page .contact > span.whatsapp i {
+.home-page .contact > a.whatsapp i {
   font-size: 37px;
 }
 

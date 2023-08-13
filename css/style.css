@@ -609,10 +609,10 @@ div[class*=-page] {
 .home-page .contact > a.call i {
   font-size: 30px;
 }
-.home-page .contact > a.whatsapp {
+.home-page .contact > a.whatsapp-call {
   background-color: #52CB5F;
 }
-.home-page .contact > a.whatsapp i {
+.home-page .contact > a.whatsapp-call i {
   font-size: 37px;
 }
 

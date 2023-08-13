@@ -1,5 +1,32 @@
 $(document).ready(function () {
 
+    $(window).scroll(function () {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > 150) {
+            $(".header").addClass("is-sticky");
+        } else {
+            $(".header").removeClass("is-sticky");
+        }
+    });
+
+    $('.menu-btn').click(function () {
+        $('.mobile-navbar').css({ display: 'flex' })
+    })
+    $('.close-btn').click(function () {
+        $('.mobile-navbar').css({ display: ' none' });
+    })
+
+    $('.sidebar .menu-icon').click(function () {
+        if ($('.sidebar .menu-icon i').hasClass('fa-bars')) {
+            console.log('dfkjdhfjkdhf');
+            $('.sidebar').css({ right: ' 0px' });
+            $('.sidebar i').removeClass('fa-bars').addClass('fa-xmark')
+        }
+        else {
+            $('.sidebar').css({ right: ' -270px' });
+            $('.sidebar i').removeClass('fa-xmark').addClass('fa-bars')
+        }
+    })
     $('.owl-slider').owlCarousel({
         loop: true,
         margin: 10,
@@ -68,10 +95,10 @@ $(document).ready(function () {
             input.val(0);
         }
     });
-    $('.input-number').focusin(function () {
+    $('.input-qty').focusin(function () {
         $(this).data('oldValue', $(this).val());
     });
-    $('.input-number').change(function () {
+    $('.input-qty').change(function () {
 
         minValue = parseInt($(this).attr('min'));
         maxValue = parseInt($(this).attr('max'));
@@ -93,7 +120,7 @@ $(document).ready(function () {
 
 
     });
-    $(".input-number").keydown(function (e) {
+    $(".input-qty").keydown(function (e) {
         // Allow: backspace, delete, tab, escape, enter and .
         if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
             // Allow: Ctrl+A
@@ -176,83 +203,196 @@ $(document).ready(function () {
         $("#datepicker").datepicker();
     });
 
+    var cart = [];
+    $(function () {
+        if (localStorage.cart) {
+            // load cart data from local storage
+            cart = JSON.parse(localStorage.cart);
+            $('.num-cart').text(JSON.parse(localStorage.cart).length);
+            // showCart();  // display cart that is loaded into cart array
+        }
+    });
+    function saveCart() {
+        if (window.localStorage) {
+            localStorage.cart = JSON.stringify(cart);
+            $('.num-cart').text(JSON.parse(localStorage.cart).length);
+        }
+    }
+    function addToCart(item) {
+        var name = $(item).parent('.card-body').find(".card-title").text() || $('.card').find(".card-title").text();
+        var price = $(item).parent('.card-body').find(".price").find(".new-price").text() || $('.card').find(".price").find(".new-price").text();
+        var qty = $('.card').find(".input-qty").val() || 1;
 
+        // update Qty if product is already present
+        for (var i in cart) {
+            if (cart[i].Product == name) {
+                cart[i].Qty = qty;  // replace existing Qty
+                // showCart();
+                saveCart();
+                return;
+            }
+        }
+
+        var item = { Product: name, Price: price, Qty: qty };
+        cart.push(item);
+
+        saveCart();
+        // showCart();
+    }
+
+    $('.add-to-cart').on('click', function () {
+        var cart = $('.shopping-cart');
+        var imgtodrag = $(this).parent('.card-body').parent('.card').find("img").eq(0);
+        if (imgtodrag) {
+            var imgclone = imgtodrag.clone()
+                .offset({
+                    top: imgtodrag.offset().top,
+                    left: imgtodrag.offset().left
+                })
+                .css({
+                    'opacity': '0.5',
+                    'position': 'absolute',
+                    'height': '150px',
+                    'width': '150px',
+                    'z-index': '100'
+                })
+                .appendTo($('body'))
+                .animate({
+                    'top': cart.offset().top - 70,
+                    'left': cart.offset().left + 10,
+                    'width': 75,
+                    'height': 75
+                }, 1000, 'easeInOutExpo');
+
+            setTimeout(function () {
+                cart.effect("shake", {
+                    times: 2
+                }, 200);
+            }, 1500);
+
+            imgclone.animate({
+                'width': 0,
+                'height': 0
+            }, function () {
+                $(this).detach()
+            });
+        }
+        addToCart($(this));
+    });
+
+    $('.add-cart').on('click', function () {
+        var cart = $('.shopping-cart');
+        var imgtodrag = $('.card').find("img").eq(0);
+        if (imgtodrag) {
+            var imgclone = imgtodrag.clone()
+                .offset({
+                    top: imgtodrag.offset().top,
+                    left: imgtodrag.offset().left
+                })
+                .css({
+                    'opacity': '0.5',
+                    'position': 'absolute',
+                    'height': '150px',
+                    'width': '150px',
+                    'z-index': '100'
+                })
+                .appendTo($('body'))
+                .animate({
+                    'top': cart.offset().top - 70,
+                    'left': cart.offset().left + 10,
+                    'width': 75,
+                    'height': 75
+                }, 1000, 'easeInOutExpo');
+
+            setTimeout(function () {
+                cart.effect("shake", {
+                    times: 2
+                }, 200);
+            }, 1500);
+
+            imgclone.animate({
+                'width': 0,
+                'height': 0
+            }, function () {
+                $(this).detach()
+            });
+        }
+        addToCart($(this));
+    });
+
+
+
+    var numberCodeForm = $('[data-number-code-form]');
+    var numberCodeInputs = [...$('[data-number-code-input]').find('[data-number-code-input]').prevObject];
+    // Event callbacks
+    const handleInput = ({ target }) => {
+        if (!target.value.length) { return target.value = null; }
+
+        const inputLength = target.value.length;
+        let currentIndex = Number(target.dataset.numberCodeInput);
+
+        if (inputLength > 1) {
+            const inputValues = target.value.split('');
+
+            inputValues.forEach((value, valueIndex) => {
+                const nextValueIndex = currentIndex + valueIndex;
+
+                if (nextValueIndex >= numberCodeInputs.length) { return; }
+
+                numberCodeInputs[nextValueIndex].value = value;
+            });
+
+            currentIndex += inputValues.length - 2;
+        }
+
+        const nextIndex = currentIndex + 1;
+
+        if (nextIndex < numberCodeInputs.length) {
+            numberCodeInputs[nextIndex].focus();
+        }
+    }
+
+    const handleKeyDown = e => {
+        const { code, target } = e;
+
+        const currentIndex = Number(target.dataset.numberCodeInput);
+        const previousIndex = currentIndex - 1;
+        const nextIndex = currentIndex + 1;
+
+        const hasPreviousIndex = previousIndex >= 0;
+        const hasNextIndex = nextIndex <= numberCodeInputs.length - 1
+
+        switch (code) {
+            case 'ArrowLeft':
+            case 'ArrowUp':
+                if (hasPreviousIndex) {
+                    numberCodeInputs[previousIndex].focus();
+                }
+                e.preventDefault();
+                break;
+
+            case 'ArrowRight':
+            case 'ArrowDown':
+                if (hasNextIndex) {
+                    numberCodeInputs[nextIndex].focus();
+                }
+                e.preventDefault();
+                break;
+            case 'Backspace':
+                if (!e.target.value.length && hasPreviousIndex) {
+                    numberCodeInputs[previousIndex].value = null;
+                    numberCodeInputs[previousIndex].focus();
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    numberCodeForm.on('input', handleInput);
+    numberCodeForm.on('keydown', handleKeyDown);
     AOS.init({
         duration: 1500,
         once: true,
     });
-
 });
-
-
-const numberCodeForm = document.querySelector('[data-number-code-form]');
-const numberCodeInputs = [...numberCodeForm.querySelectorAll('[data-number-code-input]')];
-
-// Event callbacks
-const handleInput = ({ target }) => {
-    if (!target.value.length) { return target.value = null; }
-
-    const inputLength = target.value.length;
-    let currentIndex = Number(target.dataset.numberCodeInput);
-
-    if (inputLength > 1) {
-        const inputValues = target.value.split('');
-
-        inputValues.forEach((value, valueIndex) => {
-            const nextValueIndex = currentIndex + valueIndex;
-
-            if (nextValueIndex >= numberCodeInputs.length) { return; }
-
-            numberCodeInputs[nextValueIndex].value = value;
-        });
-
-        currentIndex += inputValues.length - 2;
-    }
-
-    const nextIndex = currentIndex + 1;
-
-    if (nextIndex < numberCodeInputs.length) {
-        numberCodeInputs[nextIndex].focus();
-    }
-}
-
-const handleKeyDown = e => {
-    const { code, target } = e;
-
-    const currentIndex = Number(target.dataset.numberCodeInput);
-    const previousIndex = currentIndex - 1;
-    const nextIndex = currentIndex + 1;
-
-    const hasPreviousIndex = previousIndex >= 0;
-    const hasNextIndex = nextIndex <= numberCodeInputs.length - 1
-
-    switch (code) {
-        case 'ArrowLeft':
-        case 'ArrowUp':
-            if (hasPreviousIndex) {
-                numberCodeInputs[previousIndex].focus();
-            }
-            e.preventDefault();
-            break;
-
-        case 'ArrowRight':
-        case 'ArrowDown':
-            if (hasNextIndex) {
-                numberCodeInputs[nextIndex].focus();
-            }
-            e.preventDefault();
-            break;
-        case 'Backspace':
-            if (!e.target.value.length && hasPreviousIndex) {
-                numberCodeInputs[previousIndex].value = null;
-                numberCodeInputs[previousIndex].focus();
-            }
-            break;
-        default:
-            break;
-    }
-}
-
-// Event listeners
-numberCodeForm.addEventListener('input', handleInput);
-numberCodeForm.addEventListener('keydown', handleKeyDown);

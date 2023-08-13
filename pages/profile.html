@@ -36,69 +36,140 @@
 <body>
     <!-- Header Area -->
     <header class="header">
-        <div class="nav d-flex align-items-center justify-content-between container">
-            <div class="d-flex align-items-center justify-content-start">
-                <div class="logo text-center">
-                    <a href="../index.html">
-                        <img src="../img/logo.png" alt="">
-                    </a>
+        <div class="container">
+            <div class="navHeader d-flex align-items-center justify-content-md-between justify-content-center ">
+                <div class="d-flex align-items-center justify-content-start">
+                    <div class="logo text-center">
+                        <a href="../index.html">
+                            <img src="../img/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <!-- menu list -->
+                    <div class="menu-list me-5">
+                        <ul class="nav">
+                            <li class="nav-item active">
+                                <a href="./about.html">
+                                    من نحن
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./products.html">
+                                    المنتجات
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./contact.html">
+                                    اتصل بنا
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- menu list -->
-                <div class="menu-list me-5">
-                    <ul class="nav">
-                        <li class="nav-item active">
-                            <a href="./about.html">
-                                من نحن
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../pages/products.html">
-                                المنتجات
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./contact.html">
-                                اتصل بنا
-                            </a>
-                        </li>
-                    </ul>
+                <div>
+                    <div class="menu-list">
+                        <ul class="nav">
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg class="translate-svg">
+                                        <use href="../icons.svg#translate"></use>
+                                    </svg>
+                                    English
+                                </a>
+                            </li>
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg>
+                                        <use href="../icons.svg#user"></use>
+                                    </svg>
+                                    تسجيل الدخول
+                                </a>
+                            </li>
+                            <li class="nav-item position-relative">
+                                <a href="./shopping-cart.html" class="shopping-cart">
+                                    <svg>
+                                        <use href="../icons.svg#shoppingCart"></use>
+                                    </svg>
+                                    <span class="num-cart">
+
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="menu-list">
-                    <ul class="nav">
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg class="translate-svg">
-                                    <use href="../icons.svg#translate"></use>
-                                </svg>
-                                English
-                            </a>
-                        </li>
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg>
-                                    <use href="../icons.svg#user"></use>
-                                </svg>
-                                تسجيل الدخول
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">
-                                <svg>
-                                    <use href="../icons.svg#shoppingCart"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
+
         <!-- End Header Inner -->
     </header>
     <!-- End Header Area -->
+    <!-- Mobile Navbar -->
+    <div class="mobile-navbar">
+        <div class="w-100">
+            <div class="close-btn d-flex align-items-center justify-content-end mb-4">
+                <button class="btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="menu-list">
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a href="./about.html">
+                            من نحن
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./products.html">
+                            المنتجات
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./contact.html">
+                            اتصل بنا
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg class="translate-svg">
+                                <use href="../icons.svg#translate"></use>
+                            </svg>
+                            English
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg>
+                                <use href="../icons.svg#user"></use>
+                            </svg>
+                            تسجيل الدخول
+                        </a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a href="./shopping-cart.html" class="shopping-cart">
+                            <svg>
+                                <use href="../icons.svg#shoppingCart"></use>
+                            </svg>
+                            <span class="num-cart">
+
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
     <!-- page content -->
     <div class="profile-page">
+        <!-- <div class="body-overlay">
+         
+        </div> -->
         <div class="sidebar">
             <div class="user-info">
                 <p>محمود خلة</p>
@@ -125,321 +196,334 @@
                 </div>
             </div>
             <a href="#" class="nav-link">تسجيل خروج</a>
+            <div class="menu-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
         </div>
-        <div class="page-content container">
-            <div class="tab-content" id="v-pills-tabContent">
-                <div class="tab-pane fade show active" id="v-pills-portfolio" role="tabpanel"
-                    aria-labelledby="v-pills-portfolio-tab">
-                    <div class="d-flex align-items-start justify-content-end">
-                        <button type="button" class="btn btn-bg" data-bs-toggle="modal" data-bs-dismiss="modal"
-                            data-bs-target="#balanceModal">
-                            <i class="fa-solid fa-plus"></i>
-                            شحن الرصيد
-                        </button>
-                        <div class="modal fade" id="balanceModal" tabindex="-1" aria-labelledby="balanceModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-lg modal-dialog-centered">
-                                <div class="modal-content">
-                                    <form action="#" class="accountForm">
-                                        <div class="modal-header">
-                                            <h6 class="modal-title" id="balanceModalLabel"> شحن الرصيد</h6>
-                                        </div>
-                                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="pills-balance01-tab"
-                                                    data-bs-toggle="pill" data-bs-target="#pills-balance01"
-                                                    type="button" role="tab" aria-controls="pills-balance01"
-                                                    aria-selected="true">
-                                                    <img src="../img/footer01.png" alt="">
-                                                </button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-balance02-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#pills-balance02" type="button" role="tab"
-                                                    aria-controls="pills-balance02" aria-selected="false">
-                                                    <img src="../img/footer02.png" alt="">/
-                                                    <img src="../img/footer05.png" alt="">
-                                                </button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-balance03-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#pills-balance03" type="button" role="tab"
-                                                    aria-controls="pills-balance03" aria-selected="false">
-                                                    <img src="../img/footer04.png" alt="">
-                                                </button>
-                                            </li>
-                                            <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-balance04-tab" data-bs-toggle="pill"
-                                                    data-bs-target="#pills-balance04" type="button" role="tab"
-                                                    aria-controls="pills-balance04" aria-selected="false">
-                                                    <img src="../img/footer06.png" alt="">
-                                                </button>
-                                            </li>
-                                        </ul>
-                                        <div class="modal-body">
-                                            <div class="tab-content pt-4" id="pills-tabContent">
-                                                <div class="tab-pane fade show active" id="pills-balance01"
-                                                    role="tabpanel" aria-labelledby="pills-balance01-tab">
-                                                    <div class="row">
-                                                        <div class="col-12 col-md-6 mb-4">
-                                                            <label for="card-number" class="form-label">رقم
-                                                                البطاقة</label>
-                                                            <input type="number" class="form-control" id="card-number"
-                                                                name="card-number">
-                                                        </div>
-                                                        <div class="col-12 col-md-6 mb-4">
-                                                            <label for="card-name" class="form-label">اسم حامل البطاقة
-                                                            </label>
-                                                            <input type="text" class="form-control" id="card-name"
-                                                                name="card-name">
-                                                        </div>
-                                                        <div class="col-12 col-md-6 mb-4">
-                                                            <label for="date" class="form-label">تاريخ الانتهاء</label>
-                                                            <input type="text" class="form-control" placeholder="الشهر"
-                                                                id="datepicker">
-                                                        </div>
-                                                        <div class="col-12 col-md-6 mb-4">
-                                                            <label for="CVC" class="form-label">رقم CVC/CVV</label>
-                                                            <input type="number" class="form-control" id="CVC"
-                                                                name="CVC">
+        <div class="container">
+            <div class="page-content ">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-portfolio" role="tabpanel"
+                        aria-labelledby="v-pills-portfolio-tab">
+                        <div class="d-flex align-items-start justify-content-end">
+                            <button type="button" class="btn btn-bg" data-bs-toggle="modal" data-bs-dismiss="modal"
+                                data-bs-target="#balanceModal">
+                                <i class="fa-solid fa-plus"></i>
+                                شحن الرصيد
+                            </button>
+                            <div class="modal fade" id="balanceModal" tabindex="-1" aria-labelledby="balanceModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <form action="#" class="accountForm">
+                                            <div class="modal-header">
+                                                <h6 class="modal-title" id="balanceModalLabel"> شحن الرصيد</h6>
+                                            </div>
+                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="pills-balance01-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-balance01"
+                                                        type="button" role="tab" aria-controls="pills-balance01"
+                                                        aria-selected="true">
+                                                        <img src="../img/footer01.png" alt="">
+                                                    </button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-balance02-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-balance02"
+                                                        type="button" role="tab" aria-controls="pills-balance02"
+                                                        aria-selected="false">
+                                                        <img src="../img/footer02.png" alt="">/
+                                                        <img src="../img/footer05.png" alt="">
+                                                    </button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-balance03-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-balance03"
+                                                        type="button" role="tab" aria-controls="pills-balance03"
+                                                        aria-selected="false">
+                                                        <img src="../img/footer04.png" alt="">
+                                                    </button>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-balance04-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-balance04"
+                                                        type="button" role="tab" aria-controls="pills-balance04"
+                                                        aria-selected="false">
+                                                        <img src="../img/footer06.png" alt="">
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                            <div class="modal-body">
+                                                <div class="tab-content pt-4" id="pills-tabContent">
+                                                    <div class="tab-pane fade show active" id="pills-balance01"
+                                                        role="tabpanel" aria-labelledby="pills-balance01-tab">
+                                                        <div class="row">
+                                                            <div class="col-12 col-md-6 mb-4">
+                                                                <label for="card-number" class="form-label">رقم
+                                                                    البطاقة</label>
+                                                                <input type="number" class="form-control"
+                                                                    id="card-number" name="card-number">
+                                                            </div>
+                                                            <div class="col-12 col-md-6 mb-4">
+                                                                <label for="card-name" class="form-label">اسم حامل
+                                                                    البطاقة
+                                                                </label>
+                                                                <input type="text" class="form-control" id="card-name"
+                                                                    name="card-name">
+                                                            </div>
+                                                            <div class="col-12 col-md-6 mb-4">
+                                                                <label for="date" class="form-label">تاريخ
+                                                                    الانتهاء</label>
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="الشهر" id="datepicker">
+                                                            </div>
+                                                            <div class="col-12 col-md-6 mb-4">
+                                                                <label for="CVC" class="form-label">رقم CVC/CVV</label>
+                                                                <input type="number" class="form-control" id="CVC"
+                                                                    name="CVC">
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    <div class="tab-pane fade" id="pills-balance02" role="tabpanel"
+                                                        aria-labelledby="pills-balance02-tab">...</div>
+                                                    <div class="tab-pane fade" id="pills-balance03" role="tabpanel"
+                                                        aria-labelledby="pills-balance03-tab">...</div>
+                                                    <div class="tab-pane fade" id="pills-balance04" role="tabpanel"
+                                                        aria-labelledby="pills-balance04-tab">...</div>
                                                 </div>
-                                                <div class="tab-pane fade" id="pills-balance02" role="tabpanel"
-                                                    aria-labelledby="pills-balance02-tab">...</div>
-                                                <div class="tab-pane fade" id="pills-balance03" role="tabpanel"
-                                                    aria-labelledby="pills-balance03-tab">...</div>
-                                                <div class="tab-pane fade" id="pills-balance04" role="tabpanel"
-                                                    aria-labelledby="pills-balance04-tab">...</div>
                                             </div>
+                                            <div class="modal-footer justify-content-center">
+                                                <button type="submit" class="btn btn-bg mb-3" data-bs-toggle="modal"
+                                                    data-bs-dismiss="modal">
+                                                    شحن الرصيد </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="balance my-5 d-flex align-items-center justify-content-between flex-wrap">
+                            <div class="balance-box mb-3">
+                                <p>الرصيد الكلي</p>
+                                <p class="mb-0">0.00 ر.س</p>
+                            </div>
+                            <div class="balance-box mb-3">
+                                <p>الرصيد المعلق</p>
+                                <p class="mb-0">0.00 ر.س</p>
+                            </div>
+                            <div class="balance-box mb-3">
+                                <p>الرصيد المتاح</p>
+                                <p class="mb-0">0.00 ر.س</p>
+                            </div>
+                            <div class="balance-box mb-3">
+                                <p>الرصيد القابل للسحب</p>
+                                <p class="mb-0">0.00 ر.س</p>
+                            </div>
+                        </div>
+                        <div class="financial-operations">
+                            <h5 class="mb-5 fw-bold">المعاملات المالية</h5>
+                            <div class="financ-box d-flex align-items-start justify-content-start">
+                                <span>+0.00 ر.س</span>
+                                <div>
+                                    <p class="m-0">
+                                        إيداع بواسطة Visa card
+                                    </p>
+                                    <p class="text-muted m-0">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        6/5/2023
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">
+                        <h5 class="mb-5 fw-bold"> قائمة الطلبات</h5>
+
+                        <ul class="nav nav-tabs" id="orders" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="current-tab" data-bs-toggle="tab"
+                                    data-bs-target="#current" type="button" role="tab" aria-controls="current"
+                                    aria-selected="true">حالية</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="completed-tab" data-bs-toggle="tab"
+                                    data-bs-target="#completed" type="button" role="tab" aria-controls="completed"
+                                    aria-selected="false">مكتملة</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="ordersContent">
+                            <div class="tab-pane fade show active" id="current" role="tabpanel"
+                                aria-labelledby="current-tab">
+                                <div class="order-card d-flex align-items-center justify-content-between flex-wrap">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <div class="order-card-icon">
+                                            <svg>
+                                                <use href="../icons.svg#box"></use>
+                                            </svg>
                                         </div>
-                                        <div class="modal-footer justify-content-center">
-                                            <button type="submit" class="btn btn-bg mb-3" data-bs-toggle="modal"
-                                                data-bs-dismiss="modal">
-                                                شحن الرصيد </button>
+                                        <div class="order-card-info">
+                                            <p class="m-0">
+                                                رقم الطلب #012308
+                                            </p>
+                                            <p class="m-0">
+                                                إجمالي السعر
+                                                <span>
+                                                    40 ر.س
+                                                </span>
+                                            </p>
+                                            <p class="m-0">
+                                                <svg>
+                                                    <use href="../icons.svg#boxTime"></use>
+                                                </svg>
+                                                28/4/2023
+                                                <span class="mx-2">|</span>
+                                                04:00 PM
+                                            </p>
                                         </div>
-                                    </form>
+                                    </div>
+
+                                    <div class="order-card-btn d-flex align-items-start flex-column h-100">
+                                        <span class="btn-blue-bg d-block mb-auto">
+                                            <svg>
+                                                <use href="../icons.svg#truck"></use>
+                                            </svg>
+                                            في الطريق اليك
+                                        </span>
+                                        <a href="./order-details.html" class="btn btn-gray-bg">
+                                            عرض تفاصيل
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="order-card d-flex align-items-center justify-content-between flex-wrap">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <div class="order-card-icon">
+                                            <svg>
+                                                <use href="../icons.svg#box"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="order-card-info">
+                                            <p class="m-0">
+                                                رقم الطلب #012308
+                                            </p>
+                                            <p class="m-0">
+                                                إجمالي السعر
+                                                <span>
+                                                    40 ر.س
+                                                </span>
+                                            </p>
+                                            <p class="m-0">
+                                                <svg>
+                                                    <use href="../icons.svg#boxTime"></use>
+                                                </svg>
+                                                28/4/2023
+                                                <span class="mx-2">|</span>
+                                                04:00 PM
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-card-btn d-flex align-items-start flex-column h-100">
+                                        <span class="btn-blue-bg d-block mb-auto">
+                                            <svg>
+                                                <use href="../icons.svg#truck"></use>
+                                            </svg>
+                                            في الطريق اليك
+                                        </span>
+                                        <a href="./order-details.html" class="btn btn-gray-bg">
+                                            عرض تفاصيل
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
+                                <div class="order-card d-flex align-items-center justify-content-between flex-wrap">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <div class="order-card-icon">
+                                            <svg>
+                                                <use href="../icons.svg#box"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="order-card-info">
+                                            <p class="m-0">
+                                                رقم الطلب #012308
+                                            </p>
+                                            <p class="m-0">
+                                                إجمالي السعر
+                                                <span>
+                                                    40 ر.س
+                                                </span>
+                                            </p>
+                                            <p class="m-0">
+                                                <svg>
+                                                    <use href="../icons.svg#boxTime"></use>
+                                                </svg>
+                                                28/4/2023
+                                                <span class="mx-2">|</span>
+                                                04:00 PM
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-card-btn d-flex align-items-start flex-column h-100">
+                                        <a href="#" class="btn btn-green-bg mb-auto">
+                                            طلب مرة أخري
+                                        </a>
+                                        <a href="./order-details.html" class="btn btn-gray-bg">
+                                            عرض تفاصيل
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="order-card d-flex align-items-center justify-content-between flex-wrap">
+                                    <div class="d-flex align-items-center justify-content-start">
+                                        <div class="order-card-icon">
+                                            <svg>
+                                                <use href="../icons.svg#box"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="order-card-info">
+                                            <p class="m-0">
+                                                رقم الطلب #012308
+                                            </p>
+                                            <p class="m-0">
+                                                إجمالي السعر
+                                                <span>
+                                                    40 ر.س
+                                                </span>
+                                            </p>
+                                            <p class="m-0">
+                                                <svg>
+                                                    <use href="../icons.svg#boxTime"></use>
+                                                </svg>
+                                                28/4/2023
+                                                <span class="mx-2">|</span>
+                                                04:00 PM
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-card-btn d-flex align-items-start flex-column h-100">
+                                        <a href="#" class="btn btn-green-bg mb-auto">
+                                            طلب مرة أخري
+                                        </a>
+                                        <a href="./order-details.html" class="btn btn-gray-bg">
+                                            عرض تفاصيل
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
-                    <div class="balance my-5 d-flex align-items-center justify-content-between flex-wrap">
-                        <div class="balance-box">
-                            <p>الرصيد الكلي</p>
-                            <p class="mb-0">0.00 ر.س</p>
-                        </div>
-                        <div class="balance-box">
-                            <p>الرصيد المعلق</p>
-                            <p class="mb-0">0.00 ر.س</p>
-                        </div>
-                        <div class="balance-box">
-                            <p>الرصيد المتاح</p>
-                            <p class="mb-0">0.00 ر.س</p>
-                        </div>
-                        <div class="balance-box">
-                            <p>الرصيد القابل للسحب</p>
-                            <p class="mb-0">0.00 ر.س</p>
-                        </div>
-                    </div>
-                    <div class="financial-operations">
-                        <h5 class="mb-5 fw-bold">المعاملات المالية</h5>
-                        <div class="financ-box d-flex align-items-start justify-content-start">
-                            <span>+0.00 ر.س</span>
-                            <div>
-                                <p class="m-0">
-                                    إيداع بواسطة Visa card
-                                </p>
-                                <p class="text-muted m-0">
-                                    <i class="fa-regular fa-calendar"></i>
-                                    6/5/2023
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="tab-pane fade" id="v-pills-address" role="tabpanel"
+                        aria-labelledby="v-pills-address-tab">
+                        address</div>
+                    <div class="tab-pane fade" id="v-pills-return" role="tabpanel" aria-labelledby="v-pills-return-tab">
+                        return</div>
+                    <div class="tab-pane fade" id="v-pills-account" role="tabpanel"
+                        aria-labelledby="v-pills-account-tab">
+                        account</div>
                 </div>
-                <div class="tab-pane fade" id="v-pills-orders" role="tabpanel" aria-labelledby="v-pills-orders-tab">
-                    <h5 class="mb-5 fw-bold"> قائمة الطلبات</h5>
-
-                    <ul class="nav nav-tabs" id="orders" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="current-tab" data-bs-toggle="tab"
-                                data-bs-target="#current" type="button" role="tab" aria-controls="current"
-                                aria-selected="true">حالية</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="completed-tab" data-bs-toggle="tab" data-bs-target="#completed"
-                                type="button" role="tab" aria-controls="completed" aria-selected="false">مكتملة</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="ordersContent">
-                        <div class="tab-pane fade show active" id="current" role="tabpanel"
-                            aria-labelledby="current-tab">
-                            <div class="order-card d-flex align-items-center justify-content-between flex-wrap">
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <div class="order-card-icon">
-                                        <svg>
-                                            <use href="../icons.svg#box"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="order-card-info">
-                                        <p class="m-0">
-                                            رقم الطلب #012308
-                                        </p>
-                                        <p class="m-0">
-                                            إجمالي السعر
-                                            <span>
-                                                40 ر.س
-                                            </span>
-                                        </p>
-                                        <p class="m-0">
-                                            <svg>
-                                                <use href="../icons.svg#boxTime"></use>
-                                            </svg>
-                                            28/4/2023
-                                            <span class="mx-2">|</span>
-                                            04:00 PM
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="order-card-btn d-flex align-items-start flex-column h-100">
-                                    <span class="btn-blue-bg d-block mb-auto">
-                                        <svg>
-                                            <use href="../icons.svg#truck"></use>
-                                        </svg>
-                                        في الطريق اليك
-                                    </span>
-                                    <a href="./order-details.html" class="btn btn-gray-bg">
-                                        عرض تفاصيل
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="order-card d-flex align-items-center justify-content-between flex-wrap">
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <div class="order-card-icon">
-                                        <svg>
-                                            <use href="../icons.svg#box"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="order-card-info">
-                                        <p class="m-0">
-                                            رقم الطلب #012308
-                                        </p>
-                                        <p class="m-0">
-                                            إجمالي السعر
-                                            <span>
-                                                40 ر.س
-                                            </span>
-                                        </p>
-                                        <p class="m-0">
-                                            <svg>
-                                                <use href="../icons.svg#boxTime"></use>
-                                            </svg>
-                                            28/4/2023
-                                            <span class="mx-2">|</span>
-                                            04:00 PM
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="order-card-btn d-flex align-items-start flex-column h-100">
-                                    <span class="btn-blue-bg d-block mb-auto">
-                                        <svg>
-                                            <use href="../icons.svg#truck"></use>
-                                        </svg>
-                                        في الطريق اليك
-                                    </span>
-                                    <a href="./order-details.html" class="btn btn-gray-bg">
-                                        عرض تفاصيل
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="completed" role="tabpanel" aria-labelledby="completed-tab">
-                            <div class="order-card d-flex align-items-center justify-content-between flex-wrap">
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <div class="order-card-icon">
-                                        <svg>
-                                            <use href="../icons.svg#box"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="order-card-info">
-                                        <p class="m-0">
-                                            رقم الطلب #012308
-                                        </p>
-                                        <p class="m-0">
-                                            إجمالي السعر
-                                            <span>
-                                                40 ر.س
-                                            </span>
-                                        </p>
-                                        <p class="m-0">
-                                            <svg>
-                                                <use href="../icons.svg#boxTime"></use>
-                                            </svg>
-                                            28/4/2023
-                                            <span class="mx-2">|</span>
-                                            04:00 PM
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="order-card-btn d-flex align-items-start flex-column h-100">
-                                    <a href="#" class="btn btn-green-bg mb-auto">
-                                        طلب مرة أخري
-                                    </a>
-                                    <a href="./order-details.html" class="btn btn-gray-bg">
-                                        عرض تفاصيل
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="order-card d-flex align-items-center justify-content-between flex-wrap">
-                                <div class="d-flex align-items-center justify-content-start">
-                                    <div class="order-card-icon">
-                                        <svg>
-                                            <use href="../icons.svg#box"></use>
-                                        </svg>
-                                    </div>
-                                    <div class="order-card-info">
-                                        <p class="m-0">
-                                            رقم الطلب #012308
-                                        </p>
-                                        <p class="m-0">
-                                            إجمالي السعر
-                                            <span>
-                                                40 ر.س
-                                            </span>
-                                        </p>
-                                        <p class="m-0">
-                                            <svg>
-                                                <use href="../icons.svg#boxTime"></use>
-                                            </svg>
-                                            28/4/2023
-                                            <span class="mx-2">|</span>
-                                            04:00 PM
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div class="order-card-btn d-flex align-items-start flex-column h-100">
-                                    <a href="#" class="btn btn-green-bg mb-auto">
-                                        طلب مرة أخري
-                                    </a>
-                                    <a href="./order-details.html" class="btn btn-gray-bg">
-                                        عرض تفاصيل
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="tab-pane fade" id="v-pills-address" role="tabpanel" aria-labelledby="v-pills-address-tab">
-                    address</div>
-                <div class="tab-pane fade" id="v-pills-return" role="tabpanel" aria-labelledby="v-pills-return-tab">
-                    return</div>
-                <div class="tab-pane fade" id="v-pills-account" role="tabpanel" aria-labelledby="v-pills-account-tab">
-                    account</div>
             </div>
         </div>
     </div>

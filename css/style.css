@@ -56,8 +56,10 @@ a {
   border-radius: 8px;
   text-align: center;
   color: #fff !important;
-  min-width: 185px;
+  display: block;
+  width: 185px;
   min-height: 40px;
+  margin: 0 auto;
 }
 .btn-bg:hover {
   background-color: #b60723;
@@ -168,7 +170,7 @@ a {
 .product-card .card-body .amount p {
   font-weight: 700;
 }
-.product-card .card-body .amount .input-number {
+.product-card .card-body .amount .input-qty {
   width: 80px;
   border: none;
   text-align: center;
@@ -353,45 +355,151 @@ input.error {
   left: 20px;
 }
 
+.shopping-cart .num-cart {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  top: 0;
+  right: 10px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #DB1E3C;
+  color: #fff;
+  font-size: 10px;
+}
+@media only screen and (max-width: 768px) {
+  .shopping-cart .num-cart {
+    right: 45%;
+    top: 9px;
+  }
+}
+
 /*===================
 	header style 
 =====================*/
 .header {
   border-bottom: 1px solid #EEEEEE;
+  position: absolute;
+  top: -80px;
+  right: 0;
+  left: 0;
+  z-index: 100;
 }
-.header .menu-list .nav li.nav-item {
-  padding: 0 20px;
+.header .navHeader {
+  height: 77px;
 }
-.header .menu-list .nav li.nav-item a {
-  color: #212529;
-  font-weight: 400;
-  transition: all 0.3s ease-in-out;
+.header .menu-btn {
+  display: none;
 }
-.header .menu-list .nav li.nav-item svg {
-  width: 24px;
-  height: 17px;
-  margin: 10px 0;
-  stroke: #212529;
-  transition: all 0.3s ease-in-out;
-}
-.header .menu-list .nav li.nav-item svg.translate-svg {
-  stroke: none;
-  fill: #212529;
-}
-.header .menu-list .nav li.nav-item:hover a {
-  color: #DB1E3C;
-}
-.header .menu-list .nav li.nav-item:hover svg {
-  stroke: #DB1E3C;
-}
-.header .menu-list .nav li.nav-item:hover svg.translate-svg {
-  stroke: none;
-  fill: #DB1E3C;
+.header.is-sticky {
+  position: fixed;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  top: 0;
+  backdrop-filter: blur(10px);
+  animation: slideDown 0.35s ease-out;
 }
 @media only screen and (max-width: 768px) {
   .header .menu-list {
     display: none;
   }
+  .header .menu-btn {
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+  }
+  .header .logo img {
+    height: 60px;
+  }
+}
+
+div[class*=-page] {
+  margin-top: 80px;
+}
+
+.mobile-navbar {
+  background-color: rgba(255, 255, 255, 0.95);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-navbar .close-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mobile-navbar .close-btn i {
+  font-size: 25px;
+}
+.mobile-navbar .search-input-btn {
+  background-color: #f2f1f0;
+  border-radius: 20px;
+  height: 33px;
+  padding: 0 0.75em;
+  border: 1px solid #ddd;
+}
+.mobile-navbar .search-input-btn .search-field {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.mobile-navbar .search-input-btn .search-field::placeholder {
+  color: #EEEEEE;
+}
+.mobile-navbar .menu-list .nav {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+.mobile-navbar .menu-list .nav .nav-item a {
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+}
+.mobile-navbar .menu-list .nav .nav-item a:hover {
+  background-color: #f2f1f0;
+}
+.mobile-navbar .menu-list .nav:first-of-type {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #EEEEEE;
+}
+
+.menu-list .nav li.nav-item {
+  padding: 0 20px;
+}
+.menu-list .nav li.nav-item a {
+  color: #212529;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+.menu-list .nav li.nav-item svg {
+  width: 24px;
+  height: 17px;
+  stroke: #212529;
+  transition: all 0.3s ease-in-out;
+}
+.menu-list .nav li.nav-item svg.translate-svg {
+  stroke: none;
+  fill: #212529;
+}
+.menu-list .nav li.nav-item:hover a {
+  color: #DB1E3C;
+}
+.menu-list .nav li.nav-item:hover svg {
+  stroke: #DB1E3C;
+}
+.menu-list .nav li.nav-item:hover svg.translate-svg {
+  stroke: none;
+  fill: #DB1E3C;
 }
 
 /*===================
@@ -464,6 +572,14 @@ input.error {
 }
 .home-page .hilwa-info .info-text p {
   font-size: 17px;
+}
+@media only screen and (max-width: 768px) {
+  .home-page .hilwa-info .info-text.padding-right {
+    padding-right: 33px;
+  }
+  .home-page .hilwa-info .info-text.padding-left {
+    padding-left: 33px;
+  }
 }
 .home-page .certificates .owl-certificates .item {
   padding: 0 55px;
@@ -910,6 +1026,7 @@ input.error {
   position: absolute;
   right: 0;
   top: 0;
+  transition: all ease-in-out 0.3s;
 }
 .profile-page .sidebar .user-info {
   padding: 40px 30px 30px;
@@ -922,6 +1039,33 @@ input.error {
   padding: 30px 0;
   border-top: 1px solid #EEEEEE;
   border-bottom: 1px solid #EEEEEE;
+}
+.profile-page .sidebar .menu-icon {
+  position: absolute;
+  top: 20px;
+  left: -40px;
+  width: 40px;
+  height: 40px;
+  background-color: #F5FAFF;
+  border-radius: 20px 0 0 20px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: #C0B7B7;
+  cursor: pointer;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  color: #737373;
+  display: none;
+}
+.profile-page .body-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.568627451);
+  opacity: 0;
+  display: none;
 }
 .profile-page .page-content {
   padding: 70px 0;
@@ -1002,6 +1146,30 @@ input.error {
   background-color: transparent;
   border-bottom: 3px solid #212529;
   color: #212529;
+}
+@media only screen and (max-width: 768px) {
+  .profile-page .sidebar {
+    right: -270px;
+  }
+  .profile-page .sidebar .menu-icon {
+    display: flex;
+  }
+  .profile-page .page-content {
+    padding-right: 0px;
+  }
+  .profile-page .page-content .balance .balance-box {
+    width: 45%;
+  }
+  .profile-page .order-card {
+    height: auto;
+  }
+  .profile-page .order-card .order-card-btn {
+    margin: 20px auto 0px;
+    justify-content: center;
+  }
+  .profile-page .order-card .order-card-btn .btn-gray-bg {
+    margin-top: 15px;
+  }
 }
 
 /*===================

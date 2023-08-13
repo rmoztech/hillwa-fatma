@@ -33,453 +33,528 @@
 <body>
     <!-- Header Area -->
     <header class="header">
-        <div class="nav d-flex align-items-center justify-content-between container">
-            <div class="d-flex align-items-center justify-content-start">
-                <div class="logo text-center">
-                    <a href="../index.html">
-                        <img src="../img/logo.png" alt="">
-                    </a>
+        <div class="container">
+            <div class="navHeader d-flex align-items-center justify-content-md-between justify-content-center ">
+                <div class="d-flex align-items-center justify-content-start">
+                    <div class="logo text-center">
+                        <a href="../index.html">
+                            <img src="../img/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <!-- menu list -->
+                    <div class="menu-list me-5">
+                        <ul class="nav">
+                            <li class="nav-item active">
+                                <a href="./about.html">
+                                    من نحن
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./products.html">
+                                    المنتجات
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./contact.html">
+                                    اتصل بنا
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- menu list -->
-                <div class="menu-list me-5">
-                    <ul class="nav">
-                        <li class="nav-item active">
-                            <a href="./about.html">
-                                من نحن
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../pages/products.html">
-                                المنتجات
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./contact.html">
-                                اتصل بنا
-                            </a>
-                        </li>
-                    </ul>
+                <div>
+                    <div class="menu-list">
+                        <ul class="nav">
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg class="translate-svg">
+                                        <use href="../icons.svg#translate"></use>
+                                    </svg>
+                                    English
+                                </a>
+                            </li>
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg>
+                                        <use href="../icons.svg#user"></use>
+                                    </svg>
+                                    تسجيل الدخول
+                                </a>
+                            </li>
+                            <li class="nav-item position-relative">
+                                <a href="./shopping-cart.html" class="shopping-cart">
+                                    <svg>
+                                        <use href="../icons.svg#shoppingCart"></use>
+                                    </svg>
+                                    <span class="num-cart">
+
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="menu-list">
-                    <ul class="nav">
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg class="translate-svg">
-                                    <use href="../icons.svg#translate"></use>
-                                </svg>
-                                English
-                            </a>
-                        </li>
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg>
-                                    <use href="../icons.svg#user"></use>
-                                </svg>
-                                تسجيل الدخول
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">
-                                <svg>
-                                    <use href="../icons.svg#shoppingCart"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
+
         <!-- End Header Inner -->
     </header>
     <!-- End Header Area -->
+ 
+    <!-- Mobile Navbar -->
+    <div class="mobile-navbar">
+        <div class="w-100">
+            <div class="close-btn d-flex align-items-center justify-content-end mb-4">
+                <button class="btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="menu-list">
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a href="./about.html">
+                            من نحن
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./products.html">
+                            المنتجات
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./contact.html">
+                            اتصل بنا
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg class="translate-svg">
+                                <use href="../icons.svg#translate"></use>
+                            </svg>
+                            English
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg>
+                                <use href="../icons.svg#user"></use>
+                            </svg>
+                            تسجيل الدخول
+                        </a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a href="./shopping-cart.html" class="shopping-cart">
+                            <svg>
+                                <use href="../icons.svg#shoppingCart"></use>
+                            </svg>
+                            <span class="num-cart">
+
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- End Header Area -->
     <!-- page content -->
-    <div class="checkout-page container padding-section">
-        <div class="page-content">
-            <div class="row">
-                <div class="col-12 col-md-7">
-                    <!-- shipping address -->
-                    <div class="shipping-address mb-5">
-                        <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h5>عنوان الشحن</h5>
-                            <button type="button" class="btn btn-bg" data-bs-toggle="modal" data-bs-dismiss="modal"
-                                data-bs-target="#addressModal">
-                                <i class="fa-solid fa-plus"></i>
-                                إضافة عنوان جديد
-                            </button>
-                            <div class="modal fade" id="addressModal" tabindex="-1" aria-labelledby="addressModalLabel"
-                                aria-hidden="true" data-bs-config={backdrop:true}>
-                                <div class="modal-dialog modal-lg modal-dialog-centered">
-                                    <div class="modal-content">
-                                        <form action="#" class="addressForm">
-                                            <div class="modal-header mb-4">
-                                                <h6 class="modal-title" id="addressModalLabel"> أضف عنوان جديد</h6>
-                                            </div>
-                                            <iframe
-                                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3270321.752263286!2d-119.40706100000001!3d36.826341000000006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornia!5e0!3m2!1sen!2sus!4v1691496009872!5m2!1sen!2sus"
-                                                style="border:0;" allowfullscreen="" loading="lazy"
-                                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="container">
+        <div class="checkout-page  padding-section">
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-12 col-md-7">
+                        <!-- shipping address -->
+                        <div class="shipping-address mb-5">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <h5>عنوان الشحن</h5>
+                                <button type="button" class="btn btn-bg" data-bs-toggle="modal" data-bs-dismiss="modal"
+                                    data-bs-target="#addressModal">
+                                    <i class="fa-solid fa-plus"></i>
+                                    إضافة عنوان جديد
+                                </button>
+                                <div class="modal fade" id="addressModal" tabindex="-1"
+                                    aria-labelledby="addressModalLabel" aria-hidden="true"
+                                    data-bs-config={backdrop:true}>
+                                    <div class="modal-dialog modal-lg modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <form action="#" class="addressForm">
+                                                <div class="modal-header mb-4">
+                                                    <h6 class="modal-title" id="addressModalLabel"> أضف عنوان جديد</h6>
+                                                </div>
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3270321.752263286!2d-119.40706100000001!3d36.826341000000006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornia!5e0!3m2!1sen!2sus!4v1691496009872!5m2!1sen!2sus"
+                                                    style="border:0;" allowfullscreen="" loading="lazy"
+                                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                                            <div class="modal-body mt-5">
-                                                <div class="row">
-                                                    <div class="col-12 col-md-6 mb-4">
-                                                        <label for="username" class="form-label">الاسم</label>
-                                                        <input type="text" class="form-control" id="username"
-                                                            name="username" placeholder="الاسم">
-                                                    </div>
-                                                    <div class="col-12 col-md-6 mb-4">
-                                                        <label for="mobile" class="form-label">رقم الموبايل</label>
-                                                        <input type="tel" class="form-control" id="mobile" name="mobile"
-                                                            placeholder="5x xxx xxxx">
-                                                    </div>
-                                                    <div class="col-12 col-md-6 mb-4">
-                                                        <label for="country" class="form-label">الدولة</label>
-                                                        <input type="text" class="form-control" id="country"
-                                                            name="country" placeholder="الدولة">
-                                                    </div>
-                                                    <div class="col-12 col-md-6 mb-4">
-                                                        <label for="city" class="form-label">المدينة</label>
-                                                        <input type="text" class="form-control" id="city" name="city"
-                                                            placeholder="المدينة">
-                                                    </div>
-                                                    <div class="col-12 col-md-6 mb-4">
-                                                        <label for="street" class="form-label">الشارع</label>
-                                                        <input type="text" class="form-control" id="street"
-                                                            name="street" placeholder="الشارع">
-                                                    </div>
-                                                    <div class="col-12 col-md-6 mb-4">
-                                                        <span class="d-block mb-3">العنوان</span>
-                                                        <label class="custom-radio">
-                                                            <input type="radio" name="location" checked>
-                                                            <span class="radio-btn">
-                                                                <span class="check-icon">
-                                                                    <i class="fa-solid fa-check"></i>
+                                                <div class="modal-body mt-5">
+                                                    <div class="row">
+                                                        <div class="col-12 col-md-6 mb-4">
+                                                            <label for="username" class="form-label">الاسم</label>
+                                                            <input type="text" class="form-control" id="username"
+                                                                name="username" placeholder="الاسم">
+                                                        </div>
+                                                        <div class="col-12 col-md-6 mb-4">
+                                                            <label for="mobile" class="form-label">رقم الموبايل</label>
+                                                            <input type="tel" class="form-control" id="mobile"
+                                                                name="mobile" placeholder="5x xxx xxxx">
+                                                        </div>
+                                                        <div class="col-12 col-md-6 mb-4">
+                                                            <label for="country" class="form-label">الدولة</label>
+                                                            <input type="text" class="form-control" id="country"
+                                                                name="country" placeholder="الدولة">
+                                                        </div>
+                                                        <div class="col-12 col-md-6 mb-4">
+                                                            <label for="city" class="form-label">المدينة</label>
+                                                            <input type="text" class="form-control" id="city"
+                                                                name="city" placeholder="المدينة">
+                                                        </div>
+                                                        <div class="col-12 col-md-6 mb-4">
+                                                            <label for="street" class="form-label">الشارع</label>
+                                                            <input type="text" class="form-control" id="street"
+                                                                name="street" placeholder="الشارع">
+                                                        </div>
+                                                        <div class="col-12 col-md-6 mb-4">
+                                                            <span class="d-block mb-3">العنوان</span>
+                                                            <label class="custom-radio">
+                                                                <input type="radio" name="location" checked>
+                                                                <span class="radio-btn">
+                                                                    <span class="check-icon">
+                                                                        <i class="fa-solid fa-check"></i>
+                                                                    </span>
+                                                                    <div class="address-icon">
+                                                                        <span>المنزل</span>
+                                                                    </div>
                                                                 </span>
-                                                                <div class="address-icon">
-                                                                    <span>المنزل</span>
-                                                                </div>
-                                                            </span>
-                                                        </label>
-                                                        <label class="custom-radio">
-                                                            <input type="radio" name="location">
-                                                            <span class="radio-btn">
-                                                                <span class="check-icon">
-                                                                    <i class="fa-solid fa-check"></i>
-                                                                </span>
-                                                                <div class="address-icon">
-                                                                    <span>الشركة</span>
+                                                            </label>
+                                                            <label class="custom-radio">
+                                                                <input type="radio" name="location">
+                                                                <span class="radio-btn">
+                                                                    <span class="check-icon">
+                                                                        <i class="fa-solid fa-check"></i>
+                                                                    </span>
+                                                                    <div class="address-icon">
+                                                                        <span>الشركة</span>
 
-                                                                </div>
-                                                            </span>
-                                                        </label>
-                                                        <label class="custom-radio">
-                                                            <input type="radio" name="location">
-                                                            <span class="radio-btn">
-                                                                <span class="check-icon">
-                                                                    <i class="fa-solid fa-check"></i>
+                                                                    </div>
                                                                 </span>
-                                                                <div class="address-icon">
-                                                                    <span>أخرى</span>
-                                                                </div>
-                                                            </span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="col-12 col-md-6 mb-4">
-                                                        <div class="form-check form-switch">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                id="address-check">
-                                                            <label class="form-check-label" for="address-check">تعيين
-                                                                كعنوان افتراضي للشحن</label>
+                                                            </label>
+                                                            <label class="custom-radio">
+                                                                <input type="radio" name="location">
+                                                                <span class="radio-btn">
+                                                                    <span class="check-icon">
+                                                                        <i class="fa-solid fa-check"></i>
+                                                                    </span>
+                                                                    <div class="address-icon">
+                                                                        <span>أخرى</span>
+                                                                    </div>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="col-12 col-md-6 mb-4">
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    id="address-check">
+                                                                <label class="form-check-label"
+                                                                    for="address-check">تعيين
+                                                                    كعنوان افتراضي للشحن</label>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="modal-footer justify-content-center">
-                                                <button type="submit" class="btn btn-bg mb-3 w-50" data-bs-dismiss="modal"
-                                                    data-bs-toggle="modal">
-                                                    إضافة عنوان </button>
-                                                <!-- <button type="button" class="btn btn-bg w-100" data-bs-dismiss="modal"> حساب
+                                                <div class="modal-footer justify-content-center">
+                                                    <button type="submit" class="btn btn-bg mb-3 w-50"
+                                                        data-bs-dismiss="modal" data-bs-toggle="modal">
+                                                        إضافة عنوان </button>
+                                                    <!-- <button type="button" class="btn btn-bg w-100" data-bs-dismiss="modal"> حساب
                                                 جديد</button> -->
-                                            </div>
-                                        </form>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="addresses">
-                            <label class="custom-radio d-block">
-                                <input type="radio" name="address" checked>
-                                <span class="radio-btn">
-                                    <span class="check-icon">
-                                        <i class="fa-solid fa-check"></i>
-                                    </span>
-                                    <div class="address-icon d-flex align-items-start justify-content-start">
-                                        <span class="icon">
-                                            <svg>
-                                                <use href="../icons.svg#loaction"></use>
-                                            </svg>
+                            <div class="addresses">
+                                <label class="custom-radio d-block">
+                                    <input type="radio" name="address" checked>
+                                    <span class="radio-btn">
+                                        <span class="check-icon">
+                                            <i class="fa-solid fa-check"></i>
                                         </span>
-                                        <div class="info">
-                                            <p class="mb-0">المنزل</p>
-                                            <p class="mb-0">محمود خلة</p>
-                                            <p class="mb-0">059000000</p>
-                                            <p class="mb-0">السعودية | الرياض | حي الروضة </p>
+                                        <div class="address-icon d-flex align-items-start justify-content-start">
+                                            <span class="icon">
+                                                <svg>
+                                                    <use href="../icons.svg#loaction"></use>
+                                                </svg>
+                                            </span>
+                                            <div class="info">
+                                                <p class="mb-0">المنزل</p>
+                                                <p class="mb-0">محمود خلة</p>
+                                                <p class="mb-0">059000000</p>
+                                                <p class="mb-0">السعودية | الرياض | حي الروضة </p>
+                                            </div>
+                                            <button type="button" class="btn btn-gray-bg ">
+                                                <svg>
+                                                    <use href="../icons.svg#edit"></use>
+                                                </svg>
+                                                تعديل
+                                            </button>
+                                            <span class="close">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </span>
                                         </div>
-                                        <button type="button" class="btn btn-gray-bg ">
-                                            <svg>
-                                                <use href="../icons.svg#edit"></use>
-                                            </svg>
-                                            تعديل
-                                        </button>
-                                        <span class="close">
-                                            <i class="fa-solid fa-xmark"></i>
-                                        </span>
-                                    </div>
-                                </span>
-                            </label>
-                            <label class="custom-radio d-block">
-                                <input type="radio" name="address">
-                                <span class="radio-btn">
-                                    <span class="check-icon">
-                                        <i class="fa-solid fa-check"></i>
                                     </span>
-                                    <div class="address-icon d-flex align-items-start justify-content-start">
-                                        <span class="icon">
-                                            <svg>
-                                                <use href="../icons.svg#loaction"></use>
-                                            </svg>
+                                </label>
+                                <label class="custom-radio d-block">
+                                    <input type="radio" name="address">
+                                    <span class="radio-btn">
+                                        <span class="check-icon">
+                                            <i class="fa-solid fa-check"></i>
                                         </span>
-                                        <div class="info">
-                                            <p class="mb-0">المنزل</p>
-                                            <p class="mb-0">محمود خلة</p>
-                                            <p class="mb-0">059000000</p>
-                                            <p class="mb-0">السعودية | الرياض | حي الروضة </p>
+                                        <div class="address-icon d-flex align-items-start justify-content-start">
+                                            <span class="icon">
+                                                <svg>
+                                                    <use href="../icons.svg#loaction"></use>
+                                                </svg>
+                                            </span>
+                                            <div class="info">
+                                                <p class="mb-0">المنزل</p>
+                                                <p class="mb-0">محمود خلة</p>
+                                                <p class="mb-0">059000000</p>
+                                                <p class="mb-0">السعودية | الرياض | حي الروضة </p>
+                                            </div>
+                                            <button type="button" class="btn btn-gray-bg ">
+                                                <svg>
+                                                    <use href="../icons.svg#edit"></use>
+                                                </svg>
+                                                تعديل
+                                            </button>
+                                            <span class="close">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </span>
                                         </div>
-                                        <button type="button" class="btn btn-gray-bg ">
-                                            <svg>
-                                                <use href="../icons.svg#edit"></use>
-                                            </svg>
-                                            تعديل
-                                        </button>
-                                        <span class="close">
-                                            <i class="fa-solid fa-xmark"></i>
-                                        </span>
-                                    </div>
-                                </span>
-                            </label>
+                                    </span>
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="receipt-date mb-5">
-                        <h5 class="mb-4">موعد الإستلام</h5>
-                        <p class="mb-4">حدد يوم التسليم والأوقات المتاحة المناسبة .</p>
-                        <div class="mb-4">
-                            <label class="custom-radio">
-                                <input type="radio" name="date" checked>
-                                <span class="radio-btn">
-                                    <p class="mb-0">السبت</p>
-                                    <p class="mb-0">29-4-2023</p>
-                                </span>
-                            </label>
-                            <label class="custom-radio">
-                                <input type="radio" name="date">
-                                <span class="radio-btn">
-                                    <p class="mb-0">السبت</p>
-                                    <p class="mb-0">29-4-2023</p>
-                                </span>
-                            </label>
-                            <label class="custom-radio">
-                                <input type="radio" name="date">
-                                <span class="radio-btn">
-                                    <p class="mb-0">السبت</p>
-                                    <p class="mb-0">29-4-2023</p>
-                                </span>
-                            </label>
-                            <label class="custom-radio">
-                                <input type="radio" name="date">
-                                <span class="radio-btn">
-                                    <p class="mb-0">السبت</p>
-                                    <p class="mb-0">29-4-2023</p>
-                                </span>
-                            </label>
-                            <label class="custom-radio">
-                                <input type="radio" name="date">
-                                <span class="radio-btn">
-                                    <p class="mb-0">السبت</p>
-                                    <p class="mb-0">29-4-2023</p>
-                                </span>
-                            </label>
-                            <label class="custom-radio">
-                                <input type="radio" name="date">
-                                <span class="radio-btn">
-                                    <p class="mb-0">السبت</p>
-                                    <p class="mb-0">29-4-2023</p>
-                                </span>
-                            </label>
-                        </div>
-                        <div class="shipping-time">
-                            <label class="custom-radio">
-                                <input type="radio" name="time" checked>
-                                <span class="radio-btn">
-                                    <p class="mb-0">01:00 PM - 03:30 PM</p>
-                                </span>
-                            </label>
-                            <label class="custom-radio">
-                                <input type="radio" name="time">
-                                <span class="radio-btn">
-                                    <p class="mb-0">01:00 PM - 03:30 PM</p>
+                        <div class="receipt-date mb-5">
+                            <h5 class="mb-4">موعد الإستلام</h5>
+                            <p class="mb-4">حدد يوم التسليم والأوقات المتاحة المناسبة .</p>
+                            <div class="mb-4">
+                                <label class="custom-radio">
+                                    <input type="radio" name="date" checked>
+                                    <span class="radio-btn">
+                                        <p class="mb-0">السبت</p>
+                                        <p class="mb-0">29-4-2023</p>
+                                    </span>
+                                </label>
+                                <label class="custom-radio">
+                                    <input type="radio" name="date">
+                                    <span class="radio-btn">
+                                        <p class="mb-0">السبت</p>
+                                        <p class="mb-0">29-4-2023</p>
+                                    </span>
+                                </label>
+                                <label class="custom-radio">
+                                    <input type="radio" name="date">
+                                    <span class="radio-btn">
+                                        <p class="mb-0">السبت</p>
+                                        <p class="mb-0">29-4-2023</p>
+                                    </span>
+                                </label>
+                                <label class="custom-radio">
+                                    <input type="radio" name="date">
+                                    <span class="radio-btn">
+                                        <p class="mb-0">السبت</p>
+                                        <p class="mb-0">29-4-2023</p>
+                                    </span>
+                                </label>
+                                <label class="custom-radio">
+                                    <input type="radio" name="date">
+                                    <span class="radio-btn">
+                                        <p class="mb-0">السبت</p>
+                                        <p class="mb-0">29-4-2023</p>
+                                    </span>
+                                </label>
+                                <label class="custom-radio">
+                                    <input type="radio" name="date">
+                                    <span class="radio-btn">
+                                        <p class="mb-0">السبت</p>
+                                        <p class="mb-0">29-4-2023</p>
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="shipping-time">
+                                <label class="custom-radio">
+                                    <input type="radio" name="time" checked>
+                                    <span class="radio-btn">
+                                        <p class="mb-0">01:00 PM - 03:30 PM</p>
+                                    </span>
+                                </label>
+                                <label class="custom-radio">
+                                    <input type="radio" name="time">
+                                    <span class="radio-btn">
+                                        <p class="mb-0">01:00 PM - 03:30 PM</p>
 
-                                </span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="note">
+                            <label for="note" class="form-label mb-3">
+                                ملاحظة
                             </label>
+                            <textarea name="note" class="form-control" id="note" rows="5"
+                                placeholder="أضف ملاحظاتك"></textarea>
                         </div>
                     </div>
-                    <div class="note">
-                        <label for="note" class="form-label mb-3">
-                            ملاحظة
-                        </label>
-                        <textarea name="note" class="form-control" id="note" rows="5"
-                            placeholder="أضف ملاحظاتك"></textarea>
-                    </div>
-                </div>
-                <div class="col-12 col-md-5">
-                    <div class="complete-sale pt-4">
-                        <div class="payment-method pb-4 mb-4">
-                            <h5 class="mb-4">طريقة الدفع</h5>
-                            <label class="custom-radio d-block">
-                                <input type="radio" name="payment" checked>
-                                <span class="radio-btn">
-                                    <span class="check-icon">
-                                        <i class="fa-solid fa-check"></i>
+                    <div class="col-12 col-md-5">
+                        <div class="complete-sale pt-4">
+                            <div class="payment-method pb-4 mb-4">
+                                <h5 class="mb-4">طريقة الدفع</h5>
+                                <label class="custom-radio d-block">
+                                    <input type="radio" name="payment" checked>
+                                    <span class="radio-btn">
+                                        <span class="check-icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                        <div class="address-icon">
+                                            <div class="img">
+                                                <img src="../img/footer01.png" alt="">
+                                            </div>
+                                        </div>
                                     </span>
-                                    <div class="address-icon">
-                                        <div class="img">
-                                            <img src="../img/footer01.png" alt="">
+                                </label>
+                                <label class="custom-radio d-block">
+                                    <input type="radio" name="payment">
+                                    <span class="radio-btn">
+                                        <span class="check-icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                        <div class="address-icon">
+                                            <div class="img">
+                                                <img src="../img/footer05.png" alt="">
+                                            </div>
+                                            <div class="img">
+                                                <img src="../img/footer02.png" alt="">
+                                            </div>
                                         </div>
-                                    </div>
-                                </span>
-                            </label>
-                            <label class="custom-radio d-block">
-                                <input type="radio" name="payment">
-                                <span class="radio-btn">
-                                    <span class="check-icon">
-                                        <i class="fa-solid fa-check"></i>
                                     </span>
-                                    <div class="address-icon">
-                                        <div class="img">
-                                            <img src="../img/footer05.png" alt="">
+                                </label>
+                                <label class="custom-radio d-block">
+                                    <input type="radio" name="payment">
+                                    <span class="radio-btn">
+                                        <span class="check-icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                        <div class="address-icon">
+                                            <div class="img">
+                                                <img src="../img/footer06.png" alt="">
+                                            </div>
                                         </div>
-                                        <div class="img">
-                                            <img src="../img/footer02.png" alt="">
-                                        </div>
-                                    </div>
-                                </span>
-                            </label>
-                            <label class="custom-radio d-block">
-                                <input type="radio" name="payment">
-                                <span class="radio-btn">
-                                    <span class="check-icon">
-                                        <i class="fa-solid fa-check"></i>
                                     </span>
-                                    <div class="address-icon">
-                                        <div class="img">
-                                            <img src="../img/footer06.png" alt="">
+                                </label>
+                                <label class="custom-radio d-block">
+                                    <input type="radio" name="payment">
+                                    <span class="radio-btn">
+                                        <span class="check-icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                        <div class="address-icon">
+                                            <div class="img">
+                                                <svg>
+                                                    <use href="../icons.svg#wallet"></use>
+                                                </svg>
+                                                <span>من المحفظة</span>
+                                                <span>الرصيد المتاح 200 ر.س</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </span>
-                            </label>
-                            <label class="custom-radio d-block">
-                                <input type="radio" name="payment">
-                                <span class="radio-btn">
-                                    <span class="check-icon">
-                                        <i class="fa-solid fa-check"></i>
                                     </span>
-                                    <div class="address-icon">
-                                        <div class="img">
-                                            <svg>
-                                                <use href="../icons.svg#wallet"></use>
-                                            </svg>
-                                            <span>من المحفظة</span>
-                                            <span>الرصيد المتاح 200 ر.س</span>
+                                </label>
+                                <label class="custom-radio d-block">
+                                    <input type="radio" name="payment">
+                                    <span class="radio-btn">
+                                        <span class="check-icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                        <div class="address-icon">
+                                            <div class="img">
+                                                <svg>
+                                                    <use href="../icons.svg#cash"></use>
+                                                </svg>
+                                                <span>عند الاستلام </span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </span>
-                            </label>
-                            <label class="custom-radio d-block">
-                                <input type="radio" name="payment">
-                                <span class="radio-btn">
-                                    <span class="check-icon">
-                                        <i class="fa-solid fa-check"></i>
                                     </span>
-                                    <div class="address-icon">
-                                        <div class="img">
-                                            <svg>
-                                                <use href="../icons.svg#cash"></use>
-                                            </svg>
-                                            <span>عند الاستلام </span>
+                                </label>
+                                <label class="custom-radio d-block">
+                                    <input type="radio" name="payment">
+                                    <span class="radio-btn">
+                                        <span class="check-icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                        <div class="address-icon">
+                                            <div class="img">
+                                                <img src="../img/footer03.png" alt="">
+                                            </div>
                                         </div>
-                                    </div>
-                                </span>
-                            </label>
-                            <label class="custom-radio d-block">
-                                <input type="radio" name="payment">
-                                <span class="radio-btn">
-                                    <span class="check-icon">
-                                        <i class="fa-solid fa-check"></i>
                                     </span>
-                                    <div class="address-icon">
-                                        <div class="img">
-                                            <img src="../img/footer03.png" alt="">
+                                </label>
+                                <label class="custom-radio d-block">
+                                    <input type="radio" name="payment">
+                                    <span class="radio-btn">
+                                        <span class="check-icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                        <div class="address-icon">
+                                            <div class="img">
+                                                <img src="../img/footer04.png" alt="">
+                                            </div>
                                         </div>
-                                    </div>
-                                </span>
-                            </label>
-                            <label class="custom-radio d-block">
-                                <input type="radio" name="payment">
-                                <span class="radio-btn">
-                                    <span class="check-icon">
-                                        <i class="fa-solid fa-check"></i>
                                     </span>
-                                    <div class="address-icon">
-                                        <div class="img">
-                                            <img src="../img/footer04.png" alt="">
-                                        </div>
-                                    </div>
-                                </span>
-                            </label>
-                        </div>
-                        <table class="table table-borderless mb-5">
-                            <tbody>
-                                <tr>
-                                    <td>إجمالي العناصر</td>
-                                    <td class="text-end">16.13 ر.س</td>
-                                </tr>
-                                <tr>
-                                    <td>الشحن</td>
-                                    <td class="text-end">0.0 ر.س</td>
-                                </tr>
-                                <tr>
-                                    <td>الخصم</td>
-                                    <td class="text-end">0.0 ر.س</td>
-                                </tr>
-                                <tr>
-                                    <td>الضريبة</td>
-                                    <td class="text-end">0.0 ر.س</td>
-                                </tr>
-                                <tr>
-                                    <td>المجموع</td>
-                                    <td class="text-end">26.13ر.س</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="text-center">
-                            <button type="button" class="complete-sale-btn btn btn-bg w-50 mx-auto"
-                                data-bs-target="#logInModal"> تأكيد الطلب</button>
+                                </label>
+                            </div>
+                            <table class="table table-borderless mb-5">
+                                <tbody>
+                                    <tr>
+                                        <td>إجمالي العناصر</td>
+                                        <td class="text-end">16.13 ر.س</td>
+                                    </tr>
+                                    <tr>
+                                        <td>الشحن</td>
+                                        <td class="text-end">0.0 ر.س</td>
+                                    </tr>
+                                    <tr>
+                                        <td>الخصم</td>
+                                        <td class="text-end">0.0 ر.س</td>
+                                    </tr>
+                                    <tr>
+                                        <td>الضريبة</td>
+                                        <td class="text-end">0.0 ر.س</td>
+                                    </tr>
+                                    <tr>
+                                        <td>المجموع</td>
+                                        <td class="text-end">26.13ر.س</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="text-center">
+                                <button type="button" class="complete-sale-btn btn btn-bg w-50 mx-auto"
+                                    data-bs-target="#logInModal"> تأكيد الطلب</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- page footer -->
     <section class="footer">
         <div class="footer-inner padding-section">

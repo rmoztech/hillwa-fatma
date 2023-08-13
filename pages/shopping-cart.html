@@ -33,699 +33,776 @@
 <body>
     <!-- Header Area -->
     <header class="header">
-        <div class="nav d-flex align-items-center justify-content-between container">
-            <div class="d-flex align-items-center justify-content-start">
-                <div class="logo text-center">
-                    <a href="../index.html">
-                        <img src="../img/logo.png" alt="">
-                    </a>
+        <div class="container">
+            <div class="navHeader d-flex align-items-center justify-content-md-between justify-content-center ">
+                <div class="d-flex align-items-center justify-content-start">
+                    <div class="logo text-center">
+                        <a href="../index.html">
+                            <img src="../img/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <!-- menu list -->
+                    <div class="menu-list me-5">
+                        <ul class="nav">
+                            <li class="nav-item active">
+                                <a href="./about.html">
+                                    من نحن
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./products.html">
+                                    المنتجات
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./contact.html">
+                                    اتصل بنا
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- menu list -->
-                <div class="menu-list me-5">
-                    <ul class="nav">
-                        <li class="nav-item active">
-                            <a href="./about.html">
-                                من نحن
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../pages/products.html">
-                                المنتجات
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./contact.html">
-                                اتصل بنا
-                            </a>
-                        </li>
-                    </ul>
+                <div>
+                    <div class="menu-list">
+                        <ul class="nav">
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg class="translate-svg">
+                                        <use href="../icons.svg#translate"></use>
+                                    </svg>
+                                    English
+                                </a>
+                            </li>
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg>
+                                        <use href="../icons.svg#user"></use>
+                                    </svg>
+                                    تسجيل الدخول
+                                </a>
+                            </li>
+                            <li class="nav-item position-relative">
+                                <a href="./shopping-cart.html" class="shopping-cart">
+                                    <svg>
+                                        <use href="../icons.svg#shoppingCart"></use>
+                                    </svg>
+                                    <span class="num-cart">
+
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="menu-list">
-                    <ul class="nav">
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg class="translate-svg">
-                                    <use href="../icons.svg#translate"></use>
-                                </svg>
-                                English
-                            </a>
-                        </li>
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg>
-                                    <use href="../icons.svg#user"></use>
-                                </svg>
-                                تسجيل الدخول
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">
-                                <svg>
-                                    <use href="../icons.svg#shoppingCart"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
+
         <!-- End Header Inner -->
     </header>
     <!-- End Header Area -->
-    <!-- page content -->
-    <div class="shopping-cart-page container padding-section">
-        <div class="page-header mb-4">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item ml-auto"><a href="../index.html">الرئيسية</a></li>
-                    <li class="breadcrumb-item active ml-auto" aria-current="page">سلة المشتريات</li>
-                </ol>
-            </nav>
+ 
+    <!-- Mobile Navbar -->
+    <div class="mobile-navbar">
+        <div class="w-100">
+            <div class="close-btn d-flex align-items-center justify-content-end mb-4">
+                <button class="btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="menu-list">
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a href="./about.html">
+                            من نحن
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./products.html">
+                            المنتجات
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./contact.html">
+                            اتصل بنا
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg class="translate-svg">
+                                <use href="../icons.svg#translate"></use>
+                            </svg>
+                            English
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg>
+                                <use href="../icons.svg#user"></use>
+                            </svg>
+                            تسجيل الدخول
+                        </a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a href="./shopping-cart.html" class="shopping-cart">
+                            <svg>
+                                <use href="../icons.svg#shoppingCart"></use>
+                            </svg>
+                            <span class="num-cart">
+
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
-        <div class="page-content">
-            <p class="mb-4">
-                <span>سلة المشتريات</span>
-                <span class="mx-3">|</span>
-                <span class="count"> 3 عناصر</span>
-            </p>
-            <div class="row">
-                <div class="col-12 col-md-7">
-                    <div class="card product-card mb-4 pb-4" data-aos="fade-up">
-                        <div class="row g-0">
-                            <div class="col-md-3">
-                                <div class="product-card-img">
-                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                                </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
-                                    <div class="w-75">
-                                        <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
-                                        <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
-                                    </div>
-                                    <div class="w-25">
-                                        <p class="price p-0 mb-5 text-end">
-                                            <span class="new-price">16.13ر.س</span>
-                                            <span class="old-price">21.50ر.س</span>
-                                        </p>
-                                    </div>
-                                    <div class="w-100 d-flex align-items-center justify-content-between">
-                                        <div class="amount">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="plus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-plus"></i>
-                                                    </button>
-                                                </span>
-                                                <input type="text" name="quant[2]" class=" input-number" value="1"
-                                                    min="1" max="100">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="minus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-minus"></i> </button>
-                                                </span>
-                                                <span class="me-3">كرتون</span>
-                                            </div>
-                                        </div>
-                                        <div class="trash">
-                                            <svg>
-                                                <use href="../icons.svg#trash"></use>
-                                            </svg>
-                                        </div>
+    </div>
+    <!-- page content -->
+    <div class="container">
+        <div class="shopping-cart-page  padding-section">
+            <div class="page-header mb-4">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item ml-auto"><a href="../index.html">الرئيسية</a></li>
+                        <li class="breadcrumb-item active ml-auto" aria-current="page">سلة المشتريات</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="page-content">
+                <p class="mb-4">
+                    <span>سلة المشتريات</span>
+                    <span class="mx-3">|</span>
+                    <span class="count"> 3 عناصر</span>
+                </p>
+                <div class="row">
+                    <div class="col-12 col-md-7">
+                        <div class="card product-card mb-4 pb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <div class="product-card-img">
+                                        <img src="../img/order-img.png" class="card-img-top" alt="new img">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card product-card mb-4 pb-4" data-aos="fade-up">
-                        <div class="row g-0">
-                            <div class="col-md-3">
-                                <div class="product-card-img">
-                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                                </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
-                                    <div class="w-75">
-                                        <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
-                                        <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
-                                    </div>
-                                    <div class="w-25">
-                                        <p class="price p-0 mb-5 text-end">
-                                            <span class="new-price">16.13ر.س</span>
-                                            <span class="old-price">21.50ر.س</span>
-                                        </p>
-                                    </div>
-                                    <div class="w-100 d-flex align-items-center justify-content-between">
-                                        <div class="amount">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="plus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-plus"></i>
-                                                    </button>
-                                                </span>
-                                                <input type="text" name="quant[2]" class=" input-number" value="1"
-                                                    min="1" max="100">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="minus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-minus"></i> </button>
-                                                </span>
-                                                <span class="me-3">كرتون</span>
-                                            </div>
+                                <div class="col-md-9">
+                                    <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
+                                        <div class="w-75">
+                                            <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
+                                            <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
                                         </div>
-                                        <div class="trash">
-                                            <svg>
-                                                <use href="../icons.svg#trash"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card product-card mb-4 pb-4" data-aos="fade-up">
-                        <div class="row g-0">
-                            <div class="col-md-3">
-                                <div class="product-card-img">
-                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                                </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
-                                    <div class="w-75">
-                                        <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
-                                        <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
-                                    </div>
-                                    <div class="w-25">
-                                        <p class="price p-0 mb-5 text-end">
-                                            <span class="new-price">16.13ر.س</span>
-                                            <span class="old-price">21.50ر.س</span>
-                                        </p>
-                                    </div>
-                                    <div class="w-100 d-flex align-items-center justify-content-between">
-                                        <div class="amount">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="plus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-plus"></i>
-                                                    </button>
-                                                </span>
-                                                <input type="text" name="quant[2]" class=" input-number" value="1"
-                                                    min="1" max="100">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="minus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-minus"></i> </button>
-                                                </span>
-                                                <span class="me-3">كرتون</span>
-                                            </div>
-                                        </div>
-                                        <div class="trash">
-                                            <svg>
-                                                <use href="../icons.svg#trash"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card product-card mb-4 pb-4" data-aos="fade-up">
-                        <div class="row g-0">
-                            <div class="col-md-3">
-                                <div class="product-card-img">
-                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                                </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
-                                    <div class="w-75">
-                                        <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
-                                        <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
-                                    </div>
-                                    <div class="w-25">
-                                        <p class="price p-0 mb-5 text-end">
-                                            <span class="new-price">16.13ر.س</span>
-                                            <span class="old-price">21.50ر.س</span>
-                                        </p>
-                                    </div>
-                                    <div class="w-100 d-flex align-items-center justify-content-between">
-                                        <div class="amount">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="plus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-plus"></i>
-                                                    </button>
-                                                </span>
-                                                <input type="text" name="quant[2]" class=" input-number" value="1"
-                                                    min="1" max="100">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="minus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-minus"></i> </button>
-                                                </span>
-                                                <span class="me-3">كرتون</span>
-                                            </div>
-                                        </div>
-                                        <div class="trash">
-                                            <svg>
-                                                <use href="../icons.svg#trash"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card product-card mb-4 pb-4" data-aos="fade-up">
-                        <div class="row g-0">
-                            <div class="col-md-3">
-                                <div class="product-card-img">
-                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                                </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
-                                    <div class="w-75">
-                                        <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
-                                        <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
-                                    </div>
-                                    <div class="w-25">
-                                        <p class="price p-0 mb-5 text-end">
-                                            <span class="new-price">16.13ر.س</span>
-                                            <span class="old-price">21.50ر.س</span>
-                                        </p>
-                                    </div>
-                                    <div class="w-100 d-flex align-items-center justify-content-between">
-                                        <div class="amount">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="plus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-plus"></i>
-                                                    </button>
-                                                </span>
-                                                <input type="text" name="quant[2]" class=" input-number" value="1"
-                                                    min="1" max="100">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="minus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-minus"></i> </button>
-                                                </span>
-                                                <span class="me-3">كرتون</span>
-                                            </div>
-                                        </div>
-                                        <div class="trash">
-                                            <svg>
-                                                <use href="../icons.svg#trash"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card product-card mb-4 pb-4" data-aos="fade-up">
-                        <div class="row g-0">
-                            <div class="col-md-3">
-                                <div class="product-card-img">
-                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                                </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
-                                    <div class="w-75">
-                                        <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
-                                        <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
-                                    </div>
-                                    <div class="w-25">
-                                        <p class="price p-0 mb-5 text-end">
-                                            <span class="new-price">16.13ر.س</span>
-                                            <span class="old-price">21.50ر.س</span>
-                                        </p>
-                                    </div>
-                                    <div class="w-100 d-flex align-items-center justify-content-between">
-                                        <div class="amount">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="plus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-plus"></i>
-                                                    </button>
-                                                </span>
-                                                <input type="text" name="quant[2]" class=" input-number" value="1"
-                                                    min="1" max="100">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="minus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-minus"></i> </button>
-                                                </span>
-                                                <span class="me-3">كرتون</span>
-                                            </div>
-                                        </div>
-                                        <div class="trash">
-                                            <svg>
-                                                <use href="../icons.svg#trash"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card product-card mb-4 pb-4" data-aos="fade-up">
-                        <div class="row g-0">
-                            <div class="col-md-3">
-                                <div class="product-card-img">
-                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                                </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
-                                    <div class="w-75">
-                                        <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
-                                        <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
-                                    </div>
-                                    <div class="w-25">
-                                        <p class="price p-0 mb-5 text-end">
-                                            <span class="new-price">16.13ر.س</span>
-                                            <span class="old-price">21.50ر.س</span>
-                                        </p>
-                                    </div>
-                                    <div class="w-100 d-flex align-items-center justify-content-between">
-                                        <div class="amount">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="plus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-plus"></i>
-                                                    </button>
-                                                </span>
-                                                <input type="text" name="quant[2]" class=" input-number" value="1"
-                                                    min="1" max="100">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="minus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-minus"></i> </button>
-                                                </span>
-                                                <span class="me-3">كرتون</span>
-                                            </div>
-                                        </div>
-                                        <div class="trash">
-                                            <svg>
-                                                <use href="../icons.svg#trash"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card product-card mb-4 pb-4" data-aos="fade-up">
-                        <div class="row g-0">
-                            <div class="col-md-3">
-                                <div class="product-card-img">
-                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                                </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
-                                    <div class="w-75">
-                                        <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
-                                        <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
-                                    </div>
-                                    <div class="w-25">
-                                        <p class="price p-0 mb-5 text-end">
-                                            <span class="new-price">16.13ر.س</span>
-                                            <span class="old-price">21.50ر.س</span>
-                                        </p>
-                                    </div>
-                                    <div class="w-100 d-flex align-items-center justify-content-between">
-                                        <div class="amount">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="plus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-plus"></i>
-                                                    </button>
-                                                </span>
-                                                <input type="text" name="quant[2]" class=" input-number" value="1"
-                                                    min="1" max="100">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="minus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-minus"></i> </button>
-                                                </span>
-                                                <span class="me-3">كرتون</span>
-                                            </div>
-                                        </div>
-                                        <div class="trash">
-                                            <svg>
-                                                <use href="../icons.svg#trash"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card product-card mb-4 pb-4" data-aos="fade-up">
-                        <div class="row g-0">
-                            <div class="col-md-3">
-                                <div class="product-card-img">
-                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                                </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
-                                    <div class="w-75">
-                                        <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
-                                        <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
-                                    </div>
-                                    <div class="w-25">
-                                        <p class="price p-0 mb-5 text-end">
-                                            <span class="new-price">16.13ر.س</span>
-                                            <span class="old-price">21.50ر.س</span>
-                                        </p>
-                                    </div>
-                                    <div class="w-100 d-flex align-items-center justify-content-between">
-                                        <div class="amount">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="plus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-plus"></i>
-                                                    </button>
-                                                </span>
-                                                <input type="text" name="quant[2]" class=" input-number" value="1"
-                                                    min="1" max="100">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="minus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-minus"></i> </button>
-                                                </span>
-                                                <span class="me-3">كرتون</span>
-                                            </div>
-                                        </div>
-                                        <div class="trash">
-                                            <svg>
-                                                <use href="../icons.svg#trash"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card product-card mb-4 pb-4" data-aos="fade-up">
-                        <div class="row g-0">
-                            <div class="col-md-3">
-                                <div class="product-card-img">
-                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                                </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
-                                    <div class="w-75">
-                                        <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
-                                        <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
-                                    </div>
-                                    <div class="w-25">
-                                        <p class="price p-0 mb-5 text-end">
-                                            <span class="new-price">16.13ر.س</span>
-                                            <span class="old-price">21.50ر.س</span>
-                                        </p>
-                                    </div>
-                                    <div class="w-100 d-flex align-items-center justify-content-between">
-                                        <div class="amount">
-                                            <div class="input-group">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="plus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-plus"></i>
-                                                    </button>
-                                                </span>
-                                                <input type="text" name="quant[2]" class=" input-number" value="1"
-                                                    min="1" max="100">
-                                                <span class="input-group-btn">
-                                                    <button type="button" class="btn btn-number" data-type="minus"
-                                                        data-field="quant[2]">
-                                                        <i class="fa-solid fa-minus"></i> </button>
-                                                </span>
-                                                <span class="me-3">كرتون</span>
-                                            </div>
-                                        </div>
-                                        <div class="trash">
-                                            <svg>
-                                                <use href="../icons.svg#trash"></use>
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-5">
-                    <div class="complete-sale">
-                        <div class="discount-code pb-3 mb-4">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="كود الخصم" aria-label=""
-                                    aria-describedby="button-addon1">
-                                <button class="" type="button" id="button-addon1">تحقق</button>
-                            </div>
-                        </div>
-                        <table class="table table-borderless mb-5">
-                            <tbody>
-                                <tr>
-                                    <td>إجمالي العناصر</td>
-                                    <td class="text-end">16.13 ر.س</td>
-                                </tr>
-                                <tr>
-                                    <td>الخصم</td>
-                                    <td class="text-end">0.0 ر.س</td>
-                                </tr>
-                                <tr>
-                                    <td>الضريبة</td>
-                                    <td class="text-end">0.0 ر.س</td>
-                                </tr>
-                                <tr>
-                                    <td>المجموع</td>
-                                    <td class="text-end">26.13ر.س</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div class="text-center">
-                            <button type="button" class="complete-sale-btn btn btn-bg w-50 mx-auto"
-                                data-bs-target="#logInModal"> اكمال البيع</button>
-                            <div class="toast-container position-fixed top-0 start-50 translate-middle-x">
-                                <div class="toast">
-                                    <div class="toast-body">
-                                        <p class="m-0">يجب إضافة أكتر من 10 منتجات للسلة</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div class="modal fade" id="logInModal" tabindex="-1" aria-labelledby="logInModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <form action="#" class="logInForm">
-                                        <div class="modal-header mb-3">
-                                            <h6 class="modal-title" id="logInModalLabel">تسجيل الدخول</h6>
-                                        </div>
-                                        <div class="modal-body">
-                                            <div>
-                                                <label for="mobile" class="form-label">رقم الموبايل</label>
-                                                <input type="tel" class="form-control" id="mobile"
-                                                    placeholder="5x xxx xxxx" name="mobile">
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer justify-content-start">
-                                            <button type="submit" class="btn btn-bg w-100 mb-3">
-                                                تسجيل الدخول</button>
-
-                                            <p class="m-0">ليس لديك حساب ؟
-                                                <a href="#" class="btn-link" data-bs-toggle="modal"
-                                                    data-bs-dismiss="modal" data-bs-target="#newAccountModal">
-                                                    سجل الان
-                                                </a>
+                                        <div class="w-25">
+                                            <p class="price p-0 mb-5 text-end">
+                                                <span class="new-price">16.13ر.س</span>
+                                                <span class="old-price">21.50ر.س</span>
                                             </p>
                                         </div>
-                                    </form>
+                                        <div class="w-100 d-flex align-items-center justify-content-between">
+                                            <div class="amount">
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="plus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quant[2]" class=" input-qty" value="1"
+                                                        min="1" max="100">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="minus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-minus"></i> </button>
+                                                    </span>
+                                                    <span class="me-3">كرتون</span>
+                                                </div>
+                                            </div>
+                                            <div class="trash">
+                                                <svg>
+                                                    <use href="../icons.svg#trash"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="modal fade" id="newAccountModal" tabindex="-1"aria-labelledby="newAccountModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <form action="#" class="newAccountForm">
-                                        <div class="modal-header">
-                                            <h6 class="modal-title" id="newAccountModalLabel">إنشاء حساب</h6>
+                        <div class="card product-card mb-4 pb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <div class="product-card-img">
+                                        <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
+                                        <div class="w-75">
+                                            <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
+                                            <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
                                         </div>
-                                        <div class="modal-body">
-                                            <p class="mb-3 text-center">
-                                                لإنشاء حساب جديد أضف إسمك و رقم جواللك أدناه , وسيتم إرسال رسالة نصية
-                                                لتتحقق
-                                                من الرقم المضاف.
+                                        <div class="w-25">
+                                            <p class="price p-0 mb-5 text-end">
+                                                <span class="new-price">16.13ر.س</span>
+                                                <span class="old-price">21.50ر.س</span>
                                             </p>
-                                            <div class="mb-3">
-                                                <label for="username" class="form-label">الاسم</label>
-                                                <input type="text" class="form-control" id="username" name="username">
+                                        </div>
+                                        <div class="w-100 d-flex align-items-center justify-content-between">
+                                            <div class="amount">
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="plus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quant[2]" class=" input-qty" value="1"
+                                                        min="1" max="100">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="minus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-minus"></i> </button>
+                                                    </span>
+                                                    <span class="me-3">كرتون</span>
+                                                </div>
                                             </div>
-                                            <div class="mb-3">
-                                                <label for="mobile" class="form-label">رقم الموبايل</label>
-                                                <input type="tel" class="form-control" id="mobile" name="mobile"
-                                                    placeholder="5x xxx xxxx">
+                                            <div class="trash">
+                                                <svg>
+                                                    <use href="../icons.svg#trash"></use>
+                                                </svg>
                                             </div>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="submit" class="btn btn-bg w-100 mb-3" >
-                                                تسجيل </button>
-                                        </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="modal fade" id="codeModal" tabindex="-1" aria-labelledby="codeModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <form action="#" class="codeForm">
-                                        <div class="modal-header">
-                                            <h6 class="modal-title" id="codeModalLabel">تحقق من الكود</h6>
+                        <div class="card product-card mb-4 pb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <div class="product-card-img">
+                                        <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
+                                        <div class="w-75">
+                                            <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
+                                            <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
                                         </div>
-                                        <div class="modal-body">
-                                            <p class="mb-4 text-center">
-                                                أضف الكود المرسل إليك
+                                        <div class="w-25">
+                                            <p class="price p-0 mb-5 text-end">
+                                                <span class="new-price">16.13ر.س</span>
+                                                <span class="old-price">21.50ر.س</span>
                                             </p>
-                                            <fieldset name='number-code' data-number-code-form class="number-code">
-                                                <input type="number" min='0' max='9' name='number-code-0'
-                                                    data-number-code-input='0' placeholder="0" required />
-                                                <input type="number" min='0' max='9' name='number-code-1'
-                                                    data-number-code-input='1' placeholder="0" required />
-                                                <input type="number" min='0' max='9' name='number-code-2'
-                                                    data-number-code-input='2' placeholder="0" required />
-                                                <input type="number" min='0' max='9' name='number-code-3'
-                                                    data-number-code-input='3' placeholder="0" required />
-                                            </fieldset>
                                         </div>
-                                        <div class="modal-footer justify-content-start">
-                                            <button type="submit" class="btn btn-bg w-100 mb-3"  data-bs-dismiss="modal"  data-bs-toggle="modal">
-                                                تحقق</button>
-                                            <button type="button" class="btn btn-bg btn-white-bg w-100 mb-3">
-                                                اعد إرسال الرمز</button>
+                                        <div class="w-100 d-flex align-items-center justify-content-between">
+                                            <div class="amount">
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="plus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quant[2]" class=" input-qty" value="1"
+                                                        min="1" max="100">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="minus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-minus"></i> </button>
+                                                    </span>
+                                                    <span class="me-3">كرتون</span>
+                                                </div>
+                                            </div>
+                                            <div class="trash">
+                                                <svg>
+                                                    <use href="../icons.svg#trash"></use>
+                                                </svg>
+                                            </div>
                                         </div>
-                                    </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card product-card mb-4 pb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <div class="product-card-img">
+                                        <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
+                                        <div class="w-75">
+                                            <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
+                                            <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
+                                        </div>
+                                        <div class="w-25">
+                                            <p class="price p-0 mb-5 text-end">
+                                                <span class="new-price">16.13ر.س</span>
+                                                <span class="old-price">21.50ر.س</span>
+                                            </p>
+                                        </div>
+                                        <div class="w-100 d-flex align-items-center justify-content-between">
+                                            <div class="amount">
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="plus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quant[2]" class=" input-qty" value="1"
+                                                        min="1" max="100">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="minus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-minus"></i> </button>
+                                                    </span>
+                                                    <span class="me-3">كرتون</span>
+                                                </div>
+                                            </div>
+                                            <div class="trash">
+                                                <svg>
+                                                    <use href="../icons.svg#trash"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card product-card mb-4 pb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <div class="product-card-img">
+                                        <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
+                                        <div class="w-75">
+                                            <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
+                                            <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
+                                        </div>
+                                        <div class="w-25">
+                                            <p class="price p-0 mb-5 text-end">
+                                                <span class="new-price">16.13ر.س</span>
+                                                <span class="old-price">21.50ر.س</span>
+                                            </p>
+                                        </div>
+                                        <div class="w-100 d-flex align-items-center justify-content-between">
+                                            <div class="amount">
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="plus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quant[2]" class=" input-qty" value="1"
+                                                        min="1" max="100">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="minus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-minus"></i> </button>
+                                                    </span>
+                                                    <span class="me-3">كرتون</span>
+                                                </div>
+                                            </div>
+                                            <div class="trash">
+                                                <svg>
+                                                    <use href="../icons.svg#trash"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card product-card mb-4 pb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <div class="product-card-img">
+                                        <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
+                                        <div class="w-75">
+                                            <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
+                                            <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
+                                        </div>
+                                        <div class="w-25">
+                                            <p class="price p-0 mb-5 text-end">
+                                                <span class="new-price">16.13ر.س</span>
+                                                <span class="old-price">21.50ر.س</span>
+                                            </p>
+                                        </div>
+                                        <div class="w-100 d-flex align-items-center justify-content-between">
+                                            <div class="amount">
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="plus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quant[2]" class=" input-qty" value="1"
+                                                        min="1" max="100">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="minus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-minus"></i> </button>
+                                                    </span>
+                                                    <span class="me-3">كرتون</span>
+                                                </div>
+                                            </div>
+                                            <div class="trash">
+                                                <svg>
+                                                    <use href="../icons.svg#trash"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card product-card mb-4 pb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <div class="product-card-img">
+                                        <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
+                                        <div class="w-75">
+                                            <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
+                                            <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
+                                        </div>
+                                        <div class="w-25">
+                                            <p class="price p-0 mb-5 text-end">
+                                                <span class="new-price">16.13ر.س</span>
+                                                <span class="old-price">21.50ر.س</span>
+                                            </p>
+                                        </div>
+                                        <div class="w-100 d-flex align-items-center justify-content-between">
+                                            <div class="amount">
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="plus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quant[2]" class=" input-qty" value="1"
+                                                        min="1" max="100">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="minus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-minus"></i> </button>
+                                                    </span>
+                                                    <span class="me-3">كرتون</span>
+                                                </div>
+                                            </div>
+                                            <div class="trash">
+                                                <svg>
+                                                    <use href="../icons.svg#trash"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card product-card mb-4 pb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <div class="product-card-img">
+                                        <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
+                                        <div class="w-75">
+                                            <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
+                                            <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
+                                        </div>
+                                        <div class="w-25">
+                                            <p class="price p-0 mb-5 text-end">
+                                                <span class="new-price">16.13ر.س</span>
+                                                <span class="old-price">21.50ر.س</span>
+                                            </p>
+                                        </div>
+                                        <div class="w-100 d-flex align-items-center justify-content-between">
+                                            <div class="amount">
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="plus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quant[2]" class=" input-qty" value="1"
+                                                        min="1" max="100">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="minus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-minus"></i> </button>
+                                                    </span>
+                                                    <span class="me-3">كرتون</span>
+                                                </div>
+                                            </div>
+                                            <div class="trash">
+                                                <svg>
+                                                    <use href="../icons.svg#trash"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card product-card mb-4 pb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <div class="product-card-img">
+                                        <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
+                                        <div class="w-75">
+                                            <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
+                                            <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
+                                        </div>
+                                        <div class="w-25">
+                                            <p class="price p-0 mb-5 text-end">
+                                                <span class="new-price">16.13ر.س</span>
+                                                <span class="old-price">21.50ر.س</span>
+                                            </p>
+                                        </div>
+                                        <div class="w-100 d-flex align-items-center justify-content-between">
+                                            <div class="amount">
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="plus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quant[2]" class=" input-qty" value="1"
+                                                        min="1" max="100">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="minus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-minus"></i> </button>
+                                                    </span>
+                                                    <span class="me-3">كرتون</span>
+                                                </div>
+                                            </div>
+                                            <div class="trash">
+                                                <svg>
+                                                    <use href="../icons.svg#trash"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card product-card mb-4 pb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <div class="product-card-img">
+                                        <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
+                                        <div class="w-75">
+                                            <h6 class="card-title mb-4">مياه حلوة عبوة 600 مل</h6>
+                                            <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
+                                        </div>
+                                        <div class="w-25">
+                                            <p class="price p-0 mb-5 text-end">
+                                                <span class="new-price">16.13ر.س</span>
+                                                <span class="old-price">21.50ر.س</span>
+                                            </p>
+                                        </div>
+                                        <div class="w-100 d-flex align-items-center justify-content-between">
+                                            <div class="amount">
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="plus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-plus"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" name="quant[2]" class=" input-qty" value="1"
+                                                        min="1" max="100">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="btn btn-number" data-type="minus"
+                                                            data-field="quant[2]">
+                                                            <i class="fa-solid fa-minus"></i> </button>
+                                                    </span>
+                                                    <span class="me-3">كرتون</span>
+                                                </div>
+                                            </div>
+                                            <div class="trash">
+                                                <svg>
+                                                    <use href="../icons.svg#trash"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <div class="complete-sale">
+                            <div class="discount-code pb-3 mb-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="كود الخصم" aria-label=""
+                                        aria-describedby="button-addon1">
+                                    <button class="" type="button" id="button-addon1">تحقق</button>
+                                </div>
+                            </div>
+                            <table class="table table-borderless mb-5">
+                                <tbody>
+                                    <tr>
+                                        <td>إجمالي العناصر</td>
+                                        <td class="text-end">16.13 ر.س</td>
+                                    </tr>
+                                    <tr>
+                                        <td>الخصم</td>
+                                        <td class="text-end">0.0 ر.س</td>
+                                    </tr>
+                                    <tr>
+                                        <td>الضريبة</td>
+                                        <td class="text-end">0.0 ر.س</td>
+                                    </tr>
+                                    <tr>
+                                        <td>المجموع</td>
+                                        <td class="text-end">26.13ر.س</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="text-center">
+                                <button type="button" class="complete-sale-btn btn btn-bg w-50 mx-auto"
+                                    data-bs-target="#logInModal"> اكمال البيع</button>
+                                <div class="toast-container position-fixed top-0 start-50 translate-middle-x">
+                                    <div class="toast">
+                                        <div class="toast-body">
+                                            <p class="m-0">يجب إضافة أكتر من 10 منتجات للسلة</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="logInModal" tabindex="-1" aria-labelledby="logInModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <form action="#" class="logInForm">
+                                            <div class="modal-header mb-3">
+                                                <h6 class="modal-title" id="logInModalLabel">تسجيل الدخول</h6>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div>
+                                                    <label for="mobile" class="form-label">رقم الموبايل</label>
+                                                    <input type="tel" class="form-control" id="mobile"
+                                                        placeholder="5x xxx xxxx" name="mobile">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer justify-content-start">
+                                                <button type="submit" class="btn btn-bg w-100 mb-3">
+                                                    تسجيل الدخول</button>
+
+                                                <p class="m-0">ليس لديك حساب ؟
+                                                    <a href="#" class="btn-link" data-bs-toggle="modal"
+                                                        data-bs-dismiss="modal" data-bs-target="#newAccountModal">
+                                                        سجل الان
+                                                    </a>
+                                                </p>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="newAccountModal" tabindex="-1"
+                                aria-labelledby="newAccountModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <form action="#" class="newAccountForm">
+                                            <div class="modal-header">
+                                                <h6 class="modal-title" id="newAccountModalLabel">إنشاء حساب</h6>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p class="mb-3 text-center">
+                                                    لإنشاء حساب جديد أضف إسمك و رقم جواللك أدناه , وسيتم إرسال رسالة
+                                                    نصية
+                                                    لتتحقق
+                                                    من الرقم المضاف.
+                                                </p>
+                                                <div class="mb-3">
+                                                    <label for="username" class="form-label">الاسم</label>
+                                                    <input type="text" class="form-control" id="username"
+                                                        name="username">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="mobile" class="form-label">رقم الموبايل</label>
+                                                    <input type="tel" class="form-control" id="mobile" name="mobile"
+                                                        placeholder="5x xxx xxxx">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-bg w-100 mb-3">
+                                                    تسجيل </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade" id="codeModal" tabindex="-1" aria-labelledby="codeModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <form action="#" class="codeForm">
+                                            <div class="modal-header">
+                                                <h6 class="modal-title" id="codeModalLabel">تحقق من الكود</h6>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p class="mb-4 text-center">
+                                                    أضف الكود المرسل إليك
+                                                </p>
+                                                <fieldset name='number-code' data-number-code-form class="number-code">
+                                                    <input type="number" min='0' max='9' name='number-code-0'
+                                                        data-number-code-input='0' placeholder="0" required />
+                                                    <input type="number" min='0' max='9' name='number-code-1'
+                                                        data-number-code-input='1' placeholder="0" required />
+                                                    <input type="number" min='0' max='9' name='number-code-2'
+                                                        data-number-code-input='2' placeholder="0" required />
+                                                    <input type="number" min='0' max='9' name='number-code-3'
+                                                        data-number-code-input='3' placeholder="0" required />
+                                                </fieldset>
+                                            </div>
+                                            <div class="modal-footer justify-content-start">
+                                                <button type="submit" class="btn btn-bg w-100 mb-3"
+                                                    data-bs-dismiss="modal" data-bs-toggle="modal">
+                                                    تحقق</button>
+                                                <button type="button" class="btn btn-bg btn-white-bg w-100 mb-3">
+                                                    اعد إرسال الرمز</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -734,6 +811,7 @@
             </div>
         </div>
     </div>
+
     <!-- page footer -->
     <section class="footer">
         <div class="footer-inner padding-section">

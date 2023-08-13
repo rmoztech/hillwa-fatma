@@ -28,6 +28,8 @@
     <link href="../css/owl.theme.default.min.css" rel="stylesheet">
     <!--  load aos CSS  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--  load jquery-ui CSS  -->
+    <link rel='stylesheet' href='../css/jquery-ui.css'>
     <!-- load style CSS -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -35,200 +37,272 @@
 <body>
     <!-- Header Area -->
     <header class="header">
-        <div class="nav d-flex align-items-center justify-content-between container">
-            <div class="d-flex align-items-center justify-content-start">
-                <div class="logo text-center">
-                    <a href="../index.html">
-                        <img src="../img/logo.png" alt="">
-                    </a>
+        <div class="container">
+            <div class="navHeader d-flex align-items-center justify-content-md-between justify-content-center ">
+                <div class="d-flex align-items-center justify-content-start">
+                    <div class="logo text-center">
+                        <a href="../index.html">
+                            <img src="../img/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <!-- menu list -->
+                    <div class="menu-list me-5">
+                        <ul class="nav">
+                            <li class="nav-item active">
+                                <a href="./about.html">
+                                    من نحن
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./products.html">
+                                    المنتجات
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./contact.html">
+                                    اتصل بنا
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- menu list -->
-                <div class="menu-list me-5">
-                    <ul class="nav">
-                        <li class="nav-item active">
-                            <a href="./about.html">
-                                من نحن
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../pages/products.html">
-                                المنتجات
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./contact.html">
-                                اتصل بنا
-                            </a>
-                        </li>
-                    </ul>
+                <div>
+                    <div class="menu-list">
+                        <ul class="nav">
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg class="translate-svg">
+                                        <use href="../icons.svg#translate"></use>
+                                    </svg>
+                                    English
+                                </a>
+                            </li>
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg>
+                                        <use href="../icons.svg#user"></use>
+                                    </svg>
+                                    تسجيل الدخول
+                                </a>
+                            </li>
+                            <li class="nav-item position-relative">
+                                <a href="./shopping-cart.html" class="shopping-cart">
+                                    <svg>
+                                        <use href="../icons.svg#shoppingCart"></use>
+                                    </svg>
+                                    <span class="num-cart">
+
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="menu-list">
-                    <ul class="nav">
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg class="translate-svg">
-                                    <use href="../icons.svg#translate"></use>
-                                </svg>
-                                English
-                            </a>
-                        </li>
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg>
-                                    <use href="../icons.svg#user"></use>
-                                </svg>
-                                تسجيل الدخول
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">
-                                <svg>
-                                    <use href="../icons.svg#shoppingCart"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
+
         <!-- End Header Inner -->
     </header>
     <!-- End Header Area -->
-    <!-- page content -->
-    <div class="payment-success-page container">
-        <div class="d-flex align-items-center justify-content-center text-center pt-5">
-            <div>
-                <svg>
-                    <use href="../icons.svg#success"></use>
-                </svg>
-                <p class="mb-5 mt-4 fw-bold">تم الدفع والشراء بنجاح</p>
-                <p class="mb-5 fw-bold">يمكنك متابعة تفاصيل الطلب من قائمة الطلبات</p>
-                <a href="./shopping-cart.html" class="btn btn-bg d-block mb-3">الطلبات</a>
-                <a href="./products.html" class="btn btn-bg btn-white-bg d-block">تسوق</a>
+
+    <!-- Mobile Navbar -->
+    <div class="mobile-navbar">
+        <div class="w-100">
+            <div class="close-btn d-flex align-items-center justify-content-end mb-4">
+                <button class="btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
+            <div class="menu-list">
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a href="./about.html">
+                            من نحن
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./products.html">
+                            المنتجات
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./contact.html">
+                            اتصل بنا
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg class="translate-svg">
+                                <use href="../icons.svg#translate"></use>
+                            </svg>
+                            English
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg>
+                                <use href="../icons.svg#user"></use>
+                            </svg>
+                            تسجيل الدخول
+                        </a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a href="./shopping-cart.html" class="shopping-cart">
+                            <svg>
+                                <use href="../icons.svg#shoppingCart"></use>
+                            </svg>
+                            <span class="num-cart">
+
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
-        <div class="page-header padding-section pb-0 d-flex align-items-center justify-content-between">
-            <h5>المزيد من منتجات حلوة </h5>
-            <a href="./products.html" class="btn-gray-link"> عرض الكل</a>
-        </div>
-        <div class="page-content padding-section pt-5">
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
-                        <div class="product-card-img">
-                            <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">عبوة 330 مل</h4>
-                            <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
-                            <p class="price p-0">
-                                <span class="old-price">21.50ر.س</span>
-                                <span class="new-price ms-2">16.13ر.س</span>
-                            </p>
-                            <a href="#" class="btn btn-bg">أضف للسلة</a>
-                            <div class="discount">
-                                <span>
-                                    خصم 40%
-                                </span>
+    </div>
+    <!-- page content -->
+    <div class="container">
+        <div class="payment-success-page ">
+            <div class="d-flex align-items-center justify-content-center text-center pt-5">
+                <div>
+                    <svg>
+                        <use href="../icons.svg#success"></use>
+                    </svg>
+                    <p class="mb-5 mt-4 fw-bold">تم الدفع والشراء بنجاح</p>
+                    <p class="mb-5 fw-bold">يمكنك متابعة تفاصيل الطلب من قائمة الطلبات</p>
+                    <a href="./shopping-cart.html" class="btn btn-bg d-block mb-3">الطلبات</a>
+                    <a href="./products.html" class="btn btn-bg btn-white-bg d-block">تسوق</a>
+                </div>
+            </div>
+            <div class="page-header padding-section pb-0 d-flex align-items-center justify-content-between">
+                <h5>المزيد من منتجات حلوة </h5>
+                <a href="./products.html" class="btn-gray-link"> عرض الكل</a>
+            </div>
+            <div class="page-content padding-section pt-5">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
+                            <div class="product-card-img">
+                                <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">عبوة 330 مل</h4>
+                                <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                <p class="price p-0">
+                                    <span class="old-price">21.50ر.س</span>
+                                    <span class="new-price ms-2">16.13ر.س</span>
+                                </p>
+                                <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                                <div class="discount">
+                                    <span>
+                                        خصم 40%
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
-                        <div class="product-card-img">
-                            <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">عبوة 330 مل</h4>
-                            <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
-                            <p class="price p-0">
-                                <span class="old-price">21.50ر.س</span>
-                                <span class="new-price ms-2">16.13ر.س</span>
-                            </p>
-                            <a href="#" class="btn btn-bg">أضف للسلة</a>
-                            <div class="discount">
-                                <span>
-                                    خصم 40%
-                                </span>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
+                            <div class="product-card-img">
+                                <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">عبوة 330 مل</h4>
+                                <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                <p class="price p-0">
+                                    <span class="old-price">21.50ر.س</span>
+                                    <span class="new-price ms-2">16.13ر.س</span>
+                                </p>
+                                <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                                <div class="discount">
+                                    <span>
+                                        خصم 40%
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
-                        <div class="product-card-img">
-                            <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">عبوة 330 مل</h4>
-                            <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
-                            <p class="price p-0">
-                                <span class="old-price">21.50ر.س</span>
-                                <span class="new-price ms-2">16.13ر.س</span>
-                            </p>
-                            <a href="#" class="btn btn-bg">أضف للسلة</a>
-                            <div class="discount">
-                                <span>
-                                    خصم 40%
-                                </span>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
+                            <div class="product-card-img">
+                                <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">عبوة 330 مل</h4>
+                                <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                <p class="price p-0">
+                                    <span class="old-price">21.50ر.س</span>
+                                    <span class="new-price ms-2">16.13ر.س</span>
+                                </p>
+                                <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                                <div class="discount">
+                                    <span>
+                                        خصم 40%
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
-                        <div class="product-card-img">
-                            <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">عبوة 330 مل</h4>
-                            <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
-                            <p class="price p-0">
-                                <span class="old-price">21.50ر.س</span>
-                                <span class="new-price ms-2">16.13ر.س</span>
-                            </p>
-                            <a href="#" class="btn btn-bg">أضف للسلة</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
-                        <div class="product-card-img">
-                            <img src="../img/order-img.png" class="card-img-top" alt="new img">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">عبوة 330 مل</h4>
-                            <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
-                            <p class="price p-0">
-                                <span class="old-price">21.50ر.س</span>
-                                <span class="new-price ms-2">16.13ر.س</span>
-                            </p>
-                            <a href="#" class="btn btn-bg">أضف للسلة</a>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
+                            <div class="product-card-img">
+                                <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">عبوة 330 مل</h4>
+                                <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                <p class="price p-0">
+                                    <span class="old-price">21.50ر.س</span>
+                                    <span class="new-price ms-2">16.13ر.س</span>
+                                </p>
+                                <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
-                        <div class="product-card-img">
-                            <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
+                            <div class="product-card-img">
+                                <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">عبوة 330 مل</h4>
+                                <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                <p class="price p-0">
+                                    <span class="old-price">21.50ر.س</span>
+                                    <span class="new-price ms-2">16.13ر.س</span>
+                                </p>
+                                <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h4 class="card-title">عبوة 330 مل</h4>
-                            <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
-                            <p class="price p-0">
-                                <span class="old-price">21.50ر.س</span>
-                                <span class="new-pirce ms-2">16.13ر.س</span>
-                            </p>
-                            <a href="#" class="btn btn-bg">أضف للسلة</a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
+                            <div class="product-card-img">
+                                <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">عبوة 330 مل</h4>
+                                <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                <p class="price p-0">
+                                    <span class="old-price">21.50ر.س</span>
+                                    <span class="new-pirce ms-2">16.13ر.س</span>
+                                </p>
+                                <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- page footer -->
     <section class="footer">
         <div class="footer-inner padding-section">
@@ -374,6 +448,8 @@
 
     <!--  load jQuery  -->
     <script src="../js/jquery.min.js"></script>
+    <!--  load jQuery ui  -->
+    <script src="../js/jquery-ui.min.js"></script>
     <!--  load owl carousel.  -->
     <script src="../js/owl.carousel.min.js"></script>
     <!--  load popper.js  -->

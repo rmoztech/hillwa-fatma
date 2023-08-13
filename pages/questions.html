@@ -33,230 +33,300 @@
 <body>
     <!-- Header Area -->
     <header class="header">
-        <div class="nav d-flex align-items-center justify-content-between container">
-            <div class="d-flex align-items-center justify-content-start">
-                <div class="logo text-center">
-                    <a href="../index.html">
-                        <img src="../img/logo.png" alt="">
-                    </a>
+        <div class="container">
+            <div class="navHeader d-flex align-items-center justify-content-md-between justify-content-center ">
+                <div class="d-flex align-items-center justify-content-start">
+                    <div class="logo text-center">
+                        <a href="../index.html">
+                            <img src="../img/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <!-- menu list -->
+                    <div class="menu-list me-5">
+                        <ul class="nav">
+                            <li class="nav-item active">
+                                <a href="./about.html">
+                                    من نحن
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./products.html">
+                                    المنتجات
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./contact.html">
+                                    اتصل بنا
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- menu list -->
-                <div class="menu-list me-5">
-                    <ul class="nav">
-                        <li class="nav-item active">
-                            <a href="./about.html">
-                                من نحن
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../pages/products.html">
-                                المنتجات
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./contact.html">
-                                اتصل بنا
-                            </a>
-                        </li>
-                    </ul>
+                <div>
+                    <div class="menu-list">
+                        <ul class="nav">
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg class="translate-svg">
+                                        <use href="../icons.svg#translate"></use>
+                                    </svg>
+                                    English
+                                </a>
+                            </li>
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg>
+                                        <use href="../icons.svg#user"></use>
+                                    </svg>
+                                    تسجيل الدخول
+                                </a>
+                            </li>
+                            <li class="nav-item position-relative">
+                                <a href="./shopping-cart.html" class="shopping-cart">
+                                    <svg>
+                                        <use href="../icons.svg#shoppingCart"></use>
+                                    </svg>
+                                    <span class="num-cart">
+
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="menu-list">
-                    <ul class="nav">
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg class="translate-svg">
-                                    <use href="../icons.svg#translate"></use>
-                                </svg>
-                                English
-                            </a>
-                        </li>
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg>
-                                    <use href="../icons.svg#user"></use>
-                                </svg>
-                                تسجيل الدخول
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">
-                                <svg>
-                                    <use href="../icons.svg#shoppingCart"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
+
         <!-- End Header Inner -->
     </header>
     <!-- End Header Area -->
+ 
+    <!-- Mobile Navbar -->
+    <div class="mobile-navbar">
+        <div class="w-100">
+            <div class="close-btn d-flex align-items-center justify-content-end mb-4">
+                <button class="btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="menu-list">
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a href="./about.html">
+                            من نحن
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./products.html">
+                            المنتجات
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./contact.html">
+                            اتصل بنا
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg class="translate-svg">
+                                <use href="../icons.svg#translate"></use>
+                            </svg>
+                            English
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg>
+                                <use href="../icons.svg#user"></use>
+                            </svg>
+                            تسجيل الدخول
+                        </a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a href="./shopping-cart.html" class="shopping-cart">
+                            <svg>
+                                <use href="../icons.svg#shoppingCart"></use>
+                            </svg>
+                            <span class="num-cart">
+
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
     <!-- page content -->
-    <div class="questions-page container padding-section">
-        <h1 class="mb-5 text-center"> الأسئلة المتكررة</h1>
-        <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <span></span>
-                        <i class="fa-solid fa-caret-left"></i>
-                        كيف يمكنني طلب مياه حلوه ؟
-                    </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p>
-                            يمكنك طلب مياه حلوة من خلال:
+    <div class="container">
+        <div class="questions-page  padding-section">
+            <h1 class="mb-5 text-center"> الأسئلة المتكررة</h1>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <span></span>
+                            <i class="fa-solid fa-caret-left"></i>
+                            كيف يمكنني طلب مياه حلوه ؟
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                يمكنك طلب مياه حلوة من خلال:
 
-                        </p>
-                        <ul>
-                            <li>
-                                - تطبيق حلوة على نظام Android , ios
-                            </li>
-                            <li>
-                                - من خلال الرابط التالي: Https://Hilwawater.Sa </li>
-                            <li>
-                                - الاتصال بخدمة العملاء على الرقم: 920001536 </li>
-                            <li>
-                                - او من خلال رقم الواتساب : 920001536 </li>
-                            <li>
-                                - كما يمكنك التواصل معنا من خلال حساباتنا في مواقع التواصل الاجتماعي </li>
-                        </ul>
+                            </p>
+                            <ul>
+                                <li>
+                                    - تطبيق حلوة على نظام Android , ios
+                                </li>
+                                <li>
+                                    - من خلال الرابط التالي: Https://Hilwawater.Sa </li>
+                                <li>
+                                    - الاتصال بخدمة العملاء على الرقم: 920001536 </li>
+                                <li>
+                                    - او من خلال رقم الواتساب : 920001536 </li>
+                                <li>
+                                    - كما يمكنك التواصل معنا من خلال حساباتنا في مواقع التواصل الاجتماعي </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <span></span>
-                        <i class="fa-solid fa-caret-left"></i>
-                        هل يتوفر توصيل للمياه الى المنازل ؟ </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p>
-                            يمكنك طلب مياه حلوة من خلال:
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <span></span>
+                            <i class="fa-solid fa-caret-left"></i>
+                            هل يتوفر توصيل للمياه الى المنازل ؟ </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                يمكنك طلب مياه حلوة من خلال:
 
-                        </p>
-                        <ul>
-                            <li>
-                                - تطبيق حلوة على نظام Android , ios
-                            </li>
-                            <li>
-                                - من خلال الرابط التالي: Https://Hilwawater.Sa </li>
-                            <li>
-                                - الاتصال بخدمة العملاء على الرقم: 920001536 </li>
-                            <li>
-                                - او من خلال رقم الواتساب : 920001536 </li>
-                            <li>
-                                - كما يمكنك التواصل معنا من خلال حساباتنا في مواقع التواصل الاجتماعي </li>
-                        </ul>
+                            </p>
+                            <ul>
+                                <li>
+                                    - تطبيق حلوة على نظام Android , ios
+                                </li>
+                                <li>
+                                    - من خلال الرابط التالي: Https://Hilwawater.Sa </li>
+                                <li>
+                                    - الاتصال بخدمة العملاء على الرقم: 920001536 </li>
+                                <li>
+                                    - او من خلال رقم الواتساب : 920001536 </li>
+                                <li>
+                                    - كما يمكنك التواصل معنا من خلال حساباتنا في مواقع التواصل الاجتماعي </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <span></span>
-                        <i class="fa-solid fa-caret-left"></i>
-                        هل يمكن تحديد موعد محدد للطلب ( في يوم محدد او ساعة محدده ) ؟ </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p>
-                            يمكنك طلب مياه حلوة من خلال:
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <span></span>
+                            <i class="fa-solid fa-caret-left"></i>
+                            هل يمكن تحديد موعد محدد للطلب ( في يوم محدد او ساعة محدده ) ؟ </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                يمكنك طلب مياه حلوة من خلال:
 
-                        </p>
-                        <ul>
-                            <li>
-                                - تطبيق حلوة على نظام Android , ios
-                            </li>
-                            <li>
-                                - من خلال الرابط التالي: Https://Hilwawater.Sa </li>
-                            <li>
-                                - الاتصال بخدمة العملاء على الرقم: 920001536 </li>
-                            <li>
-                                - او من خلال رقم الواتساب : 920001536 </li>
-                            <li>
-                                - كما يمكنك التواصل معنا من خلال حساباتنا في مواقع التواصل الاجتماعي </li>
-                        </ul>
+                            </p>
+                            <ul>
+                                <li>
+                                    - تطبيق حلوة على نظام Android , ios
+                                </li>
+                                <li>
+                                    - من خلال الرابط التالي: Https://Hilwawater.Sa </li>
+                                <li>
+                                    - الاتصال بخدمة العملاء على الرقم: 920001536 </li>
+                                <li>
+                                    - او من خلال رقم الواتساب : 920001536 </li>
+                                <li>
+                                    - كما يمكنك التواصل معنا من خلال حساباتنا في مواقع التواصل الاجتماعي </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        <span></span>
-                        <i class="fa-solid fa-caret-left"></i>
-                        هل يتم خدمة القطاع الحكومي والقطاع الخاص ؟ </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p>
-                            يمكنك طلب مياه حلوة من خلال:
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <span></span>
+                            <i class="fa-solid fa-caret-left"></i>
+                            هل يتم خدمة القطاع الحكومي والقطاع الخاص ؟ </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                يمكنك طلب مياه حلوة من خلال:
 
-                        </p>
-                        <ul>
-                            <li>
-                                - تطبيق حلوة على نظام Android , ios
-                            </li>
-                            <li>
-                                - من خلال الرابط التالي: Https://Hilwawater.Sa </li>
-                            <li>
-                                - الاتصال بخدمة العملاء على الرقم: 920001536 </li>
-                            <li>
-                                - او من خلال رقم الواتساب : 920001536 </li>
-                            <li>
-                                - كما يمكنك التواصل معنا من خلال حساباتنا في مواقع التواصل الاجتماعي </li>
-                        </ul>
+                            </p>
+                            <ul>
+                                <li>
+                                    - تطبيق حلوة على نظام Android , ios
+                                </li>
+                                <li>
+                                    - من خلال الرابط التالي: Https://Hilwawater.Sa </li>
+                                <li>
+                                    - الاتصال بخدمة العملاء على الرقم: 920001536 </li>
+                                <li>
+                                    - او من خلال رقم الواتساب : 920001536 </li>
+                                <li>
+                                    - كما يمكنك التواصل معنا من خلال حساباتنا في مواقع التواصل الاجتماعي </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFive">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        <span></span>
-                        <i class="fa-solid fa-caret-left"></i>
-                        ماهي وسائل الدفع المتوفرة ؟</button>
-                </h2>
-                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-                    data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <p>
-                            يمكنك طلب مياه حلوة من خلال:
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <span></span>
+                            <i class="fa-solid fa-caret-left"></i>
+                            ماهي وسائل الدفع المتوفرة ؟</button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p>
+                                يمكنك طلب مياه حلوة من خلال:
 
-                        </p>
-                        <ul>
-                            <li>
-                                - تطبيق حلوة على نظام Android , ios
-                            </li>
-                            <li>
-                                - من خلال الرابط التالي: Https://Hilwawater.Sa </li>
-                            <li>
-                                - الاتصال بخدمة العملاء على الرقم: 920001536 </li>
-                            <li>
-                                - او من خلال رقم الواتساب : 920001536 </li>
-                            <li>
-                                - كما يمكنك التواصل معنا من خلال حساباتنا في مواقع التواصل الاجتماعي </li>
-                        </ul>
+                            </p>
+                            <ul>
+                                <li>
+                                    - تطبيق حلوة على نظام Android , ios
+                                </li>
+                                <li>
+                                    - من خلال الرابط التالي: Https://Hilwawater.Sa </li>
+                                <li>
+                                    - الاتصال بخدمة العملاء على الرقم: 920001536 </li>
+                                <li>
+                                    - او من خلال رقم الواتساب : 920001536 </li>
+                                <li>
+                                    - كما يمكنك التواصل معنا من خلال حساباتنا في مواقع التواصل الاجتماعي </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- page footer -->
     <section class="footer">
         <div class="footer-inner padding-section">

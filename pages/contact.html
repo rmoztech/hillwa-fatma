@@ -33,101 +33,174 @@
 <body>
     <!-- Header Area -->
     <header class="header">
-        <div class="nav d-flex align-items-center justify-content-between container">
-            <div class="d-flex align-items-center justify-content-start">
-                <div class="logo text-center">
-                    <a href="../index.html">
-                        <img src="../img/logo.png" alt="">
-                    </a>
+        <div class="container">
+            <div class="navHeader d-flex align-items-center justify-content-md-between justify-content-center ">
+                <div class="d-flex align-items-center justify-content-start">
+                    <div class="logo text-center">
+                        <a href="../index.html">
+                            <img src="../img/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <!-- menu list -->
+                    <div class="menu-list me-5">
+                        <ul class="nav">
+                            <li class="nav-item active">
+                                <a href="./about.html">
+                                    من نحن
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./products.html">
+                                    المنتجات
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./contact.html">
+                                    اتصل بنا
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- menu list -->
-                <div class="menu-list me-5">
-                    <ul class="nav">
-                        <li class="nav-item active">
-                            <a href="./about.html">
-                                من نحن
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../pages/products.html">
-                                المنتجات
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./contact.html">
-                                اتصل بنا
-                            </a>
-                        </li>
-                    </ul>
+                <div>
+                    <div class="menu-list">
+                        <ul class="nav">
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg class="translate-svg">
+                                        <use href="../icons.svg#translate"></use>
+                                    </svg>
+                                    English
+                                </a>
+                            </li>
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg>
+                                        <use href="../icons.svg#user"></use>
+                                    </svg>
+                                    تسجيل الدخول
+                                </a>
+                            </li>
+                            <li class="nav-item position-relative">
+                                <a href="./shopping-cart.html" class="shopping-cart">
+                                    <svg>
+                                        <use href="../icons.svg#shoppingCart"></use>
+                                    </svg>
+                                    <span class="num-cart">
+
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="menu-list">
-                    <ul class="nav">
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg class="translate-svg">
-                                    <use href="../icons.svg#translate"></use>
-                                </svg>
-                                English
-                            </a>
-                        </li>
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg>
-                                    <use href="../icons.svg#user"></use>
-                                </svg>
-                                تسجيل الدخول
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">
-                                <svg>
-                                    <use href="../icons.svg#shoppingCart"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
+
         <!-- End Header Inner -->
     </header>
     <!-- End Header Area -->
-    <!-- page content -->
-    <div class="contact-page container padding-section">
-        <h1 class="mb-5 text-center">اتصل بنا</h1>
-        <section class="contact-info padding-section d-flex align-items-center justify-content-between flex-wrap">
-            <div class="mb-4 mb-md-0">
-                <div class="info-img">
-                    <img src="../img/about.png" alt="about img">
-                </div>
+ 
+    <!-- Mobile Navbar -->
+    <div class="mobile-navbar">
+        <div class="w-100">
+            <div class="close-btn d-flex align-items-center justify-content-end mb-4">
+                <button class="btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="menu-list">
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a href="./about.html">
+                            من نحن
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./products.html">
+                            المنتجات
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./contact.html">
+                            اتصل بنا
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg class="translate-svg">
+                                <use href="../icons.svg#translate"></use>
+                            </svg>
+                            English
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg>
+                                <use href="../icons.svg#user"></use>
+                            </svg>
+                            تسجيل الدخول
+                        </a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a href="./shopping-cart.html" class="shopping-cart">
+                            <svg>
+                                <use href="../icons.svg#shoppingCart"></use>
+                            </svg>
+                            <span class="num-cart">
+
+                            </span>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
-            <div class="info-form px-4 px-md-0">
-                <form action="#">
-                    <div class="mb-4">
-                        <label for="name" class="form-label mb-3">الاسم</label>
-                        <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="الاسم">
-                    </div>
-                    <div class="mb-4">
-                        <label for="mobile" class="form-label mb-3">رقم الجوال </label>
-                        <input type="tel" class="form-control" id="mobile" aria-describedby="mobile"
-                            placeholder="5x xxx xxxx">
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="form-label mb-3">البريد الإلكتروني</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="email"
-                            placeholder="Username@gmail.com">
-                    </div>
-                    <div class="mb-4">
-                        <label for="message" class="form-label mb-3"> رسالة</label>
-                        <textarea class="form-control" placeholder="رسالة" id="message" rows="3"></textarea>
-                    </div>
-                </form>
-            </div>
-        </section>
+        </div>
     </div>
+    <!-- page content -->
+    <div class="container">
+        <div class="contact-page  padding-section">
+            <h1 class="mb-5 text-center">اتصل بنا</h1>
+            <section class="contact-info padding-section d-flex align-items-center justify-content-between flex-wrap">
+                <div class="mb-4 mb-md-0">
+                    <div class="info-img">
+                        <img src="../img/about.png" alt="about img">
+                    </div>
+                </div>
+
+                <div class="info-form px-4 px-md-0">
+                    <form action="#">
+                        <div class="mb-4">
+                            <label for="name" class="form-label mb-3">الاسم</label>
+                            <input type="text" class="form-control" id="name" aria-describedby="name"
+                                placeholder="الاسم">
+                        </div>
+                        <div class="mb-4">
+                            <label for="mobile" class="form-label mb-3">رقم الجوال </label>
+                            <input type="tel" class="form-control" id="mobile" aria-describedby="mobile"
+                                placeholder="5x xxx xxxx">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label mb-3">البريد الإلكتروني</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="email"
+                                placeholder="Username@gmail.com">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label mb-3"> رسالة</label>
+                            <textarea class="form-control" placeholder="رسالة" id="message" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
     <!-- page footer -->
     <section class="footer">
         <div class="footer-inner padding-section">

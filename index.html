@@ -28,6 +28,8 @@
     <link href="./css/owl.theme.default.min.css" rel="stylesheet">
     <!--  load aos CSS  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--  load jquery-ui CSS  -->
+    <link rel='stylesheet' href='../css/jquery-ui.css'>
     <!-- load style CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -35,67 +37,136 @@
 <body>
     <!-- Header Area -->
     <header class="header">
-        <div class="nav d-flex align-items-center justify-content-between container">
-            <div class="d-flex align-items-center justify-content-start">
-                <div class="logo text-center">
-                    <a href="./index.html">
-                        <img src="./img/logo.png" alt="">
-                    </a>
+        <div class="container">
+            <div class="navHeader d-flex align-items-center justify-content-md-between justify-content-center ">
+                <div class="d-flex align-items-center justify-content-start">
+                    <div class="logo text-center">
+                        <a href="../index.html">
+                            <img src="./img/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <!-- menu list -->
+                    <div class="menu-list me-5">
+                        <ul class="nav">
+                            <li class="nav-item active">
+                                <a href="./pages/about.html">
+                                    من نحن
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../pages/products.html">
+                                    المنتجات
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../pages/contact.html">
+                                    اتصل بنا
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- menu list -->
-                <div class="menu-list me-5">
-                    <ul class="nav">
-                        <li class="nav-item active">
-                            <a href="./pages/about.html">
-                                من نحن
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./pages/products.html">
-                                المنتجات
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./pages/contact.html">
-                                اتصل بنا
-                            </a>
-                        </li>
-                    </ul>
+                <div>
+                    <div class="menu-list">
+                        <ul class="nav">
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg class="translate-svg">
+                                        <use href="./icons.svg#translate"></use>
+                                    </svg>
+                                    English
+                                </a>
+                            </li>
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg>
+                                        <use href="./icons.svg#user"></use>
+                                    </svg>
+                                    تسجيل الدخول
+                                </a>
+                            </li>
+                            <li class="nav-item position-relative">
+                                <a href="./pages/shopping-cart.html" class="shopping-cart">
+                                    <svg>
+                                        <use href="./icons.svg#shoppingCart"></use>
+                                    </svg>
+                                    <span class="num-cart">
+
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="menu-list">
-                    <ul class="nav">
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg class="translate-svg">
-                                    <use href="./icons.svg#translate"></use>
-                                </svg>
-                                English
-                            </a>
-                        </li>
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg>
-                                    <use href="./icons.svg#user"></use>
-                                </svg>
-                                تسجيل الدخول
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">
-                                <svg>
-                                    <use href="./icons.svg#shoppingCart"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
+
         <!-- End Header Inner -->
     </header>
     <!-- End Header Area -->
+
+    <!-- Mobile Navbar -->
+    <div class="mobile-navbar">
+        <div class="w-100">
+            <div class="close-btn d-flex align-items-center justify-content-end mb-4">
+                <button class="btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="menu-list">
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a href="./pages/about.html">
+                            من نحن
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./pages/products.html">
+                            المنتجات
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="../pages/contact.html">
+                            اتصل بنا
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg class="translate-svg">
+                                <use href="./icons.svg#translate"></use>
+                            </svg>
+                            English
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg>
+                                <use href="./icons.svg#user"></use>
+                            </svg>
+                            تسجيل الدخول
+                        </a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a href="./pages/shopping-cart.html" class="shopping-cart">
+                            <svg>
+                                <use href="../icons.svg#shoppingCart"></use>
+                            </svg>
+                            <span class="num-cart">
+
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
     <!-- page content -->
     <div class="home-page">
         <section class="slider">
@@ -114,258 +185,268 @@
                 </div>
             </div>
         </section>
-        <section class="orders container padding-section">
-            <div class="section-header mb-5">
-                <h4>
-                    الحد الأدنى للطلب 10 كراتين
-                </h4>
-            </div>
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
-                        <div class="product-card-img">
-                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">عبوة 330 مل</h4>
-                            <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
-                            <p class="price p-0">
-                                <span class="old-price">21.50ر.س</span>
-                                <span class="new-price ms-2">16.13ر.س</span>
-                            </p>
-                            <a href="#" class="btn btn-bg">أضف للسلة</a>
-                            <div class="discount">
-                                <span>
-                                    خصم 40%
-                                </span>
+        <section class="orders padding-section">
+            <div class="container">
+                <div class="section-header mb-5">
+                    <h4>
+                        الحد الأدنى للطلب 10 كراتين
+                    </h4>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
+                            <div class="product-card-img">
+                                <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">عبوة 330 مل</h4>
+                                <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                <p class="price p-0">
+                                    <span class="old-price">21.50ر.س</span>
+                                    <span class="new-price ms-2">16.13ر.س</span>
+                                </p>
+                                <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                                <div class="discount">
+                                    <span>
+                                        خصم 40%
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
-                        <div class="product-card-img">
-                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">عبوة 330 مل</h4>
-                            <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
-                            <p class="price p-0">
-                                <span class="old-price">21.50ر.س</span>
-                                <span class="new-price ms-2">16.13ر.س</span>
-                            </p>
-                            <a href="#" class="btn btn-bg">أضف للسلة</a>
-                            <div class="discount">
-                                <span>
-                                    خصم 40%
-                                </span>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
+                            <div class="product-card-img">
+                                <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">عبوة 330 مل</h4>
+                                <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                <p class="price p-0">
+                                    <span class="old-price">21.50ر.س</span>
+                                    <span class="new-price ms-2">16.13ر.س</span>
+                                </p>
+                                <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                                <div class="discount">
+                                    <span>
+                                        خصم 40%
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
-                        <div class="product-card-img">
-                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">عبوة 330 مل</h4>
-                            <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
-                            <p class="price p-0">
-                                <span class="old-price">21.50ر.س</span>
-                                <span class="new-price ms-2">16.13ر.س</span>
-                            </p>
-                            <a href="#" class="btn btn-bg">أضف للسلة</a>
-                            <div class="discount">
-                                <span>
-                                    خصم 40%
-                                </span>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
+                            <div class="product-card-img">
+                                <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">عبوة 330 مل</h4>
+                                <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                <p class="price p-0">
+                                    <span class="old-price">21.50ر.س</span>
+                                    <span class="new-price ms-2">16.13ر.س</span>
+                                </p>
+                                <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                                <div class="discount">
+                                    <span>
+                                        خصم 40%
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
-                        <div class="product-card-img">
-                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">عبوة 330 مل</h4>
-                            <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
-                            <p class="price p-0">
-                                <span class="old-price">21.50ر.س</span>
-                                <span class="new-price ms-2">16.13ر.س</span>
-                            </p>
-                            <a href="#" class="btn btn-bg">أضف للسلة</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
-                        <div class="product-card-img">
-                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">عبوة 330 مل</h4>
-                            <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
-                            <p class="price p-0">
-                                <span class="old-price">21.50ر.س</span>
-                                <span class="new-price ms-2">16.13ر.س</span>
-                            </p>
-                            <a href="#" class="btn btn-bg">أضف للسلة</a>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
+                            <div class="product-card-img">
+                                <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">عبوة 330 مل</h4>
+                                <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                <p class="price p-0">
+                                    <span class="old-price">21.50ر.س</span>
+                                    <span class="new-price ms-2">16.13ر.س</span>
+                                </p>
+                                <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 mb-4">
-                    <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
-                        <div class="product-card-img">
-                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
+                            <div class="product-card-img">
+                                <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">عبوة 330 مل</h4>
+                                <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                <p class="price p-0">
+                                    <span class="old-price">21.50ر.س</span>
+                                    <span class="new-price ms-2">16.13ر.س</span>
+                                </p>
+                                <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h4 class="card-title">عبوة 330 مل</h4>
-                            <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
-                            <p class="price p-0">
-                                <span class="old-price">21.50ر.س</span>
-                                <span class="new-price ms-2">16.13ر.س</span>
-                            </p>
-                            <a href="#" class="btn btn-bg">أضف للسلة</a>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
+                            <div class="product-card-img">
+                                <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title">عبوة 330 مل</h4>
+                                <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                <p class="price p-0">
+                                    <span class="old-price">21.50ر.س</span>
+                                    <span class="new-pirce ms-2">16.13ر.س</span>
+                                </p>
+                                <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="our-clients">
-            <div class="padding-section container">
-                <div class="section-header mb-5">
-                    <h4>
-                        عملاؤنا
-                    </h4>
-                </div>
-                <div class="owl-clients owl-carousel owl-rtl mt-2">
-                    <!--item01-->
-                    <div class="item">
-                        <div class="member-img">
-                            <img src="./img/client-0.png" alt="client">
-                        </div>
+            <div class="padding-section ">
+                <div class="container">
+                    <div class="section-header mb-5">
+                        <h4>
+                            عملاؤنا
+                        </h4>
                     </div>
-                    <!--item01-->
-                    <div class="item ">
-                        <div class="member-img">
-                            <img src="./img/client-1.png" alt="client">
+                    <div class="owl-clients owl-carousel owl-rtl mt-2">
+                        <!--item01-->
+                        <div class="item">
+                            <div class="member-img">
+                                <img src="./img/client-0.png" alt="client">
+                            </div>
                         </div>
-                    </div>
-                    <!--item01-->
-                    <div class="item ">
-                        <div class="member-img">
-                            <img src="./img/client-2.png" alt="client">
+                        <!--item01-->
+                        <div class="item ">
+                            <div class="member-img">
+                                <img src="./img/client-1.png" alt="client">
+                            </div>
                         </div>
-                    </div>
-                    <!--item01-->
-                    <div class="item ">
-                        <div class="member-img">
-                            <img src="./img/client-3.png" alt="client">
+                        <!--item01-->
+                        <div class="item ">
+                            <div class="member-img">
+                                <img src="./img/client-2.png" alt="client">
+                            </div>
+                        </div>
+                        <!--item01-->
+                        <div class="item ">
+                            <div class="member-img">
+                                <img src="./img/client-3.png" alt="client">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <section class="hilwa-info">
-            <div class="container padding-section">
-                <div class="row">
-                    <div class="col-12 col-md-4 d-flex align-items-center flex-wrap justify-content-end">
-                        <div class="info-text padding-right d-flex align-items-center justify-content-start"
-                            data-aos="fade-left">
-                            <p>تستخرج من مصدر مياه ثابت و نقي من آبار جوفية بمدينة دومة الجندل.</p>
-                            <img src="./img/shap1.png" class="shap01" alt="shap">
-                            <img src="./img/shap2.png" class="shap02" alt="shap">
+            <div class="container">
+                <div class=" padding-section">
+                    <div class="row w-100 m-0">
+                        <div class="col-12 col-md-4 d-flex align-items-center flex-wrap justify-content-end">
+                            <div class="info-text padding-right d-flex align-items-center justify-content-start mb-4 mb-md-0"
+                                data-aos="fade-left">
+                                <p>تستخرج من مصدر مياه ثابت و نقي من آبار جوفية بمدينة دومة الجندل.</p>
+                                <img src="./img/shap1.png" class="shap01" alt="shap">
+                                <img src="./img/shap2.png" class="shap02" alt="shap">
+                            </div>
+                            <div class="info-text padding-right d-flex align-items-center justify-content-start mb-4 mb-md-0"
+                                data-aos="fade-left" data-aos-delay="200">
+                                <p>
+                                    خالية من البرومات (BrO-3) بطبيعتها ولا يتم استخدام الأوزون بالتعقيم.
+                                </p>
+                                <img src="./img/shap1.png" class="shap01" alt="shap">
+                                <img src="./img/shap2.png" class="shap02" alt="shap">
+                            </div>
+                            <div class="info-text padding-right d-flex align-items-center justify-content-start mb-4 mb-md-0"
+                                data-aos="fade-left" data-aos-delay="200">
+                                <p>
+                                    خالية من النترات (NO-3) .
+                                </p>
+                                <img src="./img/shap1.png" class="shap01" alt="shap">
+                                <img src="./img/shap2.png" class="shap02" alt="shap">
+                            </div>
                         </div>
-                        <div class="info-text padding-right d-flex align-items-center justify-content-start"
-                            data-aos="fade-left" data-aos-delay="200">
-                            <p>
-                                خالية من البرومات (BrO-3) بطبيعتها ولا يتم استخدام الأوزون بالتعقيم.
-                            </p>
-                            <img src="./img/shap1.png" class="shap01" alt="shap">
-                            <img src="./img/shap2.png" class="shap02" alt="shap">
+                        <div class="col-12 col-md-4">
+                            <div class="info-img d-flex align-items-center justify-content-center" data-aos="fade-up"
+                                data-aos-anchor-placement="top-bottom">
+                                <img src="./img/hilwa.png" alt="hilwa">
+                            </div>
                         </div>
-                        <div class="info-text padding-right d-flex align-items-center justify-content-start"
-                            data-aos="fade-left" data-aos-delay="200">
-                            <p>
-                                خالية من النترات (NO-3) .
-                            </p>
-                            <img src="./img/shap1.png" class="shap01" alt="shap">
-                            <img src="./img/shap2.png" class="shap02" alt="shap">
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="info-img d-flex align-items-center justify-content-center" data-aos="fade-up"
-                            data-aos-anchor-placement="top-bottom">
-                            <img src="./img/hilwa.png" alt="hilwa">
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 d-flex align-items-center flex-wrap justify-content-start">
-                        <div class="info-text padding-left d-flex align-items-center justify-content-start"
-                            data-aos="fade-right">
-                            <p>
-                                المحتوى المعدني للمياه يعتبر مثالي من ناحية النسب والأرقام.
-                            </p>
-                            <img src="./img/shap1.png" class="shap01" alt="shap">
-                            <img src="./img/shap2.png" class="shap02" alt="shap">
-                        </div>
-                        <div class="info-text padding-left d-flex align-items-center justify-content-start"
-                            data-aos="fade-right" data-aos-delay="200">
-                            <p>
-                                مكوناتها وعناصرها طبيعية لا تحتاج إلى تحلية أو معالجة .
-                            </p>
-                            <img src="./img/shap1.png" class="shap01" alt="shap">
-                            <img src="./img/shap2.png" class="shap02" alt="shap">
-                        </div>
-                        <div class="info-text padding-left d-flex align-items-center justify-content-start"
-                            data-aos="fade-right" data-aos-delay="200">
-                            <p>
-                                لا تحتاج الى سحب لمكوناتها الطبيعية.
-                            </p>
-                            <img src="./img/shap1.png" class="shap01" alt="shap">
-                            <img src="./img/shap2.png" class="shap02" alt="shap">
+                        <div class="col-12 col-md-4 d-flex align-items-center flex-wrap justify-content-start">
+                            <div class="info-text padding-left d-flex align-items-center justify-content-start mb-4 mb-md-0"
+                                data-aos="fade-right">
+                                <p>
+                                    المحتوى المعدني للمياه يعتبر مثالي من ناحية النسب والأرقام.
+                                </p>
+                                <img src="./img/shap1.png" class="shap01" alt="shap">
+                                <img src="./img/shap2.png" class="shap02" alt="shap">
+                            </div>
+                            <div class="info-text padding-left d-flex align-items-center justify-content-start mb-4 mb-md-0"
+                                data-aos="fade-right" data-aos-delay="200">
+                                <p>
+                                    مكوناتها وعناصرها طبيعية لا تحتاج إلى تحلية أو معالجة .
+                                </p>
+                                <img src="./img/shap1.png" class="shap01" alt="shap">
+                                <img src="./img/shap2.png" class="shap02" alt="shap">
+                            </div>
+                            <div class="info-text padding-left d-flex align-items-center justify-content-start mb-4 mb-md-0"
+                                data-aos="fade-right" data-aos-delay="200">
+                                <p>
+                                    لا تحتاج الى سحب لمكوناتها الطبيعية.
+                                </p>
+                                <img src="./img/shap1.png" class="shap01" alt="shap">
+                                <img src="./img/shap2.png" class="shap02" alt="shap">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </section>
-        <section class="certificates container padding-section">
-            <div class="section-header mb-5">
-                <h4 class="mb-3">
-                    شهادات الجودة
-                </h4>
-                <p>
-                    نفخر بحصولنا على شهادات الجودة التالية
-                </p>
+        <section class="certificates  padding-section">
+            <div class="container">
+                <div class="section-header mb-5">
+                    <h4 class="mb-3">
+                        شهادات الجودة
+                    </h4>
+                    <p>
+                        نفخر بحصولنا على شهادات الجودة التالية
+                    </p>
+                </div>
+                <div class="owl-certificates owl-carousel owl-rtl mt-2">
+                    <!--item01-->
+                    <div class="item">
+                        <div class="member-img">
+                            <img src="./img/certificate01.png" alt="client">
+                        </div>
+                    </div>
+                    <!--item01-->
+                    <div class="item ">
+                        <div class="member-img">
+                            <img src="./img/certificate02.png" alt="client">
+                        </div>
+                    </div>
+                    <!--item01-->
+                    <div class="item ">
+                        <div class="member-img">
+                            <img src="./img/certificate03.png" alt="client">
+                        </div>
+                    </div>
+                    <!--item01-->
+                    <div class="item ">
+                        <div class="member-img">
+                            <img src="./img/certificate04.png" alt="client">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="owl-certificates owl-carousel owl-rtl mt-2">
-                <!--item01-->
-                <div class="item">
-                    <div class="member-img">
-                        <img src="./img/certificate01.png" alt="client">
-                    </div>
-                </div>
-                <!--item01-->
-                <div class="item ">
-                    <div class="member-img">
-                        <img src="./img/certificate02.png" alt="client">
-                    </div>
-                </div>
-                <!--item01-->
-                <div class="item ">
-                    <div class="member-img">
-                        <img src="./img/certificate03.png" alt="client">
-                    </div>
-                </div>
-                <!--item01-->
-                <div class="item ">
-                    <div class="member-img">
-                        <img src="./img/certificate04.png" alt="client">
-                    </div>
-                </div>
-            </div>
+
         </section>
     </div>
     <!-- page footer -->
@@ -513,6 +594,8 @@
 
     <!--  load jQuery  -->
     <script src="./js/jquery.min.js"></script>
+    <!--  load jQuery ui  -->
+    <script src="../js/jquery-ui.min.js"></script>
     <!--  load owl carousel.  -->
     <script src="./js/owl.carousel.min.js"></script>
     <!--  load popper.js  -->

@@ -33,230 +33,303 @@
 <body>
     <!-- Header Area -->
     <header class="header">
-        <div class="nav d-flex align-items-center justify-content-between container">
-            <div class="d-flex align-items-center justify-content-start">
-                <div class="logo text-center">
-                    <a href="../index.html">
-                        <img src="../img/logo.png" alt="">
-                    </a>
+        <div class="container">
+            <div class="navHeader d-flex align-items-center justify-content-md-between justify-content-center ">
+                <div class="d-flex align-items-center justify-content-start">
+                    <div class="logo text-center">
+                        <a href="../index.html">
+                            <img src="../img/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <!-- menu list -->
+                    <div class="menu-list me-5">
+                        <ul class="nav">
+                            <li class="nav-item active">
+                                <a href="./about.html">
+                                    من نحن
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./products.html">
+                                    المنتجات
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./contact.html">
+                                    اتصل بنا
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- menu list -->
-                <div class="menu-list me-5">
-                    <ul class="nav">
-                        <li class="nav-item active">
-                            <a href="./about.html">
-                                من نحن
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="../pages/products.html">
-                                المنتجات
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./contact.html">
-                                اتصل بنا
-                            </a>
-                        </li>
-                    </ul>
+                <div>
+                    <div class="menu-list">
+                        <ul class="nav">
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg class="translate-svg">
+                                        <use href="../icons.svg#translate"></use>
+                                    </svg>
+                                    English
+                                </a>
+                            </li>
+                            <li class="nav-item border-left">
+                                <a href="#">
+                                    <svg>
+                                        <use href="../icons.svg#user"></use>
+                                    </svg>
+                                    تسجيل الدخول
+                                </a>
+                            </li>
+                            <li class="nav-item position-relative">
+                                <a href="./shopping-cart.html" class="shopping-cart">
+                                    <svg>
+                                        <use href="../icons.svg#shoppingCart"></use>
+                                    </svg>
+                                    <span class="num-cart">
+
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="menu-list">
-                    <ul class="nav">
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg class="translate-svg">
-                                    <use href="../icons.svg#translate"></use>
-                                </svg>
-                                English
-                            </a>
-                        </li>
-                        <li class="nav-item border-left">
-                            <a href="#">
-                                <svg>
-                                    <use href="../icons.svg#user"></use>
-                                </svg>
-                                تسجيل الدخول
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">
-                                <svg>
-                                    <use href="../icons.svg#shoppingCart"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="menu-btn">
+                    <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </div>
+
         <!-- End Header Inner -->
     </header>
     <!-- End Header Area -->
+ 
+    <!-- Mobile Navbar -->
+    <div class="mobile-navbar">
+        <div class="w-100">
+            <div class="close-btn d-flex align-items-center justify-content-end mb-4">
+                <button class="btn">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="menu-list">
+                <ul class="nav">
+                    <li class="nav-item active">
+                        <a href="./about.html">
+                            من نحن
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./products.html">
+                            المنتجات
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="./contact.html">
+                            اتصل بنا
+                        </a>
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg class="translate-svg">
+                                <use href="../icons.svg#translate"></use>
+                            </svg>
+                            English
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a href="#">
+                            <svg>
+                                <use href="../icons.svg#user"></use>
+                            </svg>
+                            تسجيل الدخول
+                        </a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a href="./shopping-cart.html" class="shopping-cart">
+                            <svg>
+                                <use href="../icons.svg#shoppingCart"></use>
+                            </svg>
+                            <span class="num-cart">
+
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
     <!-- page content -->
-    <div class="order-details-page container padding-section">
-        <div class="page-content">
-            <div class="row">
-                <div class="col-12 col-md-7">
-                    <h5 class="mb-4">
-                        المنتجات
-                    </h5>
-                    <div class="card product-card mb-4 pb-4" data-aos="fade-up">
-                        <div class="row g-0">
-                            <div class="col-md-3">
-                                <div class="product-card-img">
-                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
+    <div class="container">
+        <div class="order-details-page  padding-section">
+            <div class="page-content">
+                <div class="row">
+                    <div class="col-12 col-md-7">
+                        <h5 class="mb-4">
+                            المنتجات
+                        </h5>
+                        <div class="card product-card mb-4 pb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <div class="product-card-img">
+                                        <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
-                                    <div class="w-75">
-                                        <h6 class="card-title mb-3">مياه حلوة عبوة 600 مل</h6>
-                                        <p class=" mb-2">عدد 40 عبوة في الكرتون</p>
-                                        <p class="card-text mb-2">الكمية: 1</p>
-                                        <p class="price p-0 mb-0">
-                                            <span class="new-price">16.13ر.س</span>
-                                        </p>
+                                <div class="col-md-9">
+                                    <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
+                                        <div class="w-75">
+                                            <h6 class="card-title mb-3">مياه حلوة عبوة 600 مل</h6>
+                                            <p class=" mb-2">عدد 40 عبوة في الكرتون</p>
+                                            <p class="card-text mb-2">الكمية: 1</p>
+                                            <p class="price p-0 mb-0">
+                                                <span class="new-price">16.13ر.س</span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card product-card mb-4 pb-4" data-aos="fade-up">
-                        <div class="row g-0">
-                            <div class="col-md-3">
-                                <div class="product-card-img">
-                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                        <div class="card product-card mb-4 pb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <div class="product-card-img">
+                                        <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
-                                    <div class="w-75">
-                                        <h6 class="card-title mb-3">مياه حلوة عبوة 600 مل</h6>
-                                        <p class=" mb-2">عدد 40 عبوة في الكرتون</p>
-                                        <p class="card-text mb-2">الكمية: 1</p>
-                                        <p class="price p-0 mb-0">
-                                            <span class="new-price">16.13ر.س</span>
-                                        </p>
+                                <div class="col-md-9">
+                                    <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
+                                        <div class="w-75">
+                                            <h6 class="card-title mb-3">مياه حلوة عبوة 600 مل</h6>
+                                            <p class=" mb-2">عدد 40 عبوة في الكرتون</p>
+                                            <p class="card-text mb-2">الكمية: 1</p>
+                                            <p class="price p-0 mb-0">
+                                                <span class="new-price">16.13ر.س</span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card product-card mb-4 pb-4" data-aos="fade-up">
-                        <div class="row g-0">
-                            <div class="col-md-3">
-                                <div class="product-card-img">
-                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                        <div class="card product-card mb-4 pb-4" data-aos="fade-up">
+                            <div class="row g-0">
+                                <div class="col-md-3">
+                                    <div class="product-card-img">
+                                        <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-md-9">
-                                <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
-                                    <div class="w-75">
-                                        <h6 class="card-title mb-3">مياه حلوة عبوة 600 مل</h6>
-                                        <p class=" mb-2">عدد 40 عبوة في الكرتون</p>
-                                        <p class="card-text mb-2">الكمية: 1</p>
-                                        <p class="price p-0 mb-0">
-                                            <span class="new-price">16.13ر.س</span>
-                                        </p>
+                                <div class="col-md-9">
+                                    <div class="card-body d-flex align-items-start justify-content-between flex-wrap">
+                                        <div class="w-75">
+                                            <h6 class="card-title mb-3">مياه حلوة عبوة 600 مل</h6>
+                                            <p class=" mb-2">عدد 40 عبوة في الكرتون</p>
+                                            <p class="card-text mb-2">الكمية: 1</p>
+                                            <p class="price p-0 mb-0">
+                                                <span class="new-price">16.13ر.س</span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <h5 class="mb-4">
-                        عنوان الشحن
-                    </h5>
-                    <div class="address-icon p-0 mb-4 d-flex align-items-center justify-content-start">
-                        <span class="icon">
-                            <svg>
-                                <use href="../icons.svg#loaction"></use>
-                            </svg>
-                        </span>
-                        <div class="info">
-                            <p class="mb-0">المنزل</p>
-                            <p class="mb-0">محمود خلة</p>
-                            <p class="mb-0">059000000</p>
-                            <p class="mb-0">السعودية | الرياض | حي الروضة </p>
+                        <h5 class="mb-4">
+                            عنوان الشحن
+                        </h5>
+                        <div class="address-icon p-0 mb-4 d-flex align-items-center justify-content-start">
+                            <span class="icon">
+                                <svg>
+                                    <use href="../icons.svg#loaction"></use>
+                                </svg>
+                            </span>
+                            <div class="info">
+                                <p class="mb-0">المنزل</p>
+                                <p class="mb-0">محمود خلة</p>
+                                <p class="mb-0">059000000</p>
+                                <p class="mb-0">السعودية | الرياض | حي الروضة </p>
+                            </div>
                         </div>
-                    </div>
-                    <h5 class="mb-4">
-                        الملاحظات
-                    </h5>
-                    <p>
-                        يرجى تغليف  المنتج بشكل جيد.يرجى تغليف  المنتج بشكل جيد. يرجى تغليف  المنتج بشكل جيد.يرجى تغليف  المنتج بشكل جيد. يرجى تغليف  المنتج بشكل جيد.يرجى تغليف  المنتج بشكل جيد. 
-                    </p>
-                </div>
-                <div class="col-12 col-md-5">
-                    <div class="complete-sale mb-4 px-4">
-                        <h5 class="mb-3">الملخص</h5>
-                        <h6 class="mb-3">تم الدفع</h6>
-                        <ul class="payment-list mb-4">
-                            <li class="active">
-                                <img src="../img/footer01.png" alt="payment 01">
-                            </li>
-                            <li>
-                                <img src="../img/footer05.png" alt="payment 02">
-                            </li>
-                            <li>
-                                <img src="../img/footer02.png" alt="payment 03">
-                            </li>
-                            <li>
-                                <img src="../img/footer04.png" alt="payment 04">
-                            </li>
-                        </ul>
-                        <h6 class="mb-3"> تاريخ الطلب</h6>
-                        <p class="mb-3">
-                            <svg>
-                                <use href="../icons.svg#boxTime"></use>
-                            </svg>
-                            28/4/2023
-                            <span class="mx-2">|</span>
-                            04:00 PM
-                        </p>
-                        <h6 class="mb-3"> رقم تتبع الطلب</h6>
-                        <p class="mb-3">
-                            <svg class="truck">
-                                <use href="../icons.svg#truck"></use>
-                            </svg>
-                            #012308
-                        </p>
-                        <h6 class="mb-3"> حالة الطلب</h6>
-                        <p class="mb-0">
-                            <span> قيد التجهيز</span>
-                            ------
-                            <span> في الطريق </span>
-                            ------
-                            <span> تم الاستلام </span>
+                        <h5 class="mb-4">
+                            الملاحظات
+                        </h5>
+                        <p>
+                            يرجى تغليف المنتج بشكل جيد.يرجى تغليف المنتج بشكل جيد. يرجى تغليف المنتج بشكل جيد.يرجى تغليف
+                            المنتج بشكل جيد. يرجى تغليف المنتج بشكل جيد.يرجى تغليف المنتج بشكل جيد.
                         </p>
                     </div>
-                    <div class="complete-sale py-4">
-                        <table class="table table-borderless">
-                            <tbody>
-                                <tr>
-                                    <td>إجمالي العناصر</td>
-                                    <td class="text-end">16.13 ر.س</td>
-                                </tr>
-                                <tr>
-                                    <td>الخصم</td>
-                                    <td class="text-end">0.0 ر.س</td>
-                                </tr>
-                                <tr>
-                                    <td>الضريبة</td>
-                                    <td class="text-end">0.0 ر.س</td>
-                                </tr>
-                                <tr>
-                                    <td>المجموع</td>
-                                    <td class="text-end">26.13ر.س</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                    <div class="col-12 col-md-5">
+                        <div class="complete-sale mb-4 px-4">
+                            <h5 class="mb-3">الملخص</h5>
+                            <h6 class="mb-3">تم الدفع</h6>
+                            <ul class="payment-list mb-4">
+                                <li class="active">
+                                    <img src="../img/footer01.png" alt="payment 01">
+                                </li>
+                                <li>
+                                    <img src="../img/footer05.png" alt="payment 02">
+                                </li>
+                                <li>
+                                    <img src="../img/footer02.png" alt="payment 03">
+                                </li>
+                                <li>
+                                    <img src="../img/footer04.png" alt="payment 04">
+                                </li>
+                            </ul>
+                            <h6 class="mb-3"> تاريخ الطلب</h6>
+                            <p class="mb-3">
+                                <svg>
+                                    <use href="../icons.svg#boxTime"></use>
+                                </svg>
+                                28/4/2023
+                                <span class="mx-2">|</span>
+                                04:00 PM
+                            </p>
+                            <h6 class="mb-3"> رقم تتبع الطلب</h6>
+                            <p class="mb-3">
+                                <svg class="truck">
+                                    <use href="../icons.svg#truck"></use>
+                                </svg>
+                                #012308
+                            </p>
+                            <h6 class="mb-3"> حالة الطلب</h6>
+                            <p class="mb-0">
+                                <span> قيد التجهيز</span>
+                                ------
+                                <span> في الطريق </span>
+                                ------
+                                <span> تم الاستلام </span>
+                            </p>
+                        </div>
+                        <div class="complete-sale py-4">
+                            <table class="table table-borderless">
+                                <tbody>
+                                    <tr>
+                                        <td>إجمالي العناصر</td>
+                                        <td class="text-end">16.13 ر.س</td>
+                                    </tr>
+                                    <tr>
+                                        <td>الخصم</td>
+                                        <td class="text-end">0.0 ر.س</td>
+                                    </tr>
+                                    <tr>
+                                        <td>الضريبة</td>
+                                        <td class="text-end">0.0 ر.س</td>
+                                    </tr>
+                                    <tr>
+                                        <td>المجموع</td>
+                                        <td class="text-end">26.13ر.س</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- page footer -->
     <section class="footer">
         <div class="footer-inner padding-section">

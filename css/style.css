@@ -505,6 +505,9 @@ div[class*=-page] {
 /*===================
 	home page style 
 =====================*/
+.home-page {
+  position: relative;
+}
 .home-page .slider .owl-slider .owl-dots {
   position: absolute;
   bottom: 10px;
@@ -583,6 +586,34 @@ div[class*=-page] {
 }
 .home-page .certificates .owl-certificates .item {
   padding: 0 55px;
+}
+.home-page .contact {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  z-index: 98;
+}
+.home-page .contact > span {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.home-page .contact > span.call {
+  background-color: #DB1E3C;
+  margin-bottom: 10px;
+}
+.home-page .contact > span.call i {
+  font-size: 30px;
+}
+.home-page .contact > span.whatsapp {
+  background-color: #52CB5F;
+}
+.home-page .contact > span.whatsapp i {
+  font-size: 37px;
 }
 
 /*===================

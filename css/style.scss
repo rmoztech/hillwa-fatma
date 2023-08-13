@@ -443,7 +443,8 @@ input.error {
     background-color: $redColor;
     color: $whiteColor;
     font-size: 10px;
-    @include devices(tablet){
+
+    @include devices(tablet) {
       right: 45%;
       top: 9px;
     }
@@ -615,6 +616,8 @@ div[class*="-page"] {
 	home page style 
 =====================*/
 .home-page {
+  position: relative;
+
   .slider {
     .owl-slider {
       .owl-dots {
@@ -711,7 +714,7 @@ div[class*="-page"] {
       }
 
       @include devices(tablet) {
-        &.padding-right{
+        &.padding-right {
           padding-right: 33px;
         }
 
@@ -727,6 +730,43 @@ div[class*="-page"] {
       .item {
         padding: 0 55px;
       }
+    }
+
+  }
+
+  .contact {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    z-index: 98;
+
+    >span {
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $whiteColor;
+
+      &.call {
+        background-color: $redColor;
+        margin-bottom: 10px;
+
+        i {
+          font-size: 30px;
+        }
+      }
+
+      &.whatsapp {
+        background-color: #52CB5F;
+
+        i {
+          font-size: 37px;
+        }
+      }
+
+
     }
 
   }

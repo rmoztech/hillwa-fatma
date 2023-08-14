@@ -44,7 +44,7 @@ a {
 
 
 .padding-section {
-  padding: 90px 0;
+  padding: 50px 0;
 
   @include devices(tablet) {
     padding: 50px 0;
@@ -474,6 +474,68 @@ input.error {
   }
 }
 
+.fotorama {
+  overflow: visible;
+
+  .fotorama__wrap,
+  .fotorama__stage,
+  .fotorama__stage__shaft {
+    width: 100% !important;
+  }
+
+  .fotorama__stage {
+    max-height: 450px;
+  }
+
+  .fotorama__nav-wrap {
+    width: 100%;
+  }
+
+  .fotorama__thumb {
+    border: 2px solid $borderColor
+  }
+
+  .fotorama__thumb-border {
+    border-color: $redColor
+  }
+
+  .fotorama__thumb:hover {
+    border-color: $borderColor;
+    opacity: 0.8;
+  }
+
+  .fotorama__fullscreen-icon {
+    display: none;
+  }
+
+  .fotorama__stage__frame {
+    background: $grayLightColor;
+
+    .fotorama__img {
+      height: 80% !important;
+      width: auto !important;
+      margin: auto !important;
+    }
+  }
+}
+
+.swip-up{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+  background-color: $redColor;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 17px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 100;
+  display: inline;
+  transition: all .5s ease-in-out;
+}
 /*===================
 	header style 
 =====================*/
@@ -775,9 +837,31 @@ div[class*="-page"] {
       &.call {
         background-color: $redColor;
         margin-bottom: 10px;
-
+        position: relative;
         i {
           font-size: 30px;
+        }
+        span{
+          position: absolute;
+          left: 70px;
+          top: 11px;
+          background-color: $whiteColor;
+          width: 288px;
+          padding: 10px;
+          color: $mainColor;
+          font-weight: 600;
+          border-radius: 8px;
+          box-shadow: 0 0px 6px #db1e3c29;
+          border: 1px solid $borderColor;
+          font-size: 14px;
+          opacity: 0;
+          transition: all ease-in-out .5s
+        };
+        &:hover{
+          span{
+            opacity: 1;
+            left: 80px;
+          }
         }
       }
 
@@ -791,7 +875,6 @@ div[class*="-page"] {
 
 
     }
-
   }
 }
 
@@ -1087,6 +1170,7 @@ div[class*="-page"] {
 	product page style 
 =====================*/
 .product-page {
+
   .page-content {
     .product-card {
       box-shadow: none;
@@ -1123,6 +1207,60 @@ div[class*="-page"] {
         }
       }
     }
+
+    .another-product {
+      position: relative;
+
+      .news-custom-nav {
+        position: absolute;
+        top: 33%;
+        left: -20px;
+        right: -20px;
+        background-color: $redColor;
+
+        .owl-prev,
+        .owl-next {
+          position: absolute;
+          height: 100px;
+          color: inherit;
+          background: none;
+          border: none;
+          z-index: 88;
+          opacity: 0;
+          transition: all 0.2s ease-in;
+
+          i {
+            font-size: 1.5rem;
+            color: $textGrayColor;
+          }
+        }
+
+        .owl-prev {
+          left: -30px;
+        }
+
+        .owl-next {
+          right: -30px;
+        }
+      }
+
+      &:hover {
+
+        .owl-prev,
+        .owl-next {
+          opacity: 1;
+        }
+
+        .owl-prev {
+          left: -25px;
+        }
+
+        .owl-next {
+          right: -25px;
+        }
+      }
+    }
+
   }
 }
 

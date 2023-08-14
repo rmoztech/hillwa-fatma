@@ -39,7 +39,7 @@ a {
 }
 
 .padding-section {
-  padding: 90px 0;
+  padding: 50px 0;
 }
 @media only screen and (max-width: 768px) {
   .padding-section {
@@ -392,6 +392,60 @@ input.error {
   }
 }
 
+.fotorama {
+  overflow: visible;
+}
+.fotorama .fotorama__wrap,
+.fotorama .fotorama__stage,
+.fotorama .fotorama__stage__shaft {
+  width: 100% !important;
+}
+.fotorama .fotorama__stage {
+  max-height: 450px;
+}
+.fotorama .fotorama__nav-wrap {
+  width: 100%;
+}
+.fotorama .fotorama__thumb {
+  border: 2px solid #EEEEEE;
+}
+.fotorama .fotorama__thumb-border {
+  border-color: #DB1E3C;
+}
+.fotorama .fotorama__thumb:hover {
+  border-color: #EEEEEE;
+  opacity: 0.8;
+}
+.fotorama .fotorama__fullscreen-icon {
+  display: none;
+}
+.fotorama .fotorama__stage__frame {
+  background: #F7F7F7;
+}
+.fotorama .fotorama__stage__frame .fotorama__img {
+  height: 80% !important;
+  width: auto !important;
+  margin: auto !important;
+}
+
+.swip-up {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #DB1E3C;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 17px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 100;
+  display: inline;
+  transition: all 0.5s ease-in-out;
+}
+
 /*===================
 	header style 
 =====================*/
@@ -623,9 +677,30 @@ div[class*=-page] {
 .home-page .contact > a.call {
   background-color: #DB1E3C;
   margin-bottom: 10px;
+  position: relative;
 }
 .home-page .contact > a.call i {
   font-size: 30px;
+}
+.home-page .contact > a.call span {
+  position: absolute;
+  left: 70px;
+  top: 11px;
+  background-color: #fff;
+  width: 288px;
+  padding: 10px;
+  color: #212529;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 0px 6px rgba(219, 30, 60, 0.1607843137);
+  border: 1px solid #EEEEEE;
+  font-size: 14px;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+}
+.home-page .contact > a.call:hover span {
+  opacity: 1;
+  left: 80px;
 }
 .home-page .contact > a.whatsapp-call {
   background-color: #52CB5F;
@@ -861,6 +936,48 @@ div[class*=-page] {
 }
 .product-page .page-content .product-card .card-body .sharing .list-sharing li img {
   width: 24px;
+}
+.product-page .page-content .another-product {
+  position: relative;
+}
+.product-page .page-content .another-product .news-custom-nav {
+  position: absolute;
+  top: 33%;
+  left: -20px;
+  right: -20px;
+  background-color: #DB1E3C;
+}
+.product-page .page-content .another-product .news-custom-nav .owl-prev,
+.product-page .page-content .another-product .news-custom-nav .owl-next {
+  position: absolute;
+  height: 100px;
+  color: inherit;
+  background: none;
+  border: none;
+  z-index: 88;
+  opacity: 0;
+  transition: all 0.2s ease-in;
+}
+.product-page .page-content .another-product .news-custom-nav .owl-prev i,
+.product-page .page-content .another-product .news-custom-nav .owl-next i {
+  font-size: 1.5rem;
+  color: #737373;
+}
+.product-page .page-content .another-product .news-custom-nav .owl-prev {
+  left: -30px;
+}
+.product-page .page-content .another-product .news-custom-nav .owl-next {
+  right: -30px;
+}
+.product-page .page-content .another-product:hover .owl-prev,
+.product-page .page-content .another-product:hover .owl-next {
+  opacity: 1;
+}
+.product-page .page-content .another-product:hover .owl-prev {
+  left: -25px;
+}
+.product-page .page-content .another-product:hover .owl-next {
+  right: -25px;
 }
 
 /*===================

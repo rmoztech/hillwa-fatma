@@ -6,8 +6,19 @@ $(document).ready(function () {
         } else {
             $(".header").removeClass("is-sticky");
         }
+        if ($(window).scrollTop() > 300) {
+            $('.swip-up').css('display', 'inline');
+        }
+        else {
+            $('.swip-up').css('display', 'none')
+        }
     });
-
+    $(function() {
+        $('.swip-up').css('display', 'none')
+    })
+    $('.swip-up').click(function () {
+        $("html, body").stop().animate({ scrollTop: 0 }, 500);
+    })
     $('.menu-btn').click(function () {
         $('.mobile-navbar').css({ display: 'flex' })
     })
@@ -62,6 +73,21 @@ $(document).ready(function () {
         }
     });
 
+    $('.owl-products').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        rtl: true,
+        items: 3,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        navText: [
+            '<i class="fa-solid fa-chevron-left"></i>',
+            '<i class="fa-solid fa-chevron-right"></i>'
+        ],
+        navContainer: '.news-custom-nav',
+    });
     $(".complete-sale-btn").click(function (e) {
         e.preventDefault();
         var count = $(".shopping-cart-page").find(".product-card").length;
@@ -124,12 +150,9 @@ $(document).ready(function () {
             $("#codeModal").modal("show");
         }
     });
-
-    $('.card-list').on('click', '.btn-number', function (e) {
-        e.preventDefault();
-
-        fieldName = $(this).attr('data-field');
-        type = $(this).attr('data-type');
+    function onclickBtn(info) {
+        fieldName = $(info).attr('data-field');
+        type = $(info).attr('data-type');
         var input = $("input[name='" + fieldName + "']");
         var currentVal = parseInt(input.val());
         if (!isNaN(currentVal)) {
@@ -155,40 +178,27 @@ $(document).ready(function () {
         } else {
             input.val(0);
         }
-        itemIndex = $(this).parent().parent().parent().parent().parent().parent().parent().parent().attr("id");
-        var cart = JSON.parse(localStorage.cart);
-        cart[itemIndex].qty = input.val();
-        localStorage.setItem("cart", JSON.stringify(cart));
-    })
-    $('.card-list').on('focusin', '.input-qty', function () {
-        $(this).data('oldValue', $(this).val());
-    })
-    $('.card-list').on('change', '.input-qty', function () {
+    }
+    function onchangeInput(info) {
+        minValue = parseInt($(info).attr('min'));
+        maxValue = parseInt($(info).attr('max'));
+        valueCurrent = parseInt($(info).val());
 
-        minValue = parseInt($(this).attr('min'));
-        maxValue = parseInt($(this).attr('max'));
-        valueCurrent = parseInt($(this).val());
-
-        name = $(this).attr('name');
+        name = $(info).attr('name');
         if (valueCurrent >= minValue) {
             $(".btn-number[data-type='minus'][data-field='" + name + "']").removeAttr('disabled')
         } else {
             alert('Sorry, the minimum value was reached');
-            $(this).val($(this).data('oldValue'));
+            $(info).val($(info).data('oldValue'));
         }
         if (valueCurrent <= maxValue) {
             $(".btn-number[data-type='plus'][data-field='" + name + "']").removeAttr('disabled')
         } else {
             alert('Sorry, the maximum value was reached');
-            $(this).val($(this).data('oldValue'));
+            $(info).val($(info).data('oldValue'));
         }
-
-        itemIndex = $(this).parent().parent().parent().parent().parent().parent().parent().attr("id");
-        var cart = JSON.parse(localStorage.cart);
-        cart[itemIndex].qty = valueCurrent;
-        localStorage.setItem("cart", JSON.stringify(cart));
-    })
-    $('.card-list').on('keydown', '.input-qty', function (e) {
+    }
+    function onkeydownInput() {
         // Allow: backspace, delete, tab, escape, enter and .
         if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 190]) !== -1 ||
             // Allow: Ctrl+A
@@ -202,6 +212,43 @@ $(document).ready(function () {
         if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
             e.preventDefault();
         }
+    }
+    $('.card-list').on('click', '.btn-number', function (e) {
+        e.preventDefault();
+        onclickBtn(this);
+        var input = $("input[name='" + fieldName + "']");
+        itemIndex = $(this).parent().parent().parent().parent().parent().parent().parent().parent().attr("id");
+        var cart = JSON.parse(localStorage.cart);
+        cart[itemIndex].qty = input.val();
+        localStorage.setItem("cart", JSON.stringify(cart));
+    })
+    $('.card-list').on('focusin', '.input-qty', function () {
+        $(this).data('oldValue', $(this).val());
+    })
+    $('.card-list').on('change', '.input-qty', function () {
+        valueCurrent = parseInt($(this).val());
+        onchangeInput(this);
+        itemIndex = $(this).parent().parent().parent().parent().parent().parent().parent().attr("id");
+        var cart = JSON.parse(localStorage.cart);
+        cart[itemIndex].qty = valueCurrent;
+        localStorage.setItem("cart", JSON.stringify(cart));
+    })
+    $('.card-list').on('keydown', '.input-qty', function (e) {
+        onkeydownInput()
+    })
+    $('.btn-number').click(function (e) {
+        e.preventDefault();
+        onclickBtn(this)
+    })
+    $('.input-qty').focusin(function () {
+        $(this).data('oldValue', $(this).val());
+    })
+    $('.input-qty').change(function () {
+        onchangeInput(this)
+    })
+    $('.input-qty').keydown(function (e) {
+        e.preventDefault();
+        onkeydownInput()
     })
 
     $(function () {
@@ -225,7 +272,14 @@ $(document).ready(function () {
     $('.card-list').on('click', '.trash', function () {
         var itemId = $(this).parent().parent().parent().parent().parent().attr("id");
         var cart = JSON.parse(localStorage.cart);
-        var newcart = cart.splice(itemId, 1); // 2nd parameter means remove one item only
+        var indexOfItem;
+        $.each(cart, function (index, value) {
+            console.log("index", cart, value.id, itemId);
+            if (value.id == itemId) {
+                indexOfItem = index;
+            }
+        });
+        var newcart = cart.splice(indexOfItem, 1);
         localStorage.setItem("cart", JSON.stringify(cart));
         location.reload()
 
@@ -234,7 +288,7 @@ $(document).ready(function () {
         $(".card-list").empty();
         for (var i in cart) {
             var item = cart[i];
-            var product = `<div class="card product-card mb-4 pb-4" id = ` + i + `>
+            var product = `<div class="card product-card mb-4 pb-4" id = ` + item.id + `>
             <div class="row g-0">
                 <div class="col-md-3">
                     <div class="product-card-img">
@@ -298,6 +352,7 @@ $(document).ready(function () {
         var newPrice = $(item).parent('.card-body').find(".price").find(".new-price").text() || $('.card').find(".price").find(".new-price").text();
         var oldPrice = $(item).parent('.card-body').find(".price").find(".old-price").text() || $('.card').find(".price").find(".old-price").text();
         var qty = $('.card').find(".input-qty").val() || 1;
+        var id = parseInt($(item).parent('.card-body').parent().attr("id"));
         // var id = localStorage.cart == undefined ? 0 : JSON.parse(localStorage.cart).length;
 
         // update Qty if product is already present
@@ -310,12 +365,13 @@ $(document).ready(function () {
             }
         }
 
-        var item = { name: name, details: details, newPrice: newPrice, oldPrice: oldPrice, qty: qty };
+        var item = { name: name, details: details, newPrice: newPrice, oldPrice: oldPrice, qty: qty, id: id };
         cart.push(item);
 
         saveCart();
         showCart();
     }
+    $('.add-to-cart').parent().find('.amount').hide();
 
     $('.add-to-cart').on('click', function () {
         var cart = $('.shopping-cart');
@@ -355,6 +411,8 @@ $(document).ready(function () {
             });
         }
         addToCart($(this));
+        $(this).hide();
+        $(this).parent().find('.amount').show();
     });
 
     $('.add-cart').on('click', function () {
@@ -395,6 +453,7 @@ $(document).ready(function () {
             });
         }
         addToCart($(this));
+
     });
 
     var numberCodeForm = $('[data-number-code-form]');
@@ -464,8 +523,6 @@ $(document).ready(function () {
     }
     numberCodeForm.on('input', handleInput);
     numberCodeForm.on('keydown', handleKeyDown);
-
-
     AOS.init({
         duration: 1500,
         once: true,

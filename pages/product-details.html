@@ -28,6 +28,7 @@
     <link href="../css/owl.theme.default.min.css" rel="stylesheet">
     <!--  load jquery-ui CSS  -->
     <link rel='stylesheet' href='../css/jquery-ui.css'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
     <!-- load style CSS -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -165,6 +166,11 @@
 
         </div>
     </div>
+
+    <!-- swip-up for scroll page to top -->
+    <div class="swip-up">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
     <!-- page content -->
     <div class="container">
         <div class="product-page  padding-section">
@@ -180,12 +186,24 @@
                 <div class="card product-card mb-3 mb-md-0" data-aos="fade-up">
                     <div class="row g-0">
                         <div class="col-md-6">
-                            <div class="product-card-img">
-                                <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                            <!-- <div class="product-card-img">
+                                 <a href="./product-details.html">
+                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                </a> 
+                            </div> -->
+                            <div class="section-gallery" data-aos="fade-up">
+                                <div class="fotorama" data-loop="true" data-allowfullscreen="true" data-autoplay="true"
+                                    data-nav='thumbs' data-thumbwidth='90' data-thumbheight='90' data-thumbmargin="10"
+                                    data-thumbborderwidth="3">
+                                    <img src="../img/order-img.png" alt="">
+                                    <img src="../img/order-img.png" alt="">
+                                    <img src="../img/order-img.png" alt="">
+                                    <img src="../img/order-img.png" alt="">
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="card-body d-flex align-items-start flex-column h-100">
+                            <div class="card-body d-flex align-items-start flex-column h-100 ps-5">
                                 <div class="mb-auto w-100">
                                     <h4 class="card-title mb-4">مياه حلوة عبوة 600 مل</h4>
                                     <p class="card-text mb-4">عدد 40 عبوة في الكرتون</p>
@@ -264,6 +282,177 @@
                         </div>
                     </div>
                 </div>
+                <div class="another-product padding-section">
+                    <div class="section-header mb-5">
+                        <h4>
+                            المزيد من المنتجات
+                        </h4>
+                    </div>
+                    <div class="owl-products owl-carousel owl-rtl mt-2">
+                        <!--item01-->
+                        <div class="item">
+                            <div class="card product-card mb-3 mb-md-0" data-aos="fade-up" id="6">
+                                <div class="product-card-img">
+                                     <a href="./product-details.html">
+                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                </a> 
+                                </div>
+                                <div class="card-body">
+                                    <a href="./product-details.html" class="card-title">
+                                        <h4>عبوة 330 مل</h4>
+                                    </a>
+                                    <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                    <p class="price p-0">
+                                        <span class="old-price">21.50ر.س</span>
+                                        <span class="new-price ms-2">16.13ر.س</span>
+                                    </p>
+                                    <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                                    <div class="amount mb-4">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-number" data-type="plus"
+                                                    data-field="quant[2]">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </span>
+                                            <input type="text" name="quant[2]" class=" input-qty" value="1" min="1"
+                                                max="100">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-number" data-type="minus"
+                                                    data-field="quant[2]">
+                                                    <i class="fa-solid fa-minus"></i> </button>
+                                            </span>
+                                            <span class="me-3">كرتون</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--item01-->
+                        <div class="item ">
+                            <div class="card product-card mb-3 mb-md-0" data-aos="fade-up" id="6">
+                                <div class="product-card-img">
+                                     <a href="./product-details.html">
+                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                </a> 
+                                </div>
+                                <div class="card-body">
+                                    <a href="./product-details.html" class="card-title">
+                                        <h4>عبوة 330 مل</h4>
+                                    </a>
+                                    <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                    <p class="price p-0">
+                                        <span class="old-price">21.50ر.س</span>
+                                        <span class="new-price ms-2">16.13ر.س</span>
+                                    </p>
+                                    <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                                    <div class="amount mb-4">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-number" data-type="plus"
+                                                    data-field="quant[2]">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </span>
+                                            <input type="text" name="quant[2]" class=" input-qty" value="1" min="1"
+                                                max="100">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-number" data-type="minus"
+                                                    data-field="quant[2]">
+                                                    <i class="fa-solid fa-minus"></i> </button>
+                                            </span>
+                                            <span class="me-3">كرتون</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--item01-->
+                        <div class="item ">
+                            <div class="card product-card mb-3 mb-md-0" data-aos="fade-up" id="6">
+                                <div class="product-card-img">
+                                     <a href="./product-details.html">
+                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                </a> 
+                                </div>
+                                <div class="card-body">
+                                    <a href="./product-details.html" class="card-title">
+                                        <h4>عبوة 330 مل</h4>
+                                    </a>
+                                    <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                    <p class="price p-0">
+                                        <span class="old-price">21.50ر.س</span>
+                                        <span class="new-price ms-2">16.13ر.س</span>
+                                    </p>
+                                    <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                                    <div class="amount mb-4">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-number" data-type="plus"
+                                                    data-field="quant[2]">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </span>
+                                            <input type="text" name="quant[2]" class=" input-qty" value="1" min="1"
+                                                max="100">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-number" data-type="minus"
+                                                    data-field="quant[2]">
+                                                    <i class="fa-solid fa-minus"></i> </button>
+                                            </span>
+                                            <span class="me-3">كرتون</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--item01-->
+                        <div class="item ">
+                            <div class="card product-card mb-3 mb-md-0" data-aos="fade-up" id="6">
+                                <div class="product-card-img">
+                                     <a href="./product-details.html">
+                                    <img src="../img/order-img.png" class="card-img-top" alt="new img">
+                                </a> 
+                                </div>
+                                <div class="card-body">
+                                    <a href="./product-details.html" class="card-title">
+                                        <h4>عبوة 330 مل</h4>
+                                    </a>
+                                    <p class="card-text m-0">عدد 40 عبوة في الكرتون</p>
+                                    <p class="price p-0">
+                                        <span class="old-price">21.50ر.س</span>
+                                        <span class="new-price ms-2">16.13ر.س</span>
+                                    </p>
+                                    <span class="btn btn-bg add-to-cart">أضف للسلة</span>
+                                    <div class="amount mb-4">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-number" data-type="plus"
+                                                    data-field="quant[2]">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </span>
+                                            <input type="text" name="quant[2]" class=" input-qty" value="1" min="1"
+                                                max="100">
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-number" data-type="minus"
+                                                    data-field="quant[2]">
+                                                    <i class="fa-solid fa-minus"></i> </button>
+                                            </span>
+                                            <span class="me-3">كرتون</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-theme">
+                        <div class="owl-controls">
+                            <div class="news-custom-nav owl-nav"></div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -285,15 +474,15 @@
                         <ul class="footer-list">
                             <li class="footer-list-item">
                                 <i class="fa-solid fa-square"></i>
-                                <a href="#">عن الشركة</a>
+                                <a href="./about.html">عن الشركة</a>
                             </li>
                             <li class="footer-list-item">
                                 <i class="fa-solid fa-square"></i>
-                                <a href="#">المنتجات </a>
+                                <a href="./products.html">المنتجات </a>
                             </li>
                             <li class="footer-list-item">
                                 <i class="fa-solid fa-square"></i>
-                                <a href="#">الأسئلة الشائعة</a>
+                                <a href="./questions.html">الأسئلة الشائعة</a>
                             </li>
                             <li class="footer-list-item">
                                 <i class="fa-solid fa-square"></i>
@@ -306,15 +495,15 @@
                         <ul class="footer-list">
                             <li class="footer-list-item">
                                 <i class="fa-solid fa-square"></i>
-                                <a href="#">سياسة الخصوصية</a>
+                                <a href="./privacy-policy.html">سياسة الخصوصية</a>
                             </li>
                             <li class="footer-list-item">
                                 <i class="fa-solid fa-square"></i>
-                                <a href="#">الشروط والأحكام </a>
+                                <a href="./terms-service.html">الشروط والأحكام </a>
                             </li>
                             <li class="footer-list-item">
                                 <i class="fa-solid fa-square"></i>
-                                <a href="#">اتصل بنا</a>
+                                <a href="./contact.html">اتصل بنا</a>
                             </li>
                         </ul>
                     </div>
@@ -353,21 +542,6 @@
                                 </a></li>
                             <li><a href="#">
                                     <img src="../img/download.png" alt="">
-                                </a></li>
-                        </ul>
-                        <h6 class="mb-2">تواصل معنا</h6>
-                        <ul class="contact-list">
-                            <li><a href="#">
-                                    <svg>
-                                        <use href="../icons.svg#calling"></use>
-                                    </svg>
-                                    920001536
-                                </a></li>
-                            <li><a href="#">
-                                    <svg>
-                                        <use href="../icons.svg#message"></use>
-                                    </svg>
-                                    info@hilwawater.com
                                 </a></li>
                         </ul>
                     </div>
@@ -421,6 +595,7 @@
     <script src="../js/bootstrap.min.js"></script>
     <!--  load jquery validate js  -->
     <script src="../js/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <!-- Main JS -->
     <script src="../js/main.js"></script>
 

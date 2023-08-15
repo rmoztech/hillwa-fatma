@@ -50,6 +50,10 @@
                     <div class="menu-list me-5">
                         <ul class="nav">
                             <li class="nav-item active">
+                                <a href="../index.html">
+                                    الرئيسية </a>
+                            </li>
+                            <li class="nav-item ">
                                 <a href="./pages/about.html">
                                     من نحن
                                 </a>
@@ -88,11 +92,11 @@
                             </li>
                             <li class="nav-item">
                                 <span class="shopping-cart d-block">
+                                    <span class="total">99.13ر.س </span>
                                     <svg>
                                         <use href="./icons.svg#shoppingCart"></use>
                                     </svg>
                                     <span class="num-cart">
-
                                     </span>
                                     <div class="cart-list">
                                         <div class="card product-card mb-2 pb-2" id='1'>
@@ -104,25 +108,44 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-9">
-                                                    <div class="card-body p-2 d-flex align-items-center justify-content-between flex-wrap h-100">
-                                                        <div class="">
-                                                            <h6 class="card-title mb-4">
-                                                                عبوة 330</h6>
-                                                                <span> 2 عبوة</span>
-                                                        </div>
-                                                        <div class="">
-                                                            <p class='price p-0 mb-5 text-end'>
-                                                                <span class="new-price">
-                                                                    16.13ر.س</span>
-                                                            </p>
-                                                        </div>
-                                                        <div class="">
-                                                            <button class=" btn btn-gray-bg trash">
-                                                                <svg>
-                                                                    <use href="./icons.svg#trash"></use>
-                                                                </svg>
-                                                            </button>
-                                                        </div>
+                                                    <div
+                                                        class="card-body p-2 d-flex align-items-center justify-content-between flex-wrap h-100">
+                                                        <table class="table table-borderless">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <p class=" mb-0">
+                                                                            عبوة 330</p>
+                                                                    </td>
+                                                                    <td><span>
+                                                                            عدد
+                                                                        </span></td>
+                                                                    <td>
+                                                                        <p class='price p-0 mb-5 text-end'>
+                                                                            <span class="new-price">
+                                                                                16</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td><button class=" btn btn-gray-bg trash">
+                                                                            <svg>
+                                                                                <use href="./icons.svg#trash"></use>
+                                                                            </svg>
+                                                                        </button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>2</td>
+                                                                    <td>
+                                                                        <p class='price p-0 mb-5 text-end'>
+                                                                            <span class="new-price">
+                                                                                ر.س</span>
+
+
+                                                                    </td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
                                                     </div>
                                                 </div>
                                             </div>
@@ -136,25 +159,42 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-9">
-                                                    <div class="card-body p-2 d-flex align-items-center justify-content-between flex-wrap h-100">
-                                                        <div class="">
-                                                            <h6 class="card-title mb-4">
-                                                                عبوة 330</h6>
-                                                                <span> 2 عبوة</span>
-                                                        </div>
-                                                        <div class="">
-                                                            <p class='price p-0 mb-5 text-end'>
-                                                                <span class="new-price">
-                                                                    16.13ر.س</span>
-                                                            </p>
-                                                        </div>
-                                                        <div class="">
-                                                            <button class=" btn btn-gray-bg trash">
-                                                                <svg>
-                                                                    <use href="./icons.svg#trash"></use>
-                                                                </svg>
-                                                            </button>
-                                                        </div>
+                                                    <div
+                                                        class="card-body p-2 d-flex align-items-center justify-content-between flex-wrap h-100">
+                                                        <table class="table table-borderless">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <p class=" mb-0">
+                                                                            عبوة 330</p>
+                                                                    </td>
+                                                                    <td><span>
+                                                                            عدد
+                                                                        </span></td>
+                                                                    <td>
+                                                                        <p class='price p-0 mb-0 text-end'>
+                                                                            <span class="new-price">
+                                                                                16</span>
+                                                                        </p>
+                                                                    </td>
+                                                                    <td><button class=" btn btn-gray-bg trash">
+                                                                            <svg>
+                                                                                <use href="./icons.svg#trash"></use>
+                                                                            </svg>
+                                                                        </button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td></td>
+                                                                    <td>2</td>
+                                                                    <td>
+                                                                        <p class='price p-0 mb-0 text-end'>
+                                                                            <span class="new-price">
+                                                                                ر.س</span>
+                                                                    </td>
+                                                                    <td></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
                                                     </div>
                                                 </div>
                                             </div>
@@ -163,7 +203,11 @@
                                             <span>المجموع</span>
                                             <span>99.13ر.س</span>
                                         </div>
-                                        <a href="./pages/shopping-cart.html" class="btn btn-bg">عرض السلة</a>
+                                        <div class="d-flex justify-content-end align-items-center">
+                                            <a href="./pages/shopping-cart.html" class="btn btn-bg">عرض السلة</a>
+                                            <a href="./pages/checkout.html" class="btn btn-bg">الدفع الآن</a>
+                                        </div>
+
                                     </div>
                                 </span>
                             </li>
@@ -191,6 +235,10 @@
             <div class="menu-list">
                 <ul class="nav">
                     <li class="nav-item active">
+                        <a href="../index.html">
+                            الرئيسية </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="./pages/about.html">
                             من نحن
                         </a>
@@ -267,13 +315,35 @@
                         الحد الأدنى للطلب 10 كراتين
                     </h4>
                 </div>
+
                 <div class="row">
                     <div class="col-12 col-sm-6 col-md-4 mb-4">
                         <div class="card product-card mb-3 mb-md-0" data-aos="fade-up" id="1">
-                            <div class="product-card-img">
-                                <a href="./pages/product-details.html">
-                                    <img src="./img/order-img.png" class="card-img-top" alt="new img">
-                                </a>
+                            <div class="owl-product owl-carousel owl-theme owl-rtl">
+                                <!--item01-->
+                                <div class="item">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--item02-->
+                                <div class="item ">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--item03-->
+                                <div class="item ">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <a href="./pages/product-details.html" class="card-title">
@@ -289,15 +359,15 @@
                                     <div class="input-group">
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-number" data-type="plus"
-                                                data-field="quant[2]">
+                                                data-field="quant[60]">
                                                 <i class="fa-solid fa-plus"></i>
                                             </button>
                                         </span>
-                                        <input type="text" name="quant[2]" class=" input-qty" value="1" min="1"
+                                        <input type="text" name="quant[60]" class=" input-qty" value="1" min="1"
                                             max="100">
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-number" data-type="minus"
-                                                data-field="quant[2]">
+                                                data-field="quant[60]">
                                                 <i class="fa-solid fa-minus"></i> </button>
                                         </span>
                                         <span class="me-3">كرتون</span>
@@ -313,10 +383,31 @@
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 mb-4">
                         <div class="card product-card mb-3 mb-md-0" data-aos="fade-up" id="2">
-                            <div class="product-card-img">
-                                <a href="./pages/product-details.html">
-                                    <img src="./img/order-img.png" class="card-img-top" alt="new img">
-                                </a>
+                            <div class="owl-product owl-carousel owl-theme owl-rtl">
+                                <!--item01-->
+                                <div class="item">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--item02-->
+                                <div class="item ">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--item03-->
+                                <div class="item ">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <a href="./pages/product-details.html" class="card-title">
@@ -332,15 +423,15 @@
                                     <div class="input-group">
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-number" data-type="plus"
-                                                data-field="quant[2]">
+                                                data-field="quant[60]">
                                                 <i class="fa-solid fa-plus"></i>
                                             </button>
                                         </span>
-                                        <input type="text" name="quant[2]" class=" input-qty" value="1" min="1"
+                                        <input type="text" name="quant[60]" class=" input-qty" value="1" min="1"
                                             max="100">
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-number" data-type="minus"
-                                                data-field="quant[2]">
+                                                data-field="quant[60]">
                                                 <i class="fa-solid fa-minus"></i> </button>
                                         </span>
                                         <span class="me-3">كرتون</span>
@@ -356,10 +447,31 @@
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 mb-4">
                         <div class="card product-card mb-3 mb-md-0" data-aos="fade-up" id="3">
-                            <div class="product-card-img">
-                                <a href="./pages/product-details.html">
-                                    <img src="./img/order-img.png" class="card-img-top" alt="new img">
-                                </a>
+                            <div class="owl-product owl-carousel owl-theme owl-rtl">
+                                <!--item01-->
+                                <div class="item">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--item02-->
+                                <div class="item ">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--item03-->
+                                <div class="item ">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <a href="./pages/product-details.html" class="card-title">
@@ -375,15 +487,15 @@
                                     <div class="input-group">
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-number" data-type="plus"
-                                                data-field="quant[2]">
+                                                data-field="quant[60]">
                                                 <i class="fa-solid fa-plus"></i>
                                             </button>
                                         </span>
-                                        <input type="text" name="quant[2]" class=" input-qty" value="1" min="1"
+                                        <input type="text" name="quant[60]" class=" input-qty" value="1" min="1"
                                             max="100">
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-number" data-type="minus"
-                                                data-field="quant[2]">
+                                                data-field="quant[60]">
                                                 <i class="fa-solid fa-minus"></i> </button>
                                         </span>
                                         <span class="me-3">كرتون</span>
@@ -399,10 +511,31 @@
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 mb-4">
                         <div class="card product-card mb-3 mb-md-0" data-aos="fade-up" id="4">
-                            <div class="product-card-img">
-                                <a href="./pages/product-details.html">
-                                    <img src="./img/order-img.png" class="card-img-top" alt="new img">
-                                </a>
+                            <div class="owl-product owl-carousel owl-theme owl-rtl">
+                                <!--item01-->
+                                <div class="item">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--item02-->
+                                <div class="item ">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--item03-->
+                                <div class="item ">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <a href="./pages/product-details.html" class="card-title">
@@ -418,15 +551,15 @@
                                     <div class="input-group">
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-number" data-type="plus"
-                                                data-field="quant[2]">
+                                                data-field="quant[60]">
                                                 <i class="fa-solid fa-plus"></i>
                                             </button>
                                         </span>
-                                        <input type="text" name="quant[2]" class=" input-qty" value="1" min="1"
+                                        <input type="text" name="quant[60]" class=" input-qty" value="1" min="1"
                                             max="100">
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-number" data-type="minus"
-                                                data-field="quant[2]">
+                                                data-field="quant[60]">
                                                 <i class="fa-solid fa-minus"></i> </button>
                                         </span>
                                         <span class="me-3">كرتون</span>
@@ -437,10 +570,31 @@
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 mb-4">
                         <div class="card product-card mb-3 mb-md-0" data-aos="fade-up" id="5">
-                            <div class="product-card-img">
-                                <a href="./pages/product-details.html">
-                                    <img src="./img/order-img.png" class="card-img-top" alt="new img">
-                                </a>
+                            <div class="owl-product owl-carousel owl-theme owl-rtl">
+                                <!--item01-->
+                                <div class="item">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--item02-->
+                                <div class="item ">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--item03-->
+                                <div class="item ">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <a href="./pages/product-details.html" class="card-title">
@@ -456,15 +610,15 @@
                                     <div class="input-group">
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-number" data-type="plus"
-                                                data-field="quant[2]">
+                                                data-field="quant[60]">
                                                 <i class="fa-solid fa-plus"></i>
                                             </button>
                                         </span>
-                                        <input type="text" name="quant[2]" class=" input-qty" value="1" min="1"
+                                        <input type="text" name="quant[60]" class=" input-qty" value="1" min="1"
                                             max="100">
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-number" data-type="minus"
-                                                data-field="quant[2]">
+                                                data-field="quant[60]">
                                                 <i class="fa-solid fa-minus"></i> </button>
                                         </span>
                                         <span class="me-3">كرتون</span>
@@ -475,10 +629,31 @@
                     </div>
                     <div class="col-12 col-sm-6 col-md-4 mb-4">
                         <div class="card product-card mb-3 mb-md-0" data-aos="fade-up" id="6">
-                            <div class="product-card-img">
-                                <a href="./pages/product-details.html">
-                                    <img src="./img/order-img.png" class="card-img-top" alt="new img">
-                                </a>
+                            <div class="owl-product owl-carousel owl-theme owl-rtl">
+                                <!--item01-->
+                                <div class="item">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--item02-->
+                                <div class="item ">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
+                                <!--item03-->
+                                <div class="item ">
+                                    <div class="product-card-img">
+                                        <a href="./pages/product-details.html">
+                                            <img src="./img/order-img.png" class="card-img-top" alt="new img">
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <a href="./pages/product-details.html" class="card-title">
@@ -494,15 +669,15 @@
                                     <div class="input-group">
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-number" data-type="plus"
-                                                data-field="quant[2]">
+                                                data-field="quant[60]">
                                                 <i class="fa-solid fa-plus"></i>
                                             </button>
                                         </span>
-                                        <input type="text" name="quant[2]" class=" input-qty" value="1" min="1"
+                                        <input type="text" name="quant[60]" class=" input-qty" value="1" min="1"
                                             max="100">
                                         <span class="input-group-btn">
                                             <button type="button" class="btn btn-number" data-type="minus"
-                                                data-field="quant[2]">
+                                                data-field="quant[60]">
                                                 <i class="fa-solid fa-minus"></i> </button>
                                         </span>
                                         <span class="me-3">كرتون</span>

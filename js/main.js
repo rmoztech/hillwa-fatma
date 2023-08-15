@@ -74,7 +74,6 @@ $(document).ready(function () {
             }
         }
     });
-
     $('.owl-products').owlCarousel({
         loop: true,
         margin: 30,
@@ -100,6 +99,16 @@ $(document).ready(function () {
                 items: 3
             }
         }
+    });
+
+    $('.owl-product').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: false,
+        rtl: true,
+        items: 1,
+        dots: true,
+        autoplayTimeout: 3000,
     });
 
     $(".complete-sale-btn").click(function (e) {
@@ -244,6 +253,7 @@ $(document).ready(function () {
         onchangeInput(this);
         itemIndex = $(this).parent().parent().parent().parent().parent().parent().parent().attr("id");
         var cart = JSON.parse(localStorage.cart);
+        console.log('dfdfd' , valueCurrent , cart[itemIndex], $(this).parent().parent().parent().parent().parent().parent().parent().attr("id"))
         cart[itemIndex].qty = valueCurrent;
         localStorage.setItem("cart", JSON.stringify(cart));
     })
@@ -375,7 +385,8 @@ $(document).ready(function () {
         var details = $(item).parent('.card-body').find("p.card-text").text() || $('.card').find("p.card-text").text();
         var newPrice = $(item).parent('.card-body').find(".price").find(".new-price").text() || $('.card').find(".price").find(".new-price").text();
         var oldPrice = $(item).parent('.card-body').find(".price").find(".old-price").text() || $('.card').find(".price").find(".old-price").text();
-        var qty = $('.card').find(".input-qty").val() || 1;
+        var qty = parseInt($('.card').find(".input-qty").val() || 1);
+        console.log(typeof(parseInt(qty)), parseInt(qty))
         var id = parseInt($(item).parent('.card-body').parent().attr("id"));
         // var id = localStorage.cart == undefined ? 0 : JSON.parse(localStorage.cart).length;
 

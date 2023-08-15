@@ -185,6 +185,7 @@ a {
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 1;
 
       span {
         font-size: 24px;
@@ -463,7 +464,7 @@ input.error {
     height: 15px;
     width: 15px;
     top: -3px;
-    right: -5px;
+    left: 16px;
     text-align: center;
     border-radius: 50%;
     background-color: $redColor;
@@ -481,7 +482,7 @@ input.error {
     left: 0;
     top: 45px;
     background-color: $whiteColor;
-    width: 280px;
+    width: 300px;
     border: 1px solid $borderColor;
     padding: 10px;
     border-radius: 5px;
@@ -519,13 +520,29 @@ input.error {
     }
 
     .btn-bg {
+      display: inline-block;
       width: 88px;
       min-height: 35px;
       font-size: 13px;
       margin: 0;
-      margin-right: auto;
+      margin-right: 10px;
+    }
+    .table{
+      margin: 0;
+      tr{
+        border: none;
+      }
+      td{
+        padding-top: 0;
+        padding-bottom: 0;
+        text-align: center;
+      }
     }
 
+  }
+  .total{
+    font-size: 14px;
+    color: $redColor;
   }
 
 }
@@ -748,6 +765,12 @@ div[class*="-page"] {
             stroke: none;
             fill: $redColor
           }
+        }
+      }
+
+      &.active{
+        a {
+          color: $redColor;
         }
       }
     }

@@ -162,6 +162,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 .product-card .card-body .discount span {
   font-size: 24px;
@@ -382,7 +383,7 @@ input.error {
   height: 15px;
   width: 15px;
   top: -3px;
-  right: -5px;
+  left: 16px;
   text-align: center;
   border-radius: 50%;
   background-color: #DB1E3C;
@@ -400,7 +401,7 @@ input.error {
   left: 0;
   top: 45px;
   background-color: #fff;
-  width: 280px;
+  width: 300px;
   border: 1px solid #EEEEEE;
   padding: 10px;
   border-radius: 5px;
@@ -432,11 +433,27 @@ input.error {
   stroke: #DB1E3C;
 }
 .shopping-cart .cart-list .btn-bg {
+  display: inline-block;
   width: 88px;
   min-height: 35px;
   font-size: 13px;
   margin: 0;
-  margin-right: auto;
+  margin-right: 10px;
+}
+.shopping-cart .cart-list .table {
+  margin: 0;
+}
+.shopping-cart .cart-list .table tr {
+  border: none;
+}
+.shopping-cart .cart-list .table td {
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+.shopping-cart .total {
+  font-size: 14px;
+  color: #DB1E3C;
 }
 
 .fotorama {
@@ -619,6 +636,9 @@ div[class*=-page] {
 .menu-list .nav li.nav-item:hover svg.translate-svg {
   stroke: none;
   fill: #DB1E3C;
+}
+.menu-list .nav li.nav-item.active a {
+  color: #DB1E3C;
 }
 
 /*===================

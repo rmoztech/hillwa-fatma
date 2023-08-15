@@ -13,7 +13,7 @@ $(document).ready(function () {
             $('.swip-up').css('display', 'none')
         }
     });
-    $(function() {
+    $(function () {
         $('.swip-up').css('display', 'none')
     })
     $('.swip-up').click(function () {
@@ -25,7 +25,9 @@ $(document).ready(function () {
     $('.close-btn').click(function () {
         $('.mobile-navbar').css({ display: ' none' });
     })
-
+    $('.shopping-cart').click(function () {
+        $('.cart-list').toggle(500)
+    })
     $('.sidebar .menu-icon').click(function () {
         if ($('.sidebar .menu-icon i').hasClass('fa-bars')) {
             $('.sidebar').css({ right: ' 0px' });
@@ -87,11 +89,23 @@ $(document).ready(function () {
             '<i class="fa-solid fa-chevron-right"></i>'
         ],
         navContainer: '.news-custom-nav',
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
     });
+
     $(".complete-sale-btn").click(function (e) {
         e.preventDefault();
-        var count = $(".shopping-cart-page").find(".product-card").length;
-        if (count < 10) {
+        var count = JSON.parse(localStorage.cart).length;
+        if (1 < count < 10) {
             var toastElList = [].slice.call($('.toast'))
             var toastList = toastElList.map(function (toastEl) {
                 return new bootstrap.Toast(toastEl)
@@ -256,6 +270,16 @@ $(document).ready(function () {
     });
     var cart = [];
     $(function () {
+        if (localStorage.cart == undefined || JSON.parse(localStorage.cart).length == 0) {
+            $('.include-cart').hide();
+            $('.empty-cart').show();
+        }
+        else {
+            $('.include-cart').show();
+            $('.empty-cart').hide();
+        }
+    })
+    $(function () {
         if (localStorage.cart) {
             // load cart data from local storage
             cart = JSON.parse(localStorage.cart);
@@ -281,11 +305,11 @@ $(document).ready(function () {
         });
         var newcart = cart.splice(indexOfItem, 1);
         localStorage.setItem("cart", JSON.stringify(cart));
-        location.reload()
-
+        location.reload();
     })
     function showCart() {
         $(".card-list").empty();
+
         for (var i in cart) {
             var item = cart[i];
             var product = `<div class="card product-card mb-4 pb-4" id = ` + item.id + `>
@@ -523,8 +547,14 @@ $(document).ready(function () {
     }
     numberCodeForm.on('input', handleInput);
     numberCodeForm.on('keydown', handleKeyDown);
+
+
     AOS.init({
         duration: 1500,
         once: true,
+        disable: function () {
+            var maxWidth = 800;
+            return window.innerWidth < maxWidth;
+        }
     });
 });

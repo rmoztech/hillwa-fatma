@@ -455,12 +455,15 @@ input.error {
 }
 
 .shopping-cart {
+  cursor: pointer;
+  position: relative;
+
   .num-cart {
     position: absolute;
     height: 15px;
     width: 15px;
-    top: 0;
-    right: 10px;
+    top: -3px;
+    right: -5px;
     text-align: center;
     border-radius: 50%;
     background-color: $redColor;
@@ -472,6 +475,59 @@ input.error {
       top: 9px;
     }
   }
+
+  .cart-list {
+    position: absolute;
+    left: 0;
+    top: 45px;
+    background-color: $whiteColor;
+    width: 280px;
+    border: 1px solid $borderColor;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+
+    .product-card {
+      line-height: normal;
+      font-size: 13px;
+      border-radius: 0px;
+
+      .card-text,
+      .card-title,
+      .price {
+        margin: 0 !important;
+        font-size: 13px;
+      }
+
+      .new-price {
+        font-size: 13px !important;
+      }
+
+      .trash {
+        width: 25px;
+        min-width: 25px;
+        height: 25px;
+        background-color: transparent;
+
+        svg {
+          width: 15px;
+          height: 15px;
+          stroke: $redColor
+        }
+      }
+
+    }
+
+    .btn-bg {
+      width: 88px;
+      min-height: 35px;
+      font-size: 13px;
+      margin: 0;
+      margin-right: auto;
+    }
+
+  }
+
 }
 
 .fotorama {
@@ -519,7 +575,7 @@ input.error {
   }
 }
 
-.swip-up{
+.swip-up {
   position: fixed;
   width: 50px;
   height: 50px;
@@ -536,6 +592,7 @@ input.error {
   display: inline;
   transition: all .5s ease-in-out;
 }
+
 /*===================
 	header style 
 =====================*/
@@ -838,10 +895,12 @@ div[class*="-page"] {
         background-color: $redColor;
         margin-bottom: 10px;
         position: relative;
+
         i {
           font-size: 30px;
         }
-        span{
+
+        span {
           position: absolute;
           left: 70px;
           top: 11px;
@@ -856,9 +915,12 @@ div[class*="-page"] {
           font-size: 14px;
           opacity: 0;
           transition: all ease-in-out .5s
-        };
-        &:hover{
-          span{
+        }
+
+        ;
+
+        &:hover {
+          span {
             opacity: 1;
             left: 80px;
           }
@@ -1285,6 +1347,25 @@ div[class*="-page"] {
 
   }
 
+  .empty-cart {
+    text-align: center;
+
+    a {
+      font-weight: 700;
+      color: $textGrayColor;
+      font-size: 20px;
+
+      &:hover {
+        color: $redColor;
+      }
+    }
+    p{
+      font-size: 25px;
+      width: 50%;
+      margin:  0 auto;
+    }
+  }
+
   @include devices(tablet) {
     .product-card {
       .card-img-top {
@@ -1292,6 +1373,11 @@ div[class*="-page"] {
         height: 100%;
         display: block;
         margin: 0 auto;
+      }
+    }
+    .empty-cart{
+      p{
+        width: 80%;
       }
     }
   }

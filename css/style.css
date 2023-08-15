@@ -373,12 +373,16 @@ input.error {
   left: 20px;
 }
 
+.shopping-cart {
+  cursor: pointer;
+  position: relative;
+}
 .shopping-cart .num-cart {
   position: absolute;
   height: 15px;
   width: 15px;
-  top: 0;
-  right: 10px;
+  top: -3px;
+  right: -5px;
   text-align: center;
   border-radius: 50%;
   background-color: #DB1E3C;
@@ -390,6 +394,49 @@ input.error {
     right: 45%;
     top: 9px;
   }
+}
+.shopping-cart .cart-list {
+  position: absolute;
+  left: 0;
+  top: 45px;
+  background-color: #fff;
+  width: 280px;
+  border: 1px solid #EEEEEE;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+}
+.shopping-cart .cart-list .product-card {
+  line-height: normal;
+  font-size: 13px;
+  border-radius: 0px;
+}
+.shopping-cart .cart-list .product-card .card-text,
+.shopping-cart .cart-list .product-card .card-title,
+.shopping-cart .cart-list .product-card .price {
+  margin: 0 !important;
+  font-size: 13px;
+}
+.shopping-cart .cart-list .product-card .new-price {
+  font-size: 13px !important;
+}
+.shopping-cart .cart-list .product-card .trash {
+  width: 25px;
+  min-width: 25px;
+  height: 25px;
+  background-color: transparent;
+}
+.shopping-cart .cart-list .product-card .trash svg {
+  width: 15px;
+  height: 15px;
+  stroke: #DB1E3C;
+}
+.shopping-cart .cart-list .btn-bg {
+  width: 88px;
+  min-height: 35px;
+  font-size: 13px;
+  margin: 0;
+  margin-right: auto;
 }
 
 .fotorama {
@@ -997,12 +1044,31 @@ div[class*=-page] {
   border-radius: 12px;
   display: flex;
 }
+.shopping-cart-page .empty-cart {
+  text-align: center;
+}
+.shopping-cart-page .empty-cart a {
+  font-weight: 700;
+  color: #737373;
+  font-size: 20px;
+}
+.shopping-cart-page .empty-cart a:hover {
+  color: #DB1E3C;
+}
+.shopping-cart-page .empty-cart p {
+  font-size: 25px;
+  width: 50%;
+  margin: 0 auto;
+}
 @media only screen and (max-width: 768px) {
   .shopping-cart-page .product-card .card-img-top {
     width: auto;
     height: 100%;
     display: block;
     margin: 0 auto;
+  }
+  .shopping-cart-page .empty-cart p {
+    width: 80%;
   }
 }
 

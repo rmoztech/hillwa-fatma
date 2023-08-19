@@ -323,9 +323,13 @@ input.error {
       font-size: 15px;
     }
 
-    input {
+    input:not([type='checkbox']) {
       font-size: 14px;
       height: 45px;
+    }
+
+    .others{
+      display: none;
     }
   }
 }

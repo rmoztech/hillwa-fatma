@@ -253,7 +253,6 @@ $(document).ready(function () {
         onchangeInput(this);
         itemIndex = $(this).parent().parent().parent().parent().parent().parent().parent().attr("id");
         var cart = JSON.parse(localStorage.cart);
-        console.log('dfdfd' , valueCurrent , cart[itemIndex], $(this).parent().parent().parent().parent().parent().parent().parent().attr("id"))
         cart[itemIndex].qty = valueCurrent;
         localStorage.setItem("cart", JSON.stringify(cart));
     })
@@ -386,7 +385,6 @@ $(document).ready(function () {
         var newPrice = $(item).parent('.card-body').find(".price").find(".new-price").text() || $('.card').find(".price").find(".new-price").text();
         var oldPrice = $(item).parent('.card-body').find(".price").find(".old-price").text() || $('.card').find(".price").find(".old-price").text();
         var qty = parseInt($('.card').find(".input-qty").val() || 1);
-        console.log(typeof(parseInt(qty)), parseInt(qty))
         var id = parseInt($(item).parent('.card-body').parent().attr("id"));
         // var id = localStorage.cart == undefined ? 0 : JSON.parse(localStorage.cart).length;
 
@@ -558,8 +556,17 @@ $(document).ready(function () {
     }
     numberCodeForm.on('input', handleInput);
     numberCodeForm.on('keydown', handleKeyDown);
+    
+    $('.custom-radio input[type="radio"]').click(function () {
+        var inputValue = $(this).attr("value");
 
-
+        if (inputValue === 'others') {
+            $('.others').show();
+        }
+        else {
+            $('.others').hide();
+        }
+    });
     AOS.init({
         duration: 1500,
         once: true,

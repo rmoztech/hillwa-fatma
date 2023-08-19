@@ -271,9 +271,12 @@ input.error {
   color: #737373;
   font-size: 15px;
 }
-.modal .modal-content input {
+.modal .modal-content input:not([type=checkbox]) {
   font-size: 14px;
   height: 45px;
+}
+.modal .modal-content .others {
+  display: none;
 }
 
 .complete-sale {

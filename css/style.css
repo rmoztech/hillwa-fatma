@@ -1,3 +1,200 @@
+.profile-page .page-content {
+  min-height: 630px !important;
+}
+.profile-page .account-list {
+  background-color: #EEEEEE;
+  padding: 20px;
+  border-radius: 8px;
+  line-height: 2;
+  border: 1px solid #d6d6d6;
+}
+.profile-page .account-list li {
+  color: #737373;
+}
+.profile-page .account-list li i {
+  font-size: 6px;
+  margin-left: 10px;
+}
+.profile-page .editAccount-form input,
+.profile-page .editPass-form input {
+  text-align: right;
+}
+.profile-page .editAccount-form .btn-bg,
+.profile-page .editPass-form .btn-bg {
+  margin: 0;
+  margin-right: auto;
+}
+.profile-page #successPassModal .icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #028C59;
+  color: #fff;
+  margin: 0 auto 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+}
+.profile-page .shipping-address .custom-radio input {
+  display: none;
+}
+.profile-page .shipping-address .custom-radio input:checked + .radio-btn .check-icon {
+  background-color: #028C59;
+}
+.profile-page .shipping-address .custom-radio input:checked + .radio-btn .check-icon > i {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+.profile-page .shipping-address .custom-radio .radio-btn {
+  margin: 10px;
+  width: 100%;
+  padding: 20px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  border-bottom: 1px solid #EEEEEE;
+}
+.profile-page .shipping-address .custom-radio .radio-btn .check-icon {
+  color: #fff;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  top: 25px;
+  border-radius: 50%;
+  border: 2px solid #EEEEEE;
+}
+.profile-page .shipping-address .custom-radio .radio-btn .check-icon > i {
+  opacity: 0;
+  transition: 0.5s;
+  pointer-events: none;
+  transform: translateX(-40%) scale(2);
+}
+.profile-page .shipping-address .modal .modal-content {
+  padding: 30px 0;
+}
+.profile-page .shipping-address .modal .modal-content .addressForm {
+  font-size: 15px;
+}
+.profile-page .shipping-address .modal .modal-content .addressForm iframe {
+  width: 100%;
+  height: 300px;
+  padding: 0 10px;
+}
+.profile-page .shipping-address .modal .modal-content .addressForm .modal-body {
+  padding: 0 60px;
+}
+.profile-page .shipping-address .modal .modal-content .addressForm .custom-radio input:checked + .radio-btn .check-icon {
+  background-color: #DB1E3C;
+}
+.profile-page .shipping-address .modal .modal-content .addressForm .custom-radio .radio-btn {
+  padding: 0 10px;
+  border: none;
+  margin: 0;
+}
+.profile-page .shipping-address .modal .modal-content .addressForm .custom-radio .radio-btn .address-icon {
+  padding-right: 30px;
+}
+.profile-page .shipping-address .modal .modal-content .addressForm .custom-radio .radio-btn .check-icon {
+  top: 0;
+}
+.profile-page .shipping-address .modal .modal-content .addressForm .form-check-input:checked {
+  background-color: #DB1E3C;
+  border-color: #DB1E3C;
+}
+.profile-page .shipping-address .modal .modal-content .addressForm label {
+  color: #212529;
+}
+.profile-page .addresses .address-icon {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #F7F7F7;
+  margin-bottom: 20px;
+}
+
+.checkout-page .tab-content .order-shap {
+  position: relative;
+  background-color: #fff;
+  height: 10px;
+  width: 35%;
+  margin: 0 auto 90px;
+}
+.checkout-page .tab-content .order-shap .circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #EEEEEE;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkout-page .tab-content .order-shap .circle span {
+  position: absolute;
+  min-width: 100px;
+  bottom: -30px;
+}
+.checkout-page .tab-content .order-shap .circle i {
+  color: #fff;
+  font-size: 12px;
+}
+.checkout-page .tab-content .order-shap .circle.circle-1 {
+  right: 0;
+}
+.checkout-page .tab-content .order-shap .circle.circle-2 {
+  left: 0;
+}
+.checkout-page .tab-content .order-shap .line {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 10px;
+  background-color: #EEEEEE;
+}
+.checkout-page .tab-content .order-shap .line.line-1 {
+  right: 0;
+}
+.checkout-page .tab-content #addressTab .circle-1 {
+  border-color: #DB1E3C;
+}
+.checkout-page .tab-content #addressTab .circle-1 span {
+  color: #DB1E3C;
+}
+.checkout-page .tab-content #paymentTab .circle-2 {
+  border-color: #DB1E3C;
+}
+.checkout-page .tab-content #paymentTab .circle-2 span {
+  color: #DB1E3C;
+}
+.checkout-page .tab-content #paymentTab .circle-1 {
+  background-color: #DB1E3C;
+  box-shadow: 0 10px 16px 0 rgba(47, 80, 149, 0.18);
+  border-color: #DB1E3C;
+}
+.checkout-page .tab-content #paymentTab .line-1 {
+  background-color: #DB1E3C;
+}
+@media only screen and (max-width: 481px) {
+  .checkout-page .tab-content .order-shap {
+    width: 75%;
+  }
+}
+.checkout-page .nav-tabs {
+  border: none;
+}
+.checkout-page .nav-tabs .btn-bg {
+  background-color: #DB1E3C !important;
+}
+.checkout-page .btn:disabled {
+  background-color: #DB1E3C;
+}
+
 /*===================
 	Global style 
 =====================*/

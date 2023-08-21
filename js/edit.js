@@ -1,0 +1,116 @@
+
+$(document).ready(function () {
+    $(".editAccount-form").validate({
+        rules: {
+            name: {
+                required: true,
+            },
+            mobile: {
+                required: true,
+            },
+            email: {
+                required: true,
+            },
+        },
+
+        messages: {
+            name: {
+                required: 'يرجى ادخال الاسم',
+            },
+            mobile: {
+                required: "يرجى ادخال رقم الموبايل",
+            },
+            email: {
+                required: 'يرجى ادخال البريد الالكتروني'
+            }
+        }
+    });
+
+    $('.editAccount-form').on('submit', function (e) {
+        e.preventDefault();
+        if ($(".editAccount-form").valid()) {
+            $("#successPassModal").modal("show");
+            setTimeout(function () {
+                $("#successPassModal").modal("hide");
+            }, 1000);
+        }
+    });
+    $.validator.addMethod('le', function (value, element, param) {
+        return this.optional(element) || value == $(param).val();
+    }, 'Invalid value');
+    $(".editPass-form").validate({
+        rules: {
+            newPass: {
+                required: true,
+            },
+            confirmPass: {
+                required: true,
+                le: '#newPass'
+            }
+        },
+
+        messages: {
+            newPass: {
+                required: 'يرجى ادخال كلمة المرور',
+            },
+            confirmPass: {
+                required: "يرجى تأكيد كلمة المرور",
+                le: "يجب ان تتوافق مع كملة المرور الجديدة"
+            }
+        }
+    });
+
+    $('.editPass-form').on('submit', function (e) {
+        e.preventDefault();
+        if ($(".editPass-form").valid()) {
+            $("#successPassModal").modal("show");
+            setTimeout(function () {
+                $("#successPassModal").modal("hide");
+            }, 1000);
+        }
+    });
+
+
+    // validation for checkout page 
+    $(function () {
+        if ($('.addresses input[type="radio"]').is(':checked') &&
+            $('.receipt-date input[type="radio"]').is(':checked') &&
+            $('.shipping-time input[type="radio"]').is(':checked')) {
+            $(".nav-tabs li.next button").prop('disabled', false);
+        }
+        else {
+            $(".nav-tabs li.next button").prop('disabled', true);
+        }
+        if($('.payment-method input[type="radio"]').is(':checked') ){
+            $(".complete-sale-btn").prop('disabled', false);
+
+        }
+        else {
+            $(".complete-sale-btn").prop('disabled', true);
+        }
+
+    })
+
+    $(function () {
+        if ($('#addressTab').hasClass('active')) {
+            $('.nav-tabs li.prev').hide();
+            $('.nav-tabs li.next').show();
+        }
+        if ($(".nav-tabs li.next button").attr('disabled') == undefined) {
+            $('.nav-tabs li.next').on('click', function () {
+                $('.nav-tabs li.next').hide();
+                $('.nav-tabs li.prev').show();
+            })
+        }
+        if ($(".nav-tabs li.prev button").attr('disabled') == undefined) {
+            $('.nav-tabs li.prev').on('click', function () {
+                $('.nav-tabs li.prev').hide();
+                $('.nav-tabs li.next').show();
+            })
+        }
+    })
+
+})
+
+
+

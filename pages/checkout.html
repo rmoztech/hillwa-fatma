@@ -289,9 +289,19 @@
     <div class="container">
         <div class="checkout-page  padding-section">
             <div class="page-content">
-                <div class="row">
-                    <div class="col-12 col-md-7">
-                        <!-- shipping address -->
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="addressTab" role="tabpanel"
+                        aria-labelledby="addressTab-tab">
+                        <div class="order-shap">
+                            <span class="circle circle-1"> <i class="fa-solid fa-check"></i>
+                                <span>تفاصيل الطلب</span>
+                            </span>
+                            <span class="circle circle-2"><i class="fa-solid fa-check"></i>
+                                <span>تفاصيل الدفع</span>
+                            </span>
+                            <span class="line line-1"></span>
+                        </div>
                         <div class="shipping-address mb-5">
                             <div class="d-flex justify-content-between align-items-center mb-4">
                                 <h5>عنوان الشحن</h5>
@@ -344,7 +354,8 @@
                                                         <div class="col-12 col-md-6 mb-4">
                                                             <span class="d-block mb-3">العنوان</span>
                                                             <label class="custom-radio">
-                                                                <input type="radio" name="location" value="home" checked>
+                                                                <input type="radio" name="location" value="home"
+                                                                    checked>
                                                                 <span class="radio-btn">
                                                                     <span class="check-icon">
                                                                         <i class="fa-solid fa-check"></i>
@@ -413,8 +424,6 @@
                                                     <button type="submit" class="btn btn-bg mb-3 w-50"
                                                         data-bs-dismiss="modal" data-bs-toggle="modal">
                                                         إضافة عنوان </button>
-                                                    <!-- <button type="button" class="btn btn-bg w-100" data-bs-dismiss="modal"> حساب
-                                                جديد</button> -->
                                                 </div>
                                             </form>
                                         </div>
@@ -485,7 +494,24 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="receipt-date mb-5">
+                        <div class="receipt-date mb-4">
+                            <h5 class="mb-4">طريق الإستلام</h5>
+                            <div class="mb-4">
+                                <label class="custom-radio">
+                                    <input type="radio" name="way" checked>
+                                    <span class="radio-btn">
+                                        التوصيل
+                                    </span>
+                                </label>
+                                <label class="custom-radio">
+                                    <input type="radio" name="way">
+                                    <span class="radio-btn">
+                                        الاستلام
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="receipt-date mb-4">
                             <h5 class="mb-4">موعد الإستلام</h5>
                             <p class="mb-4">حدد يوم التسليم والأوقات المتاحة المناسبة .</p>
                             <div class="mb-4">
@@ -556,7 +582,16 @@
                                 placeholder="أضف ملاحظاتك"></textarea>
                         </div>
                     </div>
-                    <div class="col-12 col-md-5">
+                    <div class="tab-pane fade" id="paymentTab" role="tabpanel" aria-labelledby="paymentTab-tab">
+                        <div class="order-shap">
+                            <span class="circle circle-1"> <i class="fa-solid fa-check"></i>
+                                <span>تفاصيل الطلب</span>
+                            </span>
+                            <span class="circle circle-2"><i class="fa-solid fa-check"></i>
+                                <span>تفاصيل الدفع</span>
+                            </span>
+                            <span class="line line-1"></span>
+                        </div>
                         <div class="complete-sale pt-4">
                             <div class="payment-method pb-4 mb-4">
                                 <h5 class="mb-4">طريقة الدفع</h5>
@@ -662,6 +697,13 @@
                                     </span>
                                 </label>
                             </div>
+                            <div class="discount-code pb-3 mb-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="كود الخصم" aria-label=""
+                                        aria-describedby="button-addon1">
+                                    <button class="" type="button" id="button-addon1">تحقق</button>
+                                </div>
+                            </div>
                             <table class="table table-borderless mb-5">
                                 <tbody>
                                     <tr>
@@ -687,12 +729,26 @@
                                 </tbody>
                             </table>
                             <div class="text-center">
-                                <button type="button" class="complete-sale-btn btn btn-bg w-50 mx-auto"
-                                    data-bs-target="#logInModal"> تأكيد الطلب</button>
+                                <button type="button" class="complete-sale-btn btn btn-bg mx-auto"> تأكيد
+                                    الطلب</button>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <ul class="nav nav-tabs justify-content-end mt-5" id="myTab" role="tablist">
+                    <li class="nav-item prev" role="presentation">
+                        <button class="nav-link btn btn-bg" id="addressTab-tab" data-bs-toggle="tab"
+                            data-bs-target="#addressTab" type="button" role="tab" aria-controls="addressTab"
+                            aria-selected="false"> السابق</button>
+                    </li>
+                    <li class="nav-item next" role="presentation">
+                        <button class="nav-link btn btn-bg" id="paymentTab-tab" data-bs-toggle="tab"
+                            data-bs-target="#paymentTab" type="button" role="tab" aria-controls="paymentTab"
+                            aria-selected="false"> التالي</button>
+                    </li>
+                 
+                </ul>
             </div>
         </div>
     </div>
@@ -836,6 +892,7 @@
     <script src="../js/bundle.min.js"></script>
     <!-- Main JS -->
     <script src="../js/main.js"></script>
+    <script src="../js/edit.js"></script>
 
 </body>
 

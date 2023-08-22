@@ -30,11 +30,23 @@ $(document).ready(function () {
     })
     $('.sidebar .menu-icon').click(function () {
         if ($('.sidebar .menu-icon i').hasClass('fa-bars')) {
-            $('.sidebar').css({ right: ' 0px' });
+            if($('body').css('direction') == 'rtl'){
+                $('.sidebar').css({ right: ' 0px' });
+            }
+            else{
+                $('.sidebar').css({ left: ' 0px' });
+            }
+            
             $('.sidebar i').removeClass('fa-bars').addClass('fa-xmark')
         }
         else {
-            $('.sidebar').css({ right: ' -270px' });
+            if($('body').css('direction') == 'rtl'){
+                $('.sidebar').css({ right: ' -270px' })
+            }
+            else{
+                $('.sidebar').css({ left: ' -270px' })
+            }
+        ;
             $('.sidebar i').removeClass('fa-xmark').addClass('fa-bars')
         }
     })
@@ -48,7 +60,7 @@ $(document).ready(function () {
         autoplay: true,
         autoplayTimeout: 3000,
     });
-
+ console.log($('body').css('direction'))
     $('.owl-clients, .owl-certificates').owlCarousel({
         loop: true,
         nav: true,

@@ -155,15 +155,112 @@
 
     .addresses {
         .address-icon {
+            width: 32%;
             position: relative;
-            padding: 20px;
-            border-radius: 10px;
             background-color: $grayLightColor;
+            margin-left: 1%;
+            border-radius: 8px;
             margin-bottom: 20px;
+            padding: 20px 10px;
+
+            button.btn-gray-bg {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                min-width: unset;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+
+                svg {
+                    margin: 0;
+                }
+            }
+
+            .icon {
+                width: 45px;
+                height: 45px;
+                margin-left: 8px;
+
+                svg {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+
+            .info {
+                font-size: 14px;
+            }
+            @include devices(tablet) {
+                width: 100%;
+            }
         }
     }
-
 }
+
+.shipping-address {
+    .addresses {
+        .custom-radio {
+            width: 32%;
+            margin-left: 1%;
+            border-radius: 8px;
+            border: 1px solid $borderColor;
+            margin-bottom: 20px;
+
+            .radio-btn {
+                margin: 0;
+                padding: 20px 10px;
+                border: none;
+
+                .address-icon {
+                    padding-right: 30px;
+
+                    button.btn-gray-bg {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        min-width: unset;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 0;
+
+                        svg {
+                            margin: 0;
+                        }
+                    }
+
+                    .icon {
+                        width: 45px;
+                        height: 45px;
+                        margin-left: 8px;
+
+                        svg {
+                            height: 20px;
+                            width: 20px;
+                        }
+                    }
+
+                    .info {
+                        font-size: 14px;
+                    }
+
+                }
+
+                .check-icon {
+                    width: 23px;
+                    height: 23px;
+                    font-size: 13px;
+                }
+            }
+            @include devices(tablet) {
+                width: 100%;
+            }
+        }
+    }
+}
+
 
 .checkout-page {
     .tab-content {
@@ -268,8 +365,17 @@
             background-color: $redColor !important;
         }
     }
-    .btn:disabled{
+
+    .btn:disabled {
         background-color: $redColor;
 
+    }
+
+    .complete-sale {
+        padding: 30px 0;
+
+        .payment-method {
+            border: none;
+        }
     }
 }

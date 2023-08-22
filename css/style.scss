@@ -1,6 +1,5 @@
 @import "./sass/colors";
 @import "./sass/mediaQuery";
-@import "./sass//newStyle";
 /*===================
 	Global style 
 =====================*/
@@ -2088,3 +2087,5 @@ div[class*="-page"] {
 
   }
 }
+
+@import "./sass//newStyle";

@@ -156,6 +156,7 @@
     .addresses {
         .address-icon {
             width: 32%;
+            height: 142px;
             position: relative;
             background-color: $grayLightColor;
             margin-left: 1%;
@@ -192,6 +193,7 @@
             .info {
                 font-size: 14px;
             }
+
             @include devices(tablet) {
                 width: 100%;
             }
@@ -203,18 +205,21 @@
     .addresses {
         .custom-radio {
             width: 32%;
+            height: 142px;
             margin-left: 1%;
             border-radius: 8px;
             border: 1px solid $borderColor;
             margin-bottom: 20px;
 
             .radio-btn {
+                height: 100%;
                 margin: 0;
                 padding: 20px 10px;
                 border: none;
 
                 .address-icon {
                     padding-right: 30px;
+                    height: 100%;
 
                     button.btn-gray-bg {
                         width: 30px;
@@ -254,13 +259,28 @@
                     font-size: 13px;
                 }
             }
+
             @include devices(tablet) {
                 width: 100%;
             }
         }
+
+      
     }
 }
-
+.address-icon {
+    .info {
+        width: 66%;
+        p {
+            &:nth-of-type(2) {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                -webkit-line-clamp: 2;
+            }
+        }
+    }
+}
 
 .checkout-page {
     .tab-content {

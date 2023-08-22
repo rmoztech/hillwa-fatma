@@ -210,6 +210,17 @@ a {
 .product-card:hover {
   box-shadow: 0 5px 16px rgba(137, 137, 137, 0.1);
 }
+@media only screen and (max-width: 768px) {
+  .product-card .card-img-top {
+    width: auto;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  .product-card .empty-cart p {
+    width: 80%;
+  }
+}
 
 .breadcrumb {
   margin: 0;
@@ -1083,17 +1094,6 @@ div[class*=-page] {
   width: 50%;
   margin: 0 auto;
 }
-@media only screen and (max-width: 768px) {
-  .shopping-cart-page .product-card .card-img-top {
-    width: auto;
-    height: 100%;
-    display: block;
-    margin: 0 auto;
-  }
-  .shopping-cart-page .empty-cart p {
-    width: 80%;
-  }
-}
 
 /*===================
 	checkout  page style 
@@ -1434,9 +1434,6 @@ div[class*=-page] {
 /*===================
 	order details page style 
 =====================*/
-.order-details-page .product-card {
-  box-shadow: none;
-}
 .order-details-page .complete-sale .payment-list li {
   display: inline-block;
   min-width: 90px;
@@ -1463,6 +1460,7 @@ div[class*=-page] {
   background-color: transparent;
   border-bottom: 1px solid #EEEEEE;
   border-radius: 0;
+  box-shadow: none;
 }
 .order-details-page .product-card .product-card-img {
   width: 100%;
@@ -1470,6 +1468,7 @@ div[class*=-page] {
   border: 1px solid #EEEEEE;
   border-radius: 12px;
   display: flex;
+  justify-content: center;
 }
 
 /*===================
@@ -1713,6 +1712,7 @@ div[class*=-page] {
 }
 .profile-page .addresses .address-icon {
   width: 32%;
+  height: 142px;
   position: relative;
   background-color: #F7F7F7;
   margin-left: 1%;
@@ -1753,18 +1753,21 @@ div[class*=-page] {
 
 .shipping-address .addresses .custom-radio {
   width: 32%;
+  height: 142px;
   margin-left: 1%;
   border-radius: 8px;
   border: 1px solid #EEEEEE;
   margin-bottom: 20px;
 }
 .shipping-address .addresses .custom-radio .radio-btn {
+  height: 100%;
   margin: 0;
   padding: 20px 10px;
   border: none;
 }
 .shipping-address .addresses .custom-radio .radio-btn .address-icon {
   padding-right: 30px;
+  height: 100%;
 }
 .shipping-address .addresses .custom-radio .radio-btn .address-icon button.btn-gray-bg {
   width: 30px;
@@ -1800,6 +1803,16 @@ div[class*=-page] {
   .shipping-address .addresses .custom-radio {
     width: 100%;
   }
+}
+
+.address-icon .info {
+  width: 66%;
+}
+.address-icon .info p:nth-of-type(2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
 }
 
 .checkout-page .tab-content .order-shap {

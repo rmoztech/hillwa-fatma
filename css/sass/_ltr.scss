@@ -1,0 +1,80 @@
+.about-page .about-info .about-list li.about-list-item i,
+.footer .footer-inner .footer-list li.footer-list-item i,
+.privacy-page .privacy-content .indexing li>span {
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+.shipping-address .addresses .custom-radio .radio-btn .address-icon {
+    padding-right: 0;
+    padding-left: 30px;
+}
+
+.address-icon .close,
+.address-icon button.btn-gray-bg {
+    right: 20px;
+    left: unset;
+}
+
+.shipping-address .addresses .custom-radio .radio-btn .address-icon .icon {
+    margin-left: 0px;
+    margin-right: 8px;
+}
+
+.checkout-page .tab-content .order-shap .circle.circle-1,
+.profile-page .sidebar {
+    right: unset;
+    left: 0;
+}
+
+.checkout-page .tab-content .order-shap .circle.circle-2 {
+    right: 0;
+    left: unset;
+}
+
+.address-icon {
+    padding-right: 0px;
+    padding-left: 50px;
+
+    .icon {
+        margin-left: 0px;
+        margin-right: 20px;
+    }
+}
+
+.contact-page .contact-info .info-form input,
+.contact-page .contact-info .info-form textarea,
+.profile-page .editAccount-form input,
+.profile-page .editPass-form input {
+    text-align: left;
+}
+
+.privacy-page .privacy-content h6>span {
+    right: unset;
+    left: -30px;
+}
+
+.profile-page .page-content {
+    padding-right: 0px;
+    padding-left: 100px;
+}
+
+.profile-page .editAccount-form .btn-bg,
+.profile-page .editPass-form .btn-bg {
+    margin-left: auto;
+    margin-right: unset;
+}
+
+.profile-page .page-content .financial-operations .financ-box span {
+    margin-left: 0px;
+    margin-right: 20px;
+}
+.profile-page .order-card .order-card-icon{
+    margin-left: 0px;
+    margin-right: 30px;
+}
+.questions-page .accordion-item .accordion-button i{
+    transform: rotate(180deg);
+    margin-right: 15px;
+    margin-left: 0px;
+}

@@ -247,6 +247,22 @@ a {
     box-shadow: 0 5px 16px rgba(137, 137, 137, 0.1);
 
   }
+
+  @include devices(tablet) {
+
+    .card-img-top {
+      width: auto;
+      height: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .empty-cart {
+      p {
+        width: 80%;
+      }
+    }
+  }
 }
 
 .breadcrumb {
@@ -328,7 +344,7 @@ input.error {
       height: 45px;
     }
 
-    .others{
+    .others {
       display: none;
     }
   }
@@ -531,12 +547,15 @@ input.error {
       margin: 0;
       margin-right: 10px;
     }
-    .table{
+
+    .table {
       margin: 0;
-      tr{
+
+      tr {
         border: none;
       }
-      td{
+
+      td {
         padding-top: 0;
         padding-bottom: 0;
         text-align: center;
@@ -544,7 +563,8 @@ input.error {
     }
 
   }
-  .total{
+
+  .total {
     font-size: 14px;
     color: $redColor;
   }
@@ -772,7 +792,7 @@ div[class*="-page"] {
         }
       }
 
-      &.active{
+      &.active {
         a {
           color: $redColor;
         }
@@ -1386,28 +1406,14 @@ div[class*="-page"] {
         color: $redColor;
       }
     }
-    p{
+
+    p {
       font-size: 25px;
       width: 50%;
-      margin:  0 auto;
+      margin: 0 auto;
     }
   }
 
-  @include devices(tablet) {
-    .product-card {
-      .card-img-top {
-        width: auto;
-        height: 100%;
-        display: block;
-        margin: 0 auto;
-      }
-    }
-    .empty-cart{
-      p{
-        width: 80%;
-      }
-    }
-  }
 }
 
 /*===================
@@ -1866,9 +1872,6 @@ div[class*="-page"] {
 	order details page style 
 =====================*/
 .order-details-page {
-  .product-card {
-    box-shadow: none;
-  }
 
   .complete-sale {
     .payment-list {
@@ -1907,6 +1910,8 @@ div[class*="-page"] {
     background-color: transparent;
     border-bottom: 1px solid $borderColor;
     border-radius: 0;
+    box-shadow: none;
+
 
     .product-card-img {
       width: 100%;
@@ -1914,6 +1919,7 @@ div[class*="-page"] {
       border: 1px solid $borderColor;
       border-radius: 12px;
       display: flex;
+      justify-content: center;
     }
 
   }
@@ -2088,4 +2094,5 @@ div[class*="-page"] {
   }
 }
 
-@import "./sass//newStyle";
+@import "./sass/newStyle";
+// @import "./sass/ltr.scss";

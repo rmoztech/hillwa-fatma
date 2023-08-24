@@ -418,15 +418,23 @@
     }
 
 }
-.header.is-sticky{
+
+.header.is-sticky {
     background-color: #8d8d8d70;
 }
-.fotorama .fotorama__stage__frame{
+
+.fotorama .fotorama__stage__frame {
     height: 450px;
-    .fotorama__img{
+
+    .fotorama__img {
         height: 100% !important;
     }
 }
-.fotorama__nav{
+
+.fotorama__nav {
     z-index: 0;
+}
+
+.btn:disabled {
+    background-color: $redColor;
 }

@@ -1898,4 +1898,32 @@ div[class*=-page] {
 }
 .checkout-page .complete-sale .payment-method {
   border: none;
+}
+
+.shopping-cart .cart-list {
+  height: 330px;
+  overflow-y: scroll;
+}
+.shopping-cart .cart-list::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+.shopping-cart .cart-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #e0e0e0;
+}
+
+.header.is-sticky {
+  background-color: rgba(141, 141, 141, 0.4392156863);
+}
+
+.fotorama .fotorama__stage__frame {
+  height: 450px;
+}
+.fotorama .fotorama__stage__frame .fotorama__img {
+  height: 100% !important;
+}
+
+.fotorama__nav {
+  z-index: 0;
 }/*# sourceMappingURL=style.css.map */

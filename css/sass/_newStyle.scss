@@ -265,12 +265,14 @@
             }
         }
 
-      
+
     }
 }
+
 .address-icon {
     .info {
         width: 66%;
+
         p {
             &:nth-of-type(2) {
                 display: -webkit-box;
@@ -398,4 +400,33 @@
             border: none;
         }
     }
+}
+
+
+.shopping-cart .cart-list {
+    height: 330px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #e0e0e0;
+    }
+
+}
+.header.is-sticky{
+    background-color: #8d8d8d70;
+}
+.fotorama .fotorama__stage__frame{
+    height: 450px;
+    .fotorama__img{
+        height: 100% !important;
+    }
+}
+.fotorama__nav{
+    z-index: 0;
 }

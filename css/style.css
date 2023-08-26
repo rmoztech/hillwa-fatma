@@ -524,6 +524,56 @@ input.error {
   transition: all 0.5s ease-in-out;
 }
 
+.contact {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  z-index: 98;
+}
+.contact > a {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.contact > a.call {
+  background-color: #DB1E3C;
+  margin-bottom: 10px;
+  position: relative;
+}
+.contact > a.call i {
+  font-size: 30px;
+}
+.contact > a.call span {
+  position: absolute;
+  left: 70px;
+  top: 11px;
+  background-color: #fff;
+  width: 288px;
+  padding: 10px;
+  color: #212529;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 0px 6px rgba(219, 30, 60, 0.1607843137);
+  border: 1px solid #EEEEEE;
+  font-size: 14px;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+}
+.contact > a.call:hover span {
+  opacity: 1;
+  left: 80px;
+}
+.contact > a.whatsapp-call {
+  background-color: #52CB5F;
+}
+.contact > a.whatsapp-call i {
+  font-size: 37px;
+}
+
 /*===================
 	header style 
 =====================*/
@@ -739,55 +789,6 @@ div[class*=-page] {
 }
 .home-page .certificates .owl-certificates .item {
   padding: 0 55px;
-}
-.home-page .contact {
-  position: fixed;
-  left: 30px;
-  bottom: 30px;
-  z-index: 98;
-}
-.home-page .contact > a {
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-}
-.home-page .contact > a.call {
-  background-color: #DB1E3C;
-  margin-bottom: 10px;
-  position: relative;
-}
-.home-page .contact > a.call i {
-  font-size: 30px;
-}
-.home-page .contact > a.call span {
-  position: absolute;
-  left: 70px;
-  top: 11px;
-  background-color: #fff;
-  width: 288px;
-  padding: 10px;
-  color: #212529;
-  font-weight: 600;
-  border-radius: 8px;
-  box-shadow: 0 0px 6px rgba(219, 30, 60, 0.1607843137);
-  border: 1px solid #EEEEEE;
-  font-size: 14px;
-  opacity: 0;
-  transition: all ease-in-out 0.5s;
-}
-.home-page .contact > a.call:hover span {
-  opacity: 1;
-  left: 80px;
-}
-.home-page .contact > a.whatsapp-call {
-  background-color: #52CB5F;
-}
-.home-page .contact > a.whatsapp-call i {
-  font-size: 37px;
 }
 
 /*===================

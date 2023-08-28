@@ -1915,7 +1915,7 @@ div[class*=-page] {
 }
 
 .header.is-sticky {
-  background-color: rgba(141, 141, 141, 0.4392156863);
+  backdrop-filter: blur(15px);
 }
 
 .fotorama .fotorama__stage__frame {

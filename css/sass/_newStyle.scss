@@ -420,7 +420,7 @@
 }
 
 .header.is-sticky {
-    background-color: #8d8d8d70;
+    backdrop-filter: blur(15px)
 }
 
 .fotorama .fotorama__stage__frame {

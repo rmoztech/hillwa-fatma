@@ -1934,7 +1934,7 @@ div[class*=-page] {
 }
 
 .mobile-input .input-group-text {
-  background-color: #EEEEEE;
+  background-color: #fff;
   border: 1px solid #EEEEEE;
   color: #737373;
   border-radius: 8px 0 0 8px !important;

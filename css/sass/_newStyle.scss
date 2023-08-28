@@ -438,3 +438,22 @@
 .btn:disabled {
     background-color: $redColor;
 }
+
+.mobile-input {
+    .input-group-text {
+        background-color: $borderColor;
+        border: 1px solid $borderColor;
+        color: $textGrayColor;
+        border-radius: 8px 0 0 8px !important;
+        img {
+            margin-right: 5px;
+        }
+    }
+
+    .form-control {
+        border-radius: 0 8px 8px 0 !important;
+        text-align: right;
+
+    }
+}
+

@@ -1931,4 +1931,18 @@ div[class*=-page] {
 
 .btn:disabled {
   background-color: #DB1E3C;
+}
+
+.mobile-input .input-group-text {
+  background-color: #EEEEEE;
+  border: 1px solid #EEEEEE;
+  color: #737373;
+  border-radius: 8px 0 0 8px !important;
+}
+.mobile-input .input-group-text img {
+  margin-right: 5px;
+}
+.mobile-input .form-control {
+  border-radius: 0 8px 8px 0 !important;
+  text-align: right;
 }/*# sourceMappingURL=style.css.map */

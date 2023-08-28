@@ -156,7 +156,7 @@
     .addresses {
         .address-icon {
             width: 32%;
-            height: 142px;
+            height: 170px;
             position: relative;
             background-color: $grayLightColor;
             margin-left: 1%;
@@ -203,9 +203,10 @@
 
 .shipping-address {
     .addresses {
+        position: relative;
+
         .custom-radio {
-            width: 32%;
-            height: 142px;
+            height: 170px;
             margin-left: 1%;
             border-radius: 8px;
             border: 1px solid $borderColor;
@@ -265,6 +266,59 @@
             }
         }
 
+        .news-custom-nav {
+          position: absolute;
+          top: 30%;
+          left: -20px;
+          right: -20px;
+          background-color: $redColor;
+  
+          .owl-prev,
+          .owl-next {
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            color: inherit;
+            background: $borderColor;
+            border: none;
+            z-index: 88;
+            opacity: 0;
+            transition: all 0.2s ease-in;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+  
+            i {
+              font-size: 18px;
+              color: $textGrayColor;
+            }
+          }
+  
+          .owl-prev {
+            left: -30px;
+          }
+  
+          .owl-next {
+            right: -30px;
+          }
+        }
+  
+        &:hover {
+  
+          .owl-prev,
+          .owl-next {
+            opacity: 1;
+          }
+  
+          .owl-prev {
+            left: -25px;
+          }
+  
+          .owl-next {
+            right: -25px;
+          }
+        }
 
     }
 }
@@ -272,15 +326,6 @@
 .address-icon {
     .info {
         width: 66%;
-
-        p {
-            &:nth-of-type(2) {
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                -webkit-line-clamp: 2;
-            }
-        }
     }
 }
 

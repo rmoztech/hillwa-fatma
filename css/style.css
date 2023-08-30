@@ -1985,4 +1985,39 @@ div[class*=-page] {
 .mobile-input .form-control {
   border-radius: 0 8px 8px 0 !important;
   text-align: right;
+}
+
+.order-details-page .address-icon .icon {
+  width: 50px;
+  height: 50px;
+}
+.order-details-page .address-icon .icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: #212529;
+}
+.order-details-page .product-card .product-card-img {
+  height: 155px;
+}
+.order-details-page .product-card .product-card-img a {
+  display: flex;
+}
+.order-details-page .product-card .product-card-img a img {
+  height: 100%;
+}
+.order-details-page .product-card .price {
+  font-size: 18px;
+  font-weight: 600;
+  color: #DB1E3C;
+}
+.order-details-page .complete-sale {
+  padding: 35px 0;
+}
+.order-details-page .complete-sale .payment-list li {
+  width: unset;
+  margin-bottom: 5px;
+}
+.order-details-page .complete-sale .payment-list li svg {
+  width: 20px;
+  height: 20px;
 }/*# sourceMappingURL=style.css.map */

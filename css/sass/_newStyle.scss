@@ -502,3 +502,52 @@
     }
 }
 
+.order-details-page {
+    .address-icon {
+        .icon {
+            width: 50px;
+            height: 50px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+                stroke: $mainColor;
+            }
+        }
+    }
+    .product-card{
+        .product-card-img{
+            height: 155px;
+            a{
+                display: flex;
+                img{
+                    height: 100%;
+                }
+            }
+          
+        }
+        .price{
+            font-size: 18px;
+            font-weight: 600;  
+            color: $redColor;  
+        }
+    }
+
+    .complete-sale {
+        padding: 35px 0;
+
+        .payment-list {
+            li {
+                width: unset;
+                margin-bottom: 5px;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+        }
+    }
+
+}

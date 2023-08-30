@@ -385,8 +385,8 @@
                             <div class="mb-4">
                                 <label for="mobile" class="form-label mb-3">رقم الموبايل </label>
                                 <div class="input-group mobile-input">
-                                    <input type="tel" class="form-control"  id="mobile" placeholder="5x xxx xxxx" aria-label="mobile"
-                                        aria-describedby="mobile">
+                                    <input type="tel" class="form-control" id="mobile" placeholder="5x xxx xxxx"
+                                        aria-label="mobile" aria-describedby="mobile">
                                     <span class="input-group-text">
                                         <span>
                                             05
@@ -788,9 +788,11 @@
                                                                 name="username" placeholder="الاسم">
                                                         </div>
                                                         <div class="col-12 col-md-6 mb-4">
-                                                            <label for="mobile" class="form-label mb-3">رقم الموبايل </label>
+                                                            <label for="mobile" class="form-label mb-3">رقم الموبايل
+                                                            </label>
                                                             <div class="input-group mobile-input">
-                                                                <input type="tel" class="form-control"  id="mobile" placeholder="5x xxx xxxx" aria-label="mobile"
+                                                                <input type="tel" class="form-control" id="mobile"
+                                                                    placeholder="5x xxx xxxx" aria-label="mobile"
                                                                     aria-describedby="mobile">
                                                                 <span class="input-group-text">
                                                                     <span>
@@ -867,9 +869,12 @@
                                                                     name="name" placeholder="الاسم">
                                                             </div>
                                                             <div class="mb-4">
-                                                                <label for="mobileNum" class="form-label mb-3">رقم الموبايل </label>
+                                                                <label for="mobileNum" class="form-label mb-3">رقم
+                                                                    الموبايل </label>
                                                                 <div class="input-group mobile-input">
-                                                                    <input type="tel" class="form-control"  id="mobileNum" placeholder="5x xxx xxxx" aria-label="mobileNum"
+                                                                    <input type="tel" class="form-control"
+                                                                        id="mobileNum" placeholder="5x xxx xxxx"
+                                                                        aria-label="mobileNum"
                                                                         aria-describedby="mobileNum">
                                                                     <span class="input-group-text">
                                                                         <span>
@@ -904,47 +909,99 @@
                                 </div>
                             </div>
                             <div class="addresses d-flex align-items-center justify-content-start flex-wrap">
-                                <div class="address-icon d-flex align-items-start justify-content-start">
-                                    <span class="icon">
-                                        <svg>
-                                            <use href="../icons.svg#loaction"></use>
-                                        </svg>
+                                <label class="custom-radio">
+                                    <input type="radio" name="address" checked>
+                                    <span class="radio-btn">
+                                        <span class="check-icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                        <div class="address-icon d-flex align-items-start justify-content-start">
+                                            <span class="icon">
+                                                <svg>
+                                                    <use href="../icons.svg#loaction"></use>
+                                                </svg>
+                                            </span>
+                                            <div class="info">
+                                                <p class="mb-0">المنزل</p>
+                                                <p class="mb-0">Home:RHFC7252, 7252 King Abdulaziz Rd, 4387، حي
+                                                    الملك
+                                                    فهد، Riyadh 12272,
+                                                    , Saudi Arabia - 1227</p>
+                                            </div>
+                                            <button type="button" class="btn btn-gray-bg " data-bs-toggle="modal"
+                                                data-bs-dismiss="modal" data-bs-target="#addressModal">
+                                                <svg>
+                                                    <use href="../icons.svg#edit"></use>
+                                                </svg>
+                                            </button>
+                                            <span class="close">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </span>
+                                        </div>
                                     </span>
-                                    <div class="info">
-                                        <p class="mb-0">المنزل</p>
-                                        <p class="mb-0">محمود  محمود  محمود  محمود  محمود  محمود  محمود  محمود  محمود  محمود  محمود  محمود خلة</p>
-                                    </div>
-                                    <button type="button" class="btn btn-gray-bg " data-bs-toggle="modal"
-                                        data-bs-dismiss="modal" data-bs-target="#addressModal">
-                                        <svg>
-                                            <use href="../icons.svg#edit"></use>
-                                        </svg>
-                                    </button>
-                                    <span class="close">
-                                        <i class="fa-solid fa-xmark"></i>
+                                </label>
+                                <label class="custom-radio">
+                                    <input type="radio" name="address" checked>
+                                    <span class="radio-btn">
+                                        <span class="check-icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                        <div class="address-icon d-flex align-items-start justify-content-start">
+                                            <span class="icon">
+                                                <svg>
+                                                    <use href="../icons.svg#loaction"></use>
+                                                </svg>
+                                            </span>
+                                            <div class="info">
+                                                <p class="mb-0">المنزل</p>
+                                                <p class="mb-0">Home:RHFC7252, 7252 King Abdulaziz Rd, 4387، حي
+                                                    الملك
+                                                    فهد، Riyadh 12272,
+                                                    , Saudi Arabia - 1227</p>
+                                            </div>
+                                            <button type="button" class="btn btn-gray-bg " data-bs-toggle="modal"
+                                                data-bs-dismiss="modal" data-bs-target="#addressModal">
+                                                <svg>
+                                                    <use href="../icons.svg#edit"></use>
+                                                </svg>
+                                            </button>
+                                            <span class="close">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </span>
+                                        </div>
                                     </span>
-                                </div>
-                                <div class="address-icon d-flex align-items-start justify-content-start">
-                                    <span class="icon">
-                                        <svg>
-                                            <use href="../icons.svg#loaction"></use>
-                                        </svg>
+                                </label>
+                                <label class="custom-radio">
+                                    <input type="radio" name="address" checked>
+                                    <span class="radio-btn">
+                                        <span class="check-icon">
+                                            <i class="fa-solid fa-check"></i>
+                                        </span>
+                                        <div class="address-icon d-flex align-items-start justify-content-start">
+                                            <span class="icon">
+                                                <svg>
+                                                    <use href="../icons.svg#loaction"></use>
+                                                </svg>
+                                            </span>
+                                            <div class="info">
+                                                <p class="mb-0">المنزل</p>
+                                                <p class="mb-0">Home:RHFC7252, 7252 King Abdulaziz Rd, 4387، حي
+                                                    الملك
+                                                    فهد، Riyadh 12272,
+                                                    , Saudi Arabia - 1227</p>
+                                            </div>
+                                            <button type="button" class="btn btn-gray-bg " data-bs-toggle="modal"
+                                                data-bs-dismiss="modal" data-bs-target="#addressModal">
+                                                <svg>
+                                                    <use href="../icons.svg#edit"></use>
+                                                </svg>
+                                            </button>
+                                            <span class="close">
+                                                <i class="fa-solid fa-xmark"></i>
+                                            </span>
+                                        </div>
                                     </span>
-                                    <div class="info">
-                                        <p class="mb-0">المنزل</p>
-                                        <p class="mb-0">محمود خلة</p>
-                                    </div>
-                                    <button type="button" class="btn btn-gray-bg " data-bs-toggle="modal"
-                                        data-bs-dismiss="modal" data-bs-target="#addressModal">
-                                        <svg>
-                                            <use href="../icons.svg#edit"></use>
-                                        </svg>
-                                    </button>
-                                    <span class="close">
-                                        <i class="fa-solid fa-xmark"></i>
-                                    </span>
-                                </div>
-                                
+                                </label>
                             </div>
                         </div>
 

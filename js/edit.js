@@ -143,6 +143,13 @@ $(document).ready(function () {
             }
         }
     });
+    // 
+    // show and hide alert in checkout page
+    $('.alert').hide();
+    $('.complete-sale-btn').on('click', function () {
+        $('.alert').show();
+    })
+
 })
 
 

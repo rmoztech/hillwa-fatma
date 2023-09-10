@@ -2031,4 +2031,8 @@ div[class*=-page] {
 }
 .edit-page .addressForm .others {
   display: none;
+}
+
+.alert-dismissible .btn-close {
+  right: unset;
 }/*# sourceMappingURL=style.css.map */

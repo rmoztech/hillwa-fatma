@@ -113,6 +113,14 @@ textarea {
     margin-left: 0px;
 }
 
+.alert-dismissible {
+    padding-right: 3rem;
+    .btn-close {
+        right: 0;
+        left: unset;
+    }
+}
+
 @include devices(tablet) {
     .header .menu-btn {
         left: 20px;

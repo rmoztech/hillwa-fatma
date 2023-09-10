@@ -289,7 +289,14 @@
     <div class="container">
         <div class="checkout-page  padding-section">
             <div class="page-content">
-
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    حدث خطأ ما
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    تمت العملية بنجاح
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="addressTab" role="tabpanel"
                         aria-labelledby="addressTab-tab">
@@ -332,9 +339,11 @@
                                                                 name="username" placeholder="الاسم">
                                                         </div>
                                                         <div class="col-12 col-md-6 mb-3">
-                                                            <label for="mobile" class="form-label mb-3">رقم الموبايل </label>
+                                                            <label for="mobile" class="form-label mb-3">رقم الموبايل
+                                                            </label>
                                                             <div class="input-group mobile-input">
-                                                                <input type="tel" class="form-control" placeholder="5x xxx xxxx" aria-label="mobile"
+                                                                <input type="tel" class="form-control"
+                                                                    placeholder="5x xxx xxxx" aria-label="mobile"
                                                                     aria-describedby="mobile" id="mobile" name="mobile">
                                                                 <span class="input-group-text">
                                                                     05
@@ -409,9 +418,12 @@
                                                                     name="name" placeholder="الاسم">
                                                             </div>
                                                             <div class="mb-3">
-                                                                <label for="mobileNum" class="form-label mb-3">رقم الموبايل </label>
+                                                                <label for="mobileNum" class="form-label mb-3">رقم
+                                                                    الموبايل </label>
                                                                 <div class="input-group mobile-input">
-                                                                    <input type="tel" class="form-control" name="mobileNum"  id="mobileNum" placeholder="5x xxx xxxx" aria-label="mobileNum"
+                                                                    <input type="tel" class="form-control"
+                                                                        name="mobileNum" id="mobileNum"
+                                                                        placeholder="5x xxx xxxx" aria-label="mobileNum"
                                                                         aria-describedby="mobileNum">
                                                                     <span class="input-group-text">
                                                                         <span>
@@ -515,7 +527,7 @@
                                             </span>
                                         </label>
                                     </div>
-                                   
+
                                 </div>
                                 <div class="owl-theme">
                                     <div class="owl-controls">
@@ -626,112 +638,112 @@
                         <div class="row">
                             <div class="col-12 col-md-7 mb-3 mb-md-0">
                                 <div class="complete-sale pt-4">
-                                  <div class="payment-method">
-                                    <h5 class="mb-3">طريقة الدفع</h5>
-                                    <label class="custom-radio d-block">
-                                        <input type="radio" name="payment" checked>
-                                        <span class="radio-btn">
-                                            <span class="check-icon">
-                                                <i class="fa-solid fa-check"></i>
+                                    <div class="payment-method">
+                                        <h5 class="mb-3">طريقة الدفع</h5>
+                                        <label class="custom-radio d-block">
+                                            <input type="radio" name="payment" checked>
+                                            <span class="radio-btn">
+                                                <span class="check-icon">
+                                                    <i class="fa-solid fa-check"></i>
+                                                </span>
+                                                <div class="address-icon">
+                                                    <div class="img">
+                                                        <img src="../img/footer01.png" alt="">
+                                                    </div>
+                                                </div>
                                             </span>
-                                            <div class="address-icon">
-                                                <div class="img">
-                                                    <img src="../img/footer01.png" alt="">
+                                        </label>
+                                        <label class="custom-radio d-block">
+                                            <input type="radio" name="payment">
+                                            <span class="radio-btn">
+                                                <span class="check-icon">
+                                                    <i class="fa-solid fa-check"></i>
+                                                </span>
+                                                <div class="address-icon">
+                                                    <div class="img">
+                                                        <img src="../img/footer05.png" alt="">
+                                                    </div>
+                                                    <div class="img">
+                                                        <img src="../img/footer02.png" alt="">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </span>
-                                    </label>
-                                    <label class="custom-radio d-block">
-                                        <input type="radio" name="payment">
-                                        <span class="radio-btn">
-                                            <span class="check-icon">
-                                                <i class="fa-solid fa-check"></i>
                                             </span>
-                                            <div class="address-icon">
-                                                <div class="img">
-                                                    <img src="../img/footer05.png" alt="">
+                                        </label>
+                                        <label class="custom-radio d-block">
+                                            <input type="radio" name="payment">
+                                            <span class="radio-btn">
+                                                <span class="check-icon">
+                                                    <i class="fa-solid fa-check"></i>
+                                                </span>
+                                                <div class="address-icon">
+                                                    <div class="img">
+                                                        <img src="../img/footer06.png" alt="">
+                                                    </div>
                                                 </div>
-                                                <div class="img">
-                                                    <img src="../img/footer02.png" alt="">
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </label>
-                                    <label class="custom-radio d-block">
-                                        <input type="radio" name="payment">
-                                        <span class="radio-btn">
-                                            <span class="check-icon">
-                                                <i class="fa-solid fa-check"></i>
                                             </span>
-                                            <div class="address-icon">
-                                                <div class="img">
-                                                    <img src="../img/footer06.png" alt="">
+                                        </label>
+                                        <label class="custom-radio d-block">
+                                            <input type="radio" name="payment">
+                                            <span class="radio-btn">
+                                                <span class="check-icon">
+                                                    <i class="fa-solid fa-check"></i>
+                                                </span>
+                                                <div class="address-icon">
+                                                    <div class="img">
+                                                        <svg>
+                                                            <use href="../icons.svg#wallet"></use>
+                                                        </svg>
+                                                        <span>من المحفظة</span>
+                                                        <span>الرصيد المتاح 200 ر.س</span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </span>
-                                    </label>
-                                    <label class="custom-radio d-block">
-                                        <input type="radio" name="payment">
-                                        <span class="radio-btn">
-                                            <span class="check-icon">
-                                                <i class="fa-solid fa-check"></i>
                                             </span>
-                                            <div class="address-icon">
-                                                <div class="img">
-                                                    <svg>
-                                                        <use href="../icons.svg#wallet"></use>
-                                                    </svg>
-                                                    <span>من المحفظة</span>
-                                                    <span>الرصيد المتاح 200 ر.س</span>
+                                        </label>
+                                        <label class="custom-radio d-block">
+                                            <input type="radio" name="payment">
+                                            <span class="radio-btn">
+                                                <span class="check-icon">
+                                                    <i class="fa-solid fa-check"></i>
+                                                </span>
+                                                <div class="address-icon">
+                                                    <div class="img">
+                                                        <svg>
+                                                            <use href="../icons.svg#cash"></use>
+                                                        </svg>
+                                                        <span>عند الاستلام </span>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </span>
-                                    </label>
-                                    <label class="custom-radio d-block">
-                                        <input type="radio" name="payment">
-                                        <span class="radio-btn">
-                                            <span class="check-icon">
-                                                <i class="fa-solid fa-check"></i>
                                             </span>
-                                            <div class="address-icon">
-                                                <div class="img">
-                                                    <svg>
-                                                        <use href="../icons.svg#cash"></use>
-                                                    </svg>
-                                                    <span>عند الاستلام </span>
+                                        </label>
+                                        <label class="custom-radio d-block">
+                                            <input type="radio" name="payment">
+                                            <span class="radio-btn">
+                                                <span class="check-icon">
+                                                    <i class="fa-solid fa-check"></i>
+                                                </span>
+                                                <div class="address-icon">
+                                                    <div class="img">
+                                                        <img src="../img/footer03.png" alt="">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </span>
-                                    </label>
-                                    <label class="custom-radio d-block">
-                                        <input type="radio" name="payment">
-                                        <span class="radio-btn">
-                                            <span class="check-icon">
-                                                <i class="fa-solid fa-check"></i>
                                             </span>
-                                            <div class="address-icon">
-                                                <div class="img">
-                                                    <img src="../img/footer03.png" alt="">
+                                        </label>
+                                        <label class="custom-radio d-block">
+                                            <input type="radio" name="payment">
+                                            <span class="radio-btn">
+                                                <span class="check-icon">
+                                                    <i class="fa-solid fa-check"></i>
+                                                </span>
+                                                <div class="address-icon">
+                                                    <div class="img">
+                                                        <img src="../img/footer04.png" alt="">
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </span>
-                                    </label>
-                                    <label class="custom-radio d-block">
-                                        <input type="radio" name="payment">
-                                        <span class="radio-btn">
-                                            <span class="check-icon">
-                                                <i class="fa-solid fa-check"></i>
                                             </span>
-                                            <div class="address-icon">
-                                                <div class="img">
-                                                    <img src="../img/footer04.png" alt="">
-                                                </div>
-                                            </div>
-                                        </span>
-                                    </label>
-                                </div>   
+                                        </label>
+                                    </div>
                                 </div>
-                               
+
                             </div>
                             <div class="col-12 col-md-5">
                                 <div class="complete-sale pt-4">

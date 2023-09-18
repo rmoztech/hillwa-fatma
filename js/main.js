@@ -25,7 +25,7 @@ $(document).ready(function () {
     $('.close-btn').click(function () {
         $('.mobile-navbar').css({ display: ' none' });
     })
-    $('.shopping-cart').click(function () {
+    $('.shopping-cart >span:first-of-type, .shopping-cart>svg').click(function () {
         $('.cart-list').toggle(500)
     })
     $('.sidebar .menu-icon').click(function () {

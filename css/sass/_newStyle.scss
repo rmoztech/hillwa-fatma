@@ -579,3 +579,65 @@
 .alert-dismissible .btn-close{
     right: unset;
 }
+
+.delete-page {
+    h2 {
+        font-weight: 700;
+        color: $redColor;
+    }
+
+    p {
+        color: $grayBlackColor;
+
+    }
+
+    h5 {
+        font-weight: 600;
+        color: $redColor;
+        padding-right: 35px;
+        position: relative;
+
+        >span {
+            width: 25px;
+            height: 25px;
+            background-color: #D1E9FFE5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            >span {
+                width: 10px;
+                height: 10px;
+                background-color: $redColor;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .delete-list {
+        padding-right: 40px;
+        line-height: 2;
+
+        li {
+            color: $grayBlackColor;
+
+            i {
+                font-size: 6px;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .note {
+        font-weight: 600;
+
+        span {
+            color: $redColor;
+
+        }
+    }
+}

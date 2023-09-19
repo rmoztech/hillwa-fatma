@@ -172,19 +172,26 @@ $(document).ready(function () {
         return arg !== value;
     }, "Value must not equal arg.");
 
+    $.validator.addMethod('filesize', function (value, element, param) {
+        return this.optional(element) || (element.files[0].size <= param)
+    }, 'File size must be less than {200000000}');
+
+
     // configure your validation
     $(".payment-method").validate({
         rules: {
             bank: { valueNotEquals: "default" },
             voucherImg: {
                 required: true,
+                filesize: 200000000
             }
         },
         messages: {
             bank: { valueNotEquals: "يرجى اختيار اسم البنك" },
             voucherImg: {
                 required: "يرجى ارفاق ملف",
-            }
+                filesize: 'يجب ان يكون الملف المرفق اقل من 200 ميجا بايت '
+            },
         }
     });
 })

@@ -144,19 +144,49 @@ $(document).ready(function () {
         }
     });
     // 
-    // show and hide alert in checkout page
-    $('.alert').hide();
+    // show and hide alert in checkout page and validate
+
     $('.complete-sale-btn').on('click', function () {
         $('.alert').show();
+        $(".payment-method").valid()
     })
-// 
-    // show and hide bank modal
     $("input[type=file].voucherImg").change(function (e) {
         $(".voucherImgName").text(e.target.files[0].name);
     });
-    $('.bank-payment').on('click', function() {
-        $("#bankModal").modal("show");
-    })
+
+    // 
+    // show and hide the bank select
+    $('.payment-method').change(function () {
+        selected_value = $("input[name='payment']:checked").val();
+        if (selected_value == 7) {
+            $(".bankForm").slideDown(500);
+        }
+        else {
+            $(".bankForm").slideUp(500);
+        }
+    });
+    // 
+    // validation for add bank
+    // add the rule here
+    $.validator.addMethod("valueNotEquals", function (value, element, arg) {
+        return arg !== value;
+    }, "Value must not equal arg.");
+
+    // configure your validation
+    $(".payment-method").validate({
+        rules: {
+            bank: { valueNotEquals: "default" },
+            voucherImg: {
+                required: true,
+            }
+        },
+        messages: {
+            bank: { valueNotEquals: "يرجى اختيار اسم البنك" },
+            voucherImg: {
+                required: "يرجى ارفاق ملف",
+            }
+        }
+    });
 })
 
 

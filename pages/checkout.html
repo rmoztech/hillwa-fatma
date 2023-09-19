@@ -638,10 +638,10 @@
                         <div class="row">
                             <div class="col-12 col-md-7 mb-3 mb-md-0">
                                 <div class="complete-sale pt-4">
-                                    <div class="payment-method">
+                                    <form action="#"  class="payment-method">
                                         <h5 class="mb-3">طريقة الدفع</h5>
                                         <label class="custom-radio d-block">
-                                            <input type="radio" name="payment" checked>
+                                            <input type="radio" name="payment" checked  value="1">
                                             <span class="radio-btn">
                                                 <span class="check-icon">
                                                     <i class="fa-solid fa-check"></i>
@@ -654,7 +654,7 @@
                                             </span>
                                         </label>
                                         <label class="custom-radio d-block">
-                                            <input type="radio" name="payment">
+                                            <input type="radio" name="payment" value="2">
                                             <span class="radio-btn">
                                                 <span class="check-icon">
                                                     <i class="fa-solid fa-check"></i>
@@ -670,7 +670,7 @@
                                             </span>
                                         </label>
                                         <label class="custom-radio d-block">
-                                            <input type="radio" name="payment">
+                                            <input type="radio" name="payment" value="3">
                                             <span class="radio-btn">
                                                 <span class="check-icon">
                                                     <i class="fa-solid fa-check"></i>
@@ -683,7 +683,7 @@
                                             </span>
                                         </label>
                                         <label class="custom-radio d-block">
-                                            <input type="radio" name="payment">
+                                            <input type="radio" name="payment"  value="4">
                                             <span class="radio-btn">
                                                 <span class="check-icon">
                                                     <i class="fa-solid fa-check"></i>
@@ -700,7 +700,7 @@
                                             </span>
                                         </label>
                                         <label class="custom-radio d-block">
-                                            <input type="radio" name="payment">
+                                            <input type="radio" name="payment"  value="5">
                                             <span class="radio-btn">
                                                 <span class="check-icon">
                                                     <i class="fa-solid fa-check"></i>
@@ -715,21 +715,8 @@
                                                 </div>
                                             </span>
                                         </label>
-                                        <label class="custom-radio d-block bank-payment">
-                                            <input type="radio" name="payment">
-                                            <span class="radio-btn">
-                                                <span class="check-icon">
-                                                    <i class="fa-solid fa-check"></i>
-                                                </span>
-                                                <div class="address-icon">
-                                                    <div class="img">
-                                                        <img src="../img/footer03.png" alt="">
-                                                    </div>
-                                                </div>
-                                            </span>
-                                        </label>
                                         <label class="custom-radio d-block">
-                                            <input type="radio" name="payment">
+                                            <input type="radio" name="payment"  value="6">
                                             <span class="radio-btn">
                                                 <span class="check-icon">
                                                     <i class="fa-solid fa-check"></i>
@@ -741,61 +728,49 @@
                                                 </div>
                                             </span>
                                         </label>
-                                    </div>
-                                </div>
-
-                                <!-- Modal -->
-                                <div class="modal fade" id="bankModal" tabindex="-1" aria-labelledby="bankModalLabel"
-                                    aria-hidden="true">
-                                    <div class="modal-dialog modal-dialog-centered">
-                                        <div class="modal-content">
-                                            <form action="#" class="bankForm">
-                                                <div class="modal-header mb-3">
-                                                    <h6 class="modal-title" id="bankModalLabel"> الدفع من خلال
-                                                        التحويل البنكي</h6>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="mb-3">
-                                                        <label for="country" class="form-label"> البنك</label>
-                                                        <select class="form-select" aria-label="Default select"
-                                                            id="country">
-                                                            <option selected>اختر البنك</option>
-                                                            <option value="1">1</option>
-                                                            <option value="2">2</option>
-                                                            <option value="3">3</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="voucherNumber" class="form-label">رقم
-                                                            الايصال</label>
-                                                        <input type="number" class="form-control" id="voucherNumber"
-                                                            name="voucherNumber">
-                                                    </div>
-                                                    <div>
-                                                        <label for="voucherImg" class="form-label">  
-                                                            تحميل الصورة /PDF</label>
-                                                        <div class="uploadFile form-control">
-                                                            <span>
-                                                                <svg>
-                                                                    <use href="../icons.svg#uploadImg"></use>
-                                                                </svg>
-                                                                اضغط, او اسحب الملفات وإفلاتها هنا
-                                                            </span>
-                                                            <input type="file" class="inputfile voucherImg"
-                                                                name="voucherImg" id="voucherImg">
-                                                            <p class="filename voucherImgName">
-                                                                صورة, PDF </p>
-                                                        </div>
+                                        <label class="custom-radio d-block bank-payment">
+                                            <input type="radio" name="payment"  value="7">
+                                            <span class="radio-btn">
+                                                <span class="check-icon">
+                                                    <i class="fa-solid fa-check"></i>
+                                                </span>
+                                                <div class="address-icon">
+                                                    <div class="img">
+                                                        <img src="../img/footer03.png" alt="">
                                                     </div>
                                                 </div>
-                                                <div class="modal-footer justify-content-start">
-                                                    <button type="submit" class="btn btn-bg w-100 mb-3"
-                                                        data-bs-dismiss="modal" aria-label="Close">
-                                                        إتمام عملية الدفع </button>
+                                            </span>
+                                        </label>
+                                        <div class="bankForm">
+                                            <div class="mb-3">
+                                                <label for="bank" class="form-label"> البنك</label>
+                                                <select class="form-select" name="bank" id="bank" required>
+                                                    <option value="default">اختر البنك</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-5">
+                                                <label for="voucherImg" class="form-label">
+                                                    تحميل الصورة /PDF</label>
+                                                <div class="uploadFile form-control">
+                                                    <span>
+                                                        <svg>
+                                                            <use href="../icons.svg#uploadImg"></use>
+                                                        </svg>
+                                                        <span>
+                                                            انقر للتحميل
+                                                        </span>
+                                                        او السحب والافلات </span>
+                                                    <input type="file" class="inputfile voucherImg" name="voucherImg"
+                                                        id="voucherImg">
+                                                    <p class="filename voucherImgName">
+                                                        الحد الأقصى لحجم الملف المرفوع: 200 ميجابايت. </p>
                                                 </div>
-                                            </form>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-12 col-md-5">

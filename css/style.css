@@ -2090,8 +2090,10 @@ div[class*=-page] {
   display: none;
 }
 
+.bankForm {
+  display: none;
+}
 .bankForm .uploadFile {
-  overflow: hidden;
   position: relative;
   resize: none;
   width: 100%;
@@ -2099,17 +2101,22 @@ div[class*=-page] {
   border-style: dashed;
   text-align: center;
   font-size: 15px;
+  padding: 20px 0;
 }
-.bankForm .uploadFile span {
+.bankForm .uploadFile > span {
   display: block;
-  color: #DB1E3C;
+  color: #737373;
   margin-bottom: 10px;
 }
-.bankForm .uploadFile span svg {
+.bankForm .uploadFile > span svg {
   width: 40px;
   height: 40px;
-  margin: 0 auto;
+  margin: 0 auto 10px;
   display: block;
+}
+.bankForm .uploadFile > span > span {
+  font-weight: 700;
+  color: #212529;
 }
 .bankForm .uploadFile .filename {
   right: 88px;
@@ -2118,6 +2125,7 @@ div[class*=-page] {
   height: 100%;
   font-size: 14px;
   font-weight: 500;
+  color: #737373;
 }
 .bankForm .uploadFile [type=file] {
   cursor: pointer !important;
@@ -2130,4 +2138,12 @@ div[class*=-page] {
   right: 0px;
   top: 0px;
   z-index: 1;
+}
+.bankForm .uploadFile .error {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+}
+.bankForm button.btn {
+  margin-right: 0;
 }/*# sourceMappingURL=style.css.map */

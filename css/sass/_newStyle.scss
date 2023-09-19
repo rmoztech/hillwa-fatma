@@ -645,8 +645,8 @@
     display: none;
 }
 .bankForm {
+    display: none;
     .uploadFile {
-        overflow: hidden;
         position: relative;
         resize: none;
         width: 100%;
@@ -654,17 +654,22 @@
         border-style: dashed;
         text-align: center;
         font-size: 15px;
+        padding: 20px 0;
 
-        span {
+       > span {
             display: block;
-            color: $redColor;
+            color: $textGrayColor;
             margin-bottom: 10px;
 
             svg {
                 width: 40px;
                 height: 40px;
-                margin: 0 auto;
+                margin: 0 auto 10px;
                 display: block;
+            }
+            >span{
+                font-weight: 700;
+                color: $mainColor;
             }
         }
 
@@ -675,6 +680,7 @@
             height: 100%;
             font-size: 14px;
             font-weight: 500;
+            color: $textGrayColor;
         }
 
         [type="file"] {
@@ -689,5 +695,13 @@
             top: 0px;
             z-index: 1;
         }
+        .error {
+            position: absolute;
+            bottom: -30px;
+            right: 0;
+        }
+    }
+    button.btn{
+        margin-right: 0;
     }
 }

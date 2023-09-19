@@ -715,7 +715,7 @@
                                                 </div>
                                             </span>
                                         </label>
-                                        <label class="custom-radio d-block">
+                                        <label class="custom-radio d-block bank-payment">
                                             <input type="radio" name="payment">
                                             <span class="radio-btn">
                                                 <span class="check-icon">
@@ -744,6 +744,59 @@
                                     </div>
                                 </div>
 
+                                <!-- Modal -->
+                                <div class="modal fade" id="bankModal" tabindex="-1" aria-labelledby="bankModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <form action="#" class="bankForm">
+                                                <div class="modal-header mb-3">
+                                                    <h6 class="modal-title" id="bankModalLabel"> الدفع من خلال
+                                                        التحويل البنكي</h6>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="mb-3">
+                                                        <label for="country" class="form-label"> البنك</label>
+                                                        <select class="form-select" aria-label="Default select"
+                                                            id="country">
+                                                            <option selected>اختر البنك</option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="voucherNumber" class="form-label">رقم
+                                                            الايصال</label>
+                                                        <input type="number" class="form-control" id="voucherNumber"
+                                                            name="voucherNumber">
+                                                    </div>
+                                                    <div>
+                                                        <label for="voucherImg" class="form-label"> ارفاق صورة
+                                                            الشعار</label>
+                                                        <div class="uploadFile form-control">
+                                                            <span>
+                                                                <svg>
+                                                                    <use href="../icons.svg#uploadImg"></use>
+                                                                </svg>
+                                                                اضغط, او اسحب الملفات وإفلاتها هنا
+                                                            </span>
+                                                            <input type="file" class="inputfile voucherImg"
+                                                                name="voucherImg" id="voucherImg">
+                                                            <p class="filename voucherImgName">
+                                                                صورة, PDF </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer justify-content-start">
+                                                    <button type="submit" class="btn btn-bg w-100 mb-3"
+                                                        data-bs-dismiss="modal" aria-label="Close">
+                                                        إتمام عملية الدفع </button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-12 col-md-5">
                                 <div class="complete-sale pt-4">

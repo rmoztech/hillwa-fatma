@@ -149,8 +149,16 @@ $(document).ready(function () {
     $('.complete-sale-btn').on('click', function () {
         $('.alert').show();
     })
-
+// 
+    // show and hide bank modal
+    $("input[type=file].voucherImg").change(function (e) {
+        $(".voucherImgName").text(e.target.files[0].name);
+    });
+    $('.bank-payment').on('click', function() {
+        $("#bankModal").modal("show");
+    })
 })
+
 
 
 

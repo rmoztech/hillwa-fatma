@@ -194,6 +194,10 @@ $(document).ready(function () {
             },
         }
     });
+
+    $("body").mouseup(function(){
+        $('.cart-list').slideUp(500)
+    });
 })
 
 

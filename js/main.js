@@ -26,7 +26,7 @@ $(document).ready(function () {
         $('.mobile-navbar').css({ display: ' none' });
     })
     $('.shopping-cart >span:first-of-type, .shopping-cart>svg').click(function () {
-        $('.cart-list').toggle(500)
+        $('.cart-list').slideDown(500)
     })
     $('.sidebar .menu-icon').click(function () {
         if ($('.sidebar .menu-icon i').hasClass('fa-bars')) {

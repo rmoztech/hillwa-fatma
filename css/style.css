@@ -2147,4 +2147,21 @@ div[class*=-page] {
 }
 .bankForm button.btn {
   margin-right: 0;
+}
+
+.download-list li {
+  width: 100px;
+}
+.download-list li img {
+  width: 100%;
+}
+
+.footer .footer-bottom .footer-bottom-list li:first-of-type img {
+  height: unset;
+  width: 90%;
+}
+
+.footer .footer-bottom .footer-bottom-list li img {
+  height: 70%;
+  width: 70%;
 }/*# sourceMappingURL=style.css.map */
